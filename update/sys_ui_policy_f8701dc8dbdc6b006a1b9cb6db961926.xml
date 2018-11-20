@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>true</inherit>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+   
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+   if(g_form.isNewRecord()){
+	   g_form.setVisible("rela_number",false);
+   } else {
+	   g_form.setVisible("rela_number",true);
+   }
+}]]></script_true>
+        <set_values/>
+        <short_description>是否显示Rela Number</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-08-28 10:44:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f8701dc8dbdc6b006a1b9cb6db961926</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>是否显示Rela Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ui_policy_f8701dc8dbdc6b006a1b9cb6db961926</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-13 01:31:16</sys_updated_on>
+        <table>x_162342_envision_asset_task</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

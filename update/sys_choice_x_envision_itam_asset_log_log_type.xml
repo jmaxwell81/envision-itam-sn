@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="log_type" table="x_envision_itam_asset_log" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>log_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>出库</label>
+            <language>en</language>
+            <name>x_envision_itam_asset_log</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-09 01:49:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>28ffd5b54fb353005d7d121f9310c7f0</sys_id>
+            <sys_mod_count>6</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 06:16:03</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>log_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>领用</label>
+            <language>en</language>
+            <name>x_envision_itam_asset_log</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-21 07:00:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2e4ad0314f4423005d7d121f9310c71d</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 06:16:03</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>log_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>归还</label>
+            <language>en</language>
+            <name>x_envision_itam_asset_log</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-21 07:00:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aa4ad0314f4423005d7d121f9310c71e</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 06:16:03</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>log_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>入库</label>
+            <language>en</language>
+            <name>x_envision_itam_asset_log</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-21 07:00:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ae4ad0314f4423005d7d121f9310c71c</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 06:16:03</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>log_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>使用</label>
+            <language>en</language>
+            <name>x_envision_itam_asset_log</name>
+            <sequence>5</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-08-27 08:10:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>29e36be7db08e7006a1b9cb6db961933</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 06:16:03</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>log_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>借用</label>
+            <language>en</language>
+            <name>x_envision_itam_asset_log</name>
+            <sequence>6</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-09 05:56:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a8ca8063db61eb006a1b9cb6db961968</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-09 05:56:41</sys_updated_on>
+            <value>6</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>log_type</element>
+            <name>x_envision_itam_asset_log</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-05 03:23:33</sys_created_on>
+            <sys_id>5371cb42db2d2b00328592d8db9619c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>log_type</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_choice_x_envision_itam_asset_log_log_type</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-05 03:23:33</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

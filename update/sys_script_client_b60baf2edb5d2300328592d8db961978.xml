@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>apply_user</field>
+        <global>true</global>
+        <messages/>
+        <name>提示转为借用单场景(申请人)</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	applyAssetConfirm();
+	
+}
+function applyAssetConfirm(){
+	if(g_form.getValue("order_type")!="1"){
+		return ;
+	}
+	if(!g_form.getValue("apply_user") || !g_form.getValue("asset")){
+		return ;
+	}
+	
+	g_form.getReference("model_category",function(r){
+		//只限定个人计算机
+		if(r.x_envision_itam_model_code=='01'){
+			condition();
+		}
+	});
+	
+}
+function condition(){
+	g_form.getReference("asset",function(resp){
+		var ga=new GlideAjax("x_envision_itam.EnvisionAjax");
+		ga.addParam("sysparm_name","getUserAssetCount");
+		ga.addParam("sysparm_user",g_form.getValue("apply_user"));
+		ga.addParam("sysparm_modelCategory",resp.model_category);
+		//g_form.addInfoMessage(">>>>>>model_category:"+resp.model_category);
+		ga.getXML(function(response){
+			var data = response.responseXML.documentElement.getAttribute("answer");
+			//g_form.addInfoMessage(">>>>>>data:"+data);
+			data=JSON.parse(data);
+			if(data.count>=1){
+				var gd = new GlideDialogWindow('glide_confirm_basic');
+				
+				gd.setTitle('该'+g_form.getLabelOf('apply_user')+'名下已经有一台同类('+data.modelCategory+')的设备，是否转为借用场景？');
+				gd.setPreference("onPromptComplete",function(){
+					//g_form.setLabelOf("apply_user","借用人");
+					g_form.setValue("order_type","2");
+				});
+				gd.render();
+			}
+		});
+		
+	});
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-25 09:26:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b60baf2edb5d2300328592d8db961978</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>提示转为借用单场景(申请人)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_b60baf2edb5d2300328592d8db961978</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-14 07:43:35</sys_updated_on>
+        <table>x_envision_itam_apply_order</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_envision_itam_sms_code" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>878509cddbf1af006a1b9cb6db9619f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>area_code</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>0f8509cddbf1af006a1b9cb6db9619f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>mobile_phone</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>8f8509cddbf1af006a1b9cb6db9619f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sms_code</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>038509cddbf1af006a1b9cb6db9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>request_id</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>838509cddbf1af006a1b9cb6db9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>error_code</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>078509cddbf1af006a1b9cb6db9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>error_msg</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>878509cddbf1af006a1b9cb6db9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>is_invalid</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>0b8509cddbf1af006a1b9cb6db9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>send_time</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>8b8509cddbf1af006a1b9cb6db9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>use_time</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>0f8509cddbf1af006a1b9cb6db9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>invalid_time</element>
+            <list_id display_value="x_envision_itam_sms_code" element="NULL" name="x_envision_itam_sms_code" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4f8509cddbf1af006a1b9cb6db9619f7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_id>8f8509cddbf1af006a1b9cb6db9619f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_envision_itam_sms_code</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-14 02:03:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4f8509cddbf1af006a1b9cb6db9619f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_envision_itam_sms_code</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_ui_list_x_envision_itam_sms_code_null</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-14 02:03:49</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

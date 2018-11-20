@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="hasLabels=true" label="Stockroom" max_length="40" name="alm_stockroom" type="collection">
+        <element default="100" label="Sort" max_length="40" name="x_envision_itam_sort" type="integer"/>
+        <element label="Stock code" max_length="40" name="x_envision_itam_stock_code" type="string"/>
+    </element>
+</database>

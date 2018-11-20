@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>PUT</http_method>
+        <name>PUT</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ req, /*RESTAPIResponse*/ resp) {
+	
+	try {
+		
+		var request =new sn_ws.RESTMessageV2(); 
+		request.setEndpoint(getUrl());
+		var body=req.body.dataString+'';
+		request.setHttpMethod('PUT');
+		//request.setRequestBody("{\"name\":\"test\"}");
+		//request.setRequestBody('{"name":"test"}');
+		request.setRequestBody(body);
+		request.setRequestHeader("Accept","application/json");
+		var token=getParamAsString("token");
+		//gs.info(">>>>>>token"+token);
+		request.setRequestHeader("Authorization",token);
+		
+		var response = request.execute();
+		
+		var respObj={
+			body:response.getBody(),
+			statusCode:response.getStatusCode(),
+			errorCode:response.getErrorCode(),
+			errorMessage:response.getErrorMessage()
+		};
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+		//gs.info(">>>>>>JK:httpStatus:"+httpStatus);
+		//gs.info(">>>>>>JK,responseBody:"+responseBody);
+		return respObj;
+	}
+	catch(ex) {
+		var message = ex.getMessage();
+	}
+	
+	function getUrl(){
+		var url="https://"+gs.getProperty("instance_name")+".service-now.com";
+		url+=getParamAsString("tableApi")+"?";
+		for(var p in req.queryParams){
+			if(p!='api' && p!='tableApi' && p!='token'){
+				url+=p+"="+req.queryParams[p]+"&";
+			}
+		}
+		gs.info(">>>>>>JK:url:"+url);
+		return url;
+	}
+	
+	function getParamAsString(paramName) {
+		if (req.queryParams.hasOwnProperty(paramName))
+			return req.queryParams[paramName] + '';
+		
+		return '';
+	}
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-05 07:26:39</sys_created_on>
+        <sys_id>8da686a84ff313005d7d121f9310c711</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>PUT</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_8da686a84ff313005d7d121f9310c711</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-13 01:33:17</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

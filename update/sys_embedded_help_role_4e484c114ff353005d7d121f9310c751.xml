@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role/>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-07 06:09:03</sys_created_on>
+        <sys_id>4e484c114ff353005d7d121f9310c751</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ee3804514ff353005d7d121f9310c703</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_embedded_help_role_4e484c114ff353005d7d121f9310c751</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-13 01:32:09</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

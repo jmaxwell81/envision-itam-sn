@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>stock_take_asset</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+/* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+/* Optional GlideRecord */ event) {
+	
+	template.print("盘点任务："+current.number+"<br/><br/>");
+	template.print("开始时间："+current.getDisplayValue("start_time")+"<br/><br/>");
+	template.print("截止时间："+current.getDisplayValue("stop_time")+"<br/><br/>");
+	template.print("盘点类型："+current.getDisplayValue("plan_type")+"<br/><br/>");
+	template.print("盘点范围："+current.getDisplayValue("scope")+"<br/><br/>");
+	if(current.scope=="1"){
+		template.print("盘点仓库："+current.plan_scope.name+"<br/><br/>");
+	} else if(current.scope=="2"){
+		template.print("成本中心："+current.cost_center.name+"<br/><br/>");
+	}
+	
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-02 07:47:57</sys_created_on>
+        <sys_id>6b21a899dbe9a700328592d8db9619a1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>stock_take_asset</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_email_6b21a899dbe9a700328592d8db9619a1</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-02 08:56:17</sys_updated_on>
+    </sys_script_email>
+</record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="x_envision_itam_manufacturer" label="制造商" language="zh" table="alm_asset">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_envision_itam_manufacturer</element>
+            <help/>
+            <hint/>
+            <label>制造商</label>
+            <language>zh</language>
+            <name>alm_asset</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>junhui.lei</sys_created_by>
+            <sys_created_on>2018-10-29 08:26:20</sys_created_on>
+            <sys_id>9aa38488dbe9e300328592d8db961917</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>制造商</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_alm_asset_x_envision_itam_manufacturer_zh</sys_update_name>
+            <sys_updated_by>junhui.lei</sys_updated_by>
+            <sys_updated_on>2018-10-29 08:30:28</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>部门下的所有用户</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var resp={status:"9999"};
+		var department=request.queryParams["department"];
+		if(!department){
+			resp.msg="请求参数不全";
+			return resp;
+		}
+		var gr=new GlideRecord("sys_user");
+		gr.addQuery("department",department);
+		gr.addActiveQuery();
+		gr.query();
+		var list=[];
+		while(gr.next()){
+			var obj={
+				sys_id:gr.sys_id+"",
+				user_name:gr.name+"",
+			};
+			list.push(obj);
+		}
+		resp.data=list;
+		resp.status="0000";
+		return resp;
+	})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/department_user</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/department_user</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-17 02:45:29</sys_created_on>
+        <sys_id>ff59fa184fc063005d7d121f9310c7e1</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>部门下的所有用户</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_ff59fa184fc063005d7d121f9310c7e1</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-09-14 03:07:49</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

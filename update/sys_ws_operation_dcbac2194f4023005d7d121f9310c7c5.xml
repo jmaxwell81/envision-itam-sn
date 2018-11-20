@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>入库任务列表</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var userId=request.queryParams["userId"];
+	var state=request.queryParams["state"];
+	var pageNum=request.queryParams.pageNum;
+	pageNum=pageNum?pageNum:1;
+	var pageSize=5;
+	if(!state){
+		//进行中 started
+		state="1";
+	}
+	var gr=new GlideRecord("x_envision_itam_in_stockroom_task");
+	gr.addQuery("state","IN",state);
+	gr.addEncodedQuery("managed_by="+userId+"^ORassistantLIKE"+userId);
+	gr.orderBy("number");
+	gr.chooseWindow((pageNum-1)*pageSize,pageNum*pageSize);
+	gr.query();
+	var taskNums="";//
+	while(gr.next()){
+		taskNums+=gr.sys_id+",";
+	}
+	if(!taskNums){
+		return [];
+	}
+	var ga=new GlideAggregate("x_envision_itam_in_stockroom_task_detail");
+	//ga.addEncodedQuery("task_number.stateIN"+state);
+	//ga.addEncodedQuery("task_number.managed_by="+userId+"^ORtask_number.assistantLIKE"+userId);
+	ga.addQuery("task_number","IN",taskNums);
+	ga.addAggregate("MAX","task_number");
+	ga.addAggregate("COUNT","delivery_number");//采购数
+	ga.addAggregate("SUM","in_stock_number");//已入库数
+	
+	ga.setGroup("task_number");
+	
+	
+	ga.query();
+	//gs.info(">>>>>>JK:xxx:"+ga.getEncodedQuery());
+	var list=[];
+	while(ga.next()){
+		var stateName="进行中";
+		if(ga.task_number.state=="04"){
+			stateName="已结束(未完成)";
+		} else if(ga.task_number.state=="05"){
+			stateName="已结束";
+		} 
+		 
+		var startTime=new GlideDateTime(ga.task_number.start_time+"");
+		var stopTime=new GlideDateTime(ga.task_number.stop_time+"");
+		var obj={
+			sys_id:ga.task_number.sys_id+"",
+			u_number:ga.task_number.number+"",
+			count:ga.getAggregate("COUNT","delivery_number")+"",
+			stockCount:ga.getAggregate("SUM","in_stock_number")+"",
+			u_managed_by:ga.task_number.managed_by.name+"",
+			u_description:ga.task_number.description+"",
+			u_start_time:startTime && startTime!="" ?startTime.getLocalDate().getByFormat("YYYY-MM-dd")+" "+startTime.getLocalTime().getByFormat("HH:mm"):"",
+			u_stop_time:stopTime && stopTime!=""?stopTime.getLocalDate().getByFormat("YYYY-MM-dd")+" "+stopTime.getLocalTime().getByFormat("HH:mm"):"",
+			stateName:stateName,
+			pageSize:pageSize+"",
+		};
+		list.push(obj);
+	}
+	return list;
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/in_stockroom_task_list</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/in_stockroom_task_list</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 01:54:59</sys_created_on>
+        <sys_id>dcbac2194f4023005d7d121f9310c7c5</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_name>入库任务列表</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_dcbac2194f4023005d7d121f9310c7c5</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-11 11:04:23</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

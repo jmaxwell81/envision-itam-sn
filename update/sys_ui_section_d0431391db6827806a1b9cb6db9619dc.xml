@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="d0431391db6827806a1b9cb6db9619dc" sys_domain="global" table="x_envision_itam_sn_tag_batch" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>64439b91db6827806a1b9cb6db961939</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>1</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>6c439b91db6827806a1b9cb6db961939</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>batch_id</element>
+            <position>2</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>ec439b91db6827806a1b9cb6db961939</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>count</element>
+            <position>3</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>60439b91db6827806a1b9cb6db96193a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>model_no</element>
+            <position>4</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>e0439b91db6827806a1b9cb6db96193a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>64439b91db6827806a1b9cb6db96193a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>start_sn_tag</element>
+            <position>6</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>e4439b91db6827806a1b9cb6db96193a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>stop_sn_tag</element>
+            <position>7</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>68439b91db6827806a1b9cb6db96193a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valid_year</element>
+            <position>8</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>e8439b91db6827806a1b9cb6db96193a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_id>6c439b91db6827806a1b9cb6db96193a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_envision_itam_sn_tag_batch" sys_domain="global" view="Default view">d0431391db6827806a1b9cb6db9619dc</sys_ui_section>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_envision_itam_sn_tag_batch</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-14 03:42:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d0431391db6827806a1b9cb6db9619dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_envision_itam_sn_tag_batch</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_ui_section_d0431391db6827806a1b9cb6db9619dc</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-14 03:42:56</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

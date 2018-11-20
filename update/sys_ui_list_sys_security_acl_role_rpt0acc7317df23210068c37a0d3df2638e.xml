@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="sys_security_acl_role" version="2" view="RPT0acc7317df23210068c37a0d3df2638e">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_security_acl.name</element>
+            <list_id display_value="sys_security_acl_role" element="NULL" name="sys_security_acl_role" parent="NULL" relationship="NULL" sys_domain="global" view="88cefe26db0867006a1b9cb6db961960">2abeeac24f3793005d7d121f9310c7d6</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_id>aebeeac24f3793005d7d121f9310c7d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 02:11:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_security_acl.operation</element>
+            <list_id display_value="sys_security_acl_role" element="NULL" name="sys_security_acl_role" parent="NULL" relationship="NULL" sys_domain="global" view="88cefe26db0867006a1b9cb6db961960">2abeeac24f3793005d7d121f9310c7d6</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_id>22beeac24f3793005d7d121f9310c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 02:11:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_user_role</element>
+            <list_id display_value="sys_security_acl_role" element="NULL" name="sys_security_acl_role" parent="NULL" relationship="NULL" sys_domain="global" view="88cefe26db0867006a1b9cb6db961960">2abeeac24f3793005d7d121f9310c7d6</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_id>a2beeac24f3793005d7d121f9310c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 02:11:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_security_acl.condition</element>
+            <list_id display_value="sys_security_acl_role" element="NULL" name="sys_security_acl_role" parent="NULL" relationship="NULL" sys_domain="global" view="88cefe26db0867006a1b9cb6db961960">2abeeac24f3793005d7d121f9310c7d6</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_id>26beeac24f3793005d7d121f9310c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 02:11:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_security_acl.script</element>
+            <list_id display_value="sys_security_acl_role" element="NULL" name="sys_security_acl_role" parent="NULL" relationship="NULL" sys_domain="global" view="88cefe26db0867006a1b9cb6db961960">2abeeac24f3793005d7d121f9310c7d6</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_id>a6beeac24f3793005d7d121f9310c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 02:11:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_security_acl.admin_overrides</element>
+            <list_id display_value="sys_security_acl_role" element="NULL" name="sys_security_acl_role" parent="NULL" relationship="NULL" sys_domain="global" view="88cefe26db0867006a1b9cb6db961960">2abeeac24f3793005d7d121f9310c7d6</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_id>2abeeac24f3793005d7d121f9310c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 02:11:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_security_acl.active</element>
+            <list_id display_value="sys_security_acl_role" element="NULL" name="sys_security_acl_role" parent="NULL" relationship="NULL" sys_domain="global" view="88cefe26db0867006a1b9cb6db961960">2abeeac24f3793005d7d121f9310c7d6</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_id>aabeeac24f3793005d7d121f9310c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 02:11:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_security_acl.description</element>
+            <list_id display_value="sys_security_acl_role" element="NULL" name="sys_security_acl_role" parent="NULL" relationship="NULL" sys_domain="global" view="88cefe26db0867006a1b9cb6db961960">2abeeac24f3793005d7d121f9310c7d6</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_id>2ebeeac24f3793005d7d121f9310c7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-10 02:11:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sys_security_acl_role</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-10 02:11:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2abeeac24f3793005d7d121f9310c7d6</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>sys_security_acl_role</sys_name>
+            <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_ui_list_sys_security_acl_role_RPT0acc7317df23210068c37a0d3df2638e</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-09-13 01:31:16</sys_updated_on>
+            <sys_user/>
+            <view display_value="Rpt0acc7317df23210068c37a0d3df2638e" name="RPT0acc7317df23210068c37a0d3df2638e">88cefe26db0867006a1b9cb6db961960</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

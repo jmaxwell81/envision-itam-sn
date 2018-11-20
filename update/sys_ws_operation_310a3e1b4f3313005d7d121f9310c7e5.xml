@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>设备签收</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var resp={
+		"status":"9999"
+	};
+	var data=request.body.data;
+	var snAssetTag=data.snAssetTag;
+	var applySysId=data.applySysId;//领用/借用申请 签收
+	var signType=data.signType;//签收类型，1-领用，2-借用
+	if(gs.nil(data.userId) || data.userId=="" || gs.nil(data.sysId) || data.sysId==""
+		|| gs.nil(data.isExternal) || data.isExternal==""){
+		resp.msg="请求参数不全";
+		return resp;
+	}
+	var gr=new GlideRecord("alm_hardware");
+	gr.addQuery("sys_id",data.sysId);
+	gr.query();
+	if(gr.next()){
+		var logGr=new GlideRecord("x_envision_itam_asset_log");
+		logGr.asset=data.sysId;
+		logGr.asset_name=gr.display_name;
+		logGr.asset_type="alm_hardware";
+		logGr.sys_created_by=data.userId;
+		logGr.operated=new GlideDateTime();
+		
+		//操作前日志
+		logGr.delivery_state=gr.install_status;
+		logGr.delivery_stockroom=gr.stockroom;
+		logGr.delivery_managed_by=gr.managed_by;
+		logGr.delivery_owned_by=gr.owned_by;
+		logGr.delivery_assigned_to=gr.assigned_to;
+		logGr.operator=data.userId;
+		
+		
+		//管理员入库(从任务清单而来)
+		if(data.taskDetailSysId){
+			var snTag=new GlideRecord("x_envision_itam_sn_tag");
+			snTag.addQuery("sn_tag",snAssetTag);
+			snTag.query();
+			if(snTag.next()){
+				if(snTag.bind_asset){
+					resp.msg="该IT资产编号已被使用";
+					return resp;
+				}
+			} else {
+				resp.msg="该IT资产编号不存在";
+				return resp;
+			}
+			//IT资产编号绑定资产
+			snTag.bind_asset=gr.sys_id;
+			snTag.update();
+			
+			//绑定序列号
+			if(data.serialNumber){
+				gr.serial_number=data.serialNumber;
+			}
+			if(data.snAssetTag){
+				gr.x_envision_itam_sn_asset_tag=data.snAssetTag;
+			}
+			
+			gr.u_inventory_time=new GlideDateTime();//入库时间
+			gr.install_status=data.state;
+			
+			gr.stockroom=data.stockroom;
+			logGr.log_type="4";//入库
+			
+			//入库任务清单完成
+			var taskDetailGr=new GlideRecord("x_envision_itam_in_stockroom_task_detail");
+			taskDetailGr.addQuery("sys_id",data.taskDetailSysId);
+			taskDetailGr.query();
+			if(taskDetailGr.next()){
+				taskDetailGr.sn_asset_tag=data.snAssetTag;
+				taskDetailGr.in_stock_number=1;
+				taskDetailGr.in_stock_time=new GlideDateTime();
+				taskDetailGr.operator=data.userId;
+				taskDetailGr.update();
+			}
+			
+		} else if(applySysId){
+			//领用/借用申请 签收
+			var apply=new GlideRecord("x_envision_itam_apply_order");
+			apply.get(applySysId);
+			apply.agree_way="3";//小程序
+			apply.agree_time=new GlideDateTime();
+			apply.status="2";
+			apply.update();
+			
+			logGr.log_type="2";//领用
+			gr.install_status="1";//使用中
+			if(signType=="2"){
+				logGr.log_type= "6";//借用
+				gr.install_status="11";//Borrow，借用中
+			}
+			//申请人是编内人员
+			if(!apply.apply_user.x_envision_itam_is_external){
+				gr.owned_by=apply.apply_user;
+			}
+			gr.assigned_to=apply.apply_user;
+			gr.assigned=new GlideDateTime();
+			//清空预分配信息
+			gr.pre_allocated=false;
+			gr.reserved_for="";
+			gr.substatus="";
+			//最后出库仓库
+			gr.x_envision_itam_out_stockroom=logGr.delivery_stockroom;
+			gr.assigned_to=apply.apply_user;
+			
+		} else if(gr.managed_by==data.userId){//设备管理员签收
+			gr.install_status=data.state;
+			gr.stockroom=data.stockroom;
+			logGr.log_type="4";//入库
+			gr.owned_by=gr.managed_by;
+			gr.x_envision_itam_out_stockroom="";
+			
+		} else if(gr.managed_by!=data.userId){ //非设备管理员签收
+			//编外人员之间不能相互领取设备
+			if(data.isExternal && gr.assigned_to.x_envision_itam_is_external){
+				resp.msg="编外人员不能相互领取设备";
+				return resp;
+			}
+			//编外人员允许签收使用中的设备
+			if(data.isExternal==false && gr.install_status!="6"){
+				resp.msg="该设备不在库存中，无法签收";
+				return resp;
+			}
+			gr.assigned_to=data.userId;
+			gr.assigned=new GlideDateTime();
+			//编外人员
+			if(data.isExternal=="true" || data.isExternal==true){
+				
+			} else {
+				//编内人员签收，责任人变更
+				gr.owned_by=data.userId;
+			}
+			if(signType=="2"){
+				gr.install_status="11";//借用中
+				logGr.log_type="6";//借用
+				
+				//生成借用单据
+				var applyOrder=new GlideRecord("x_envision_itam_apply_order");
+				applyOrder.apply_user=data.userId;
+				applyOrder.model_category=gr.model_category;
+				applyOrder.asset=gr.sys_id;
+				applyOrder.order_type="2";
+				applyOrder.status="2";
+				applyOrder.apply_time=new GlideDateTime();
+				applyOrder.agree_time=new GlideDateTime();
+				applyOrder.agree_way="3";
+				applyOrder.duration=data.borrowDuration;
+				applyOrder.unit=data.borrowUnit;
+				applyOrder.descrition="签收领用时自动生成借用单";
+				applyOrder.insert();
+			} else {
+				gr.install_status="1";//in user 使用中
+				logGr.log_type="2";//领用
+			}
+			
+		}
+		
+		//更新资产
+		gr.update();
+		
+		//操作后日志
+		logGr.asset_state=gr.install_status;
+		logGr.stockroom=gr.stockroom;
+		logGr.managed_by=gr.managed_by;
+		logGr.owned_by=gr.owned_by;
+		logGr.assigned_to=gr.assigned_to;
+		
+		logGr.description=logGr.log_type.getDisplayValue()+"  "+gr.display_name+" x1";
+		logGr.cause=data.cause;
+		//返回ID，用于关联图片
+		resp.sys_id=logGr.insert();
+		
+		
+	}
+	resp.status="0000";
+	return resp;
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/device_sign</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/device_sign</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-14 00:18:42</sys_created_on>
+        <sys_id>310a3e1b4f3313005d7d121f9310c7e5</sys_id>
+        <sys_mod_count>126</sys_mod_count>
+        <sys_name>设备签收</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_310a3e1b4f3313005d7d121f9310c7e5</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-15 08:05:02</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

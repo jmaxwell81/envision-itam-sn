@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="number" label="Number" language="en" table="x_envision_itam_maintenance_order">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <help/>
+            <hint/>
+            <label>Number</label>
+            <language>en</language>
+            <name>x_envision_itam_maintenance_order</name>
+            <plural>Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-26 09:44:55</sys_created_on>
+            <sys_id>90e87cc3db996300328592d8db961966</sys_id>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_name>Number</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_maintenance_order_number_en</sys_update_name>
+            <sys_updated_by>yangdong.luo</sys_updated_by>
+            <sys_updated_on>2018-10-30 06:29:13</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="SN Tag" max_length="40" name="x_envision_itam_sn_tag" sizeclass="10000" type="collection">
+        <element attributes="readonly_clickthrough=true" label="Bind Asset" max_length="32" name="bind_asset" reference="alm_hardware" type="reference"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="SN Tag" max_length="40" name="sn_tag" read_only="true" type="string"/>
+        <element label="Tag Batch" max_length="40" name="tag_batch" read_only="true" reference="x_envision_itam_sn_tag_batch" type="reference"/>
+        <index name="index">
+            <element name="bind_asset"/>
+        </index>
+    </element>
+</database>

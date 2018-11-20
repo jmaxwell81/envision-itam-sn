@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pa_dashboards">
+    <pa_dashboards action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <breakdown_source/>
+        <group/>
+        <groups/>
+        <is_breakdown>false</is_breakdown>
+        <managed_breakdown/>
+        <managed_publisher/>
+        <name>System Administration</name>
+        <no_tabs>false</no_tabs>
+        <order/>
+        <owner display_value="雷俊辉">095c875edb082700328592d8db9619bb</owner>
+        <restrict_to_roles/>
+        <role_override>true</role_override>
+        <roles/>
+        <should_migrate_permissions>false</should_migrate_permissions>
+        <sys_class_name>pa_dashboards</sys_class_name>
+        <sys_created_by>junhui.lei</sys_created_by>
+        <sys_created_on>2018-09-04 01:32:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>13659f42db90e3406a1b9cb6db96192a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>System Administration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>pa_dashboards_13659f42db90e3406a1b9cb6db96192a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-13 01:30:28</sys_updated_on>
+        <users/>
+        <visible_to>2</visible_to>
+    </pa_dashboards>
+</record_update>

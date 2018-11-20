@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_envision_itam_in_stockroom_task_detail</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_envision_itam_in_stockroom_task_detail">in_stock_number&gt;0^EQ<item endquery="false" field="in_stock_number" goto="false" newquery="false" operator="&gt;" or="false" value="0"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>设备签收后入库任务及收货单自动完成</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var gr=new GlideRecord(current.getTableName());
+	gr.addQuery("task_number",current.task_number);
+	gr.addQuery("in_stock_number","<=","0");
+	gr.query();
+	if(gr.next()){
+		//存在未入库的清单
+		return ;
+	}
+	//所有任务清单入库完毕
+	var task=new GlideRecord("x_envision_itam_in_stockroom_task");
+	task.get(current.task_number);
+	task.finished_time=new GlideDateTime();
+	task.state="05";//finished
+	task.update();
+	
+	//收货单状态变更为已入库
+	var order=new GlideRecord("x_envision_itam_take_delivery");
+	order.get(task.take_delivery_order);
+	order.state="3";//已入库
+	order.inventory_time=new GlideDateTime();
+	order.update();
+	
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-09-14 06:52:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>297e7b1ddba827806a1b9cb6db961961</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>设备签收后入库任务及收货单自动完成</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_297e7b1ddba827806a1b9cb6db961961</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-03 08:08:51</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=297e7b1ddba827806a1b9cb6db961961"/>
+</record_update>

@@ -1,0 +1,2067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="sys_grid_canvas" unload_date="2018-11-20 05:38:05">
+    <sys_grid_canvas action="INSERT_OR_UPDATE">
+        <legacy_page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</legacy_page>
+        <name>PA New Tab</name>
+        <sys_class_name>sys_grid_canvas</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+        <sys_id>7f363cf1db9123006a1b9cb6db9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA New Tab</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_grid_canvas_7f363cf1db9123006a1b9cb6db9619a1</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+        <related_items_node>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>7</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_widget>
+                <posx>0</posx>
+                <posy>0</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>3f36bcf1db9123006a1b9cb6db96196f</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_3f36bcf1db9123006a1b9cb6db96196f</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>3</width>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone0</dropzone>
+                        <offset>0</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>3f36bcf1db9123006a1b9cb6db961965</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>7</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_widget>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db96196f</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_3f36bcf1db9123006a1b9cb6db96196f</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>3</width>
+                            </sys_grid_canvas_pane>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>7</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_widget>
+                                <posx>0</posx>
+                                <posy>31</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961977</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_7b36bcf1db9123006a1b9cb6db961977</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>3</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3336bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db961966</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glideapp.servicecatalog.RenderCategory</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3b36bcf1db9123006a1b9cb6db961968</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>Operation management</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db961968</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>type</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>category</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7f36bcf1db9123006a1b9cb6db961966</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>render_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db961968</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bb36bcf1db9123006a1b9cb6db961966</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db961966</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>fb36bcf1db9123006a1b9cb6db961968</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961965</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>91a9e0510a0a3c7401d20d86782fc9a0</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>current_page</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>4da11b86c611229701f1d31a48c9245d</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone1</dropzone>
+                        <offset>1</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>3336bcf1db9123006a1b9cb6db961963</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>4</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_widget>
+                                <posx>3</posx>
+                                <posy>17</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961975</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_3f36bcf1db9123006a1b9cb6db961975</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>9</width>
+                            </sys_grid_canvas_pane>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>4</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_widget>
+                                <posx>3</posx>
+                                <posy>48</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7f36bcf1db9123006a1b9cb6db96197c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_7f36bcf1db9123006a1b9cb6db96197c</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>9</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db961965</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glideapp.knowledge.RenderKnowledge</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3b36bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>FAQ</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>topic</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>FAQ</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7336bcf1db9123006a1b9cb6db961965</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>current_page</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>4da11b86c611229701f1d31a48c9245d</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bf36bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>100</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db961965</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>fb36bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone2</dropzone>
+                        <offset>0</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>3336bcf1db9123006a1b9cb6db961969</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>5</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_widget>
+                                <posx>0</posx>
+                                <posy>62</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>4846bcf1db9123006a1b9cb6db96197e</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_4846bcf1db9123006a1b9cb6db96197e</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>12</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db96196b</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3b36bcf1db9123006a1b9cb6db96196a</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>News</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>current_page</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961969</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>95f67094dbc1af406a1b9cb6db961983</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7336bcf1db9123006a1b9cb6db96196b</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db96196a</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961969</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db96196a</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db961969</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>type</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bb36bcf1db9123006a1b9cb6db96196b</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>news</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer_id</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bf36bcf1db9123006a1b9cb6db96196a</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>a066bb690a0a0aa300d40d0cce7ed94f</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db961969</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db96196b</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>fb36bcf1db9123006a1b9cb6db96196a</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glide.ui.portal.RenderJavascript</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961969</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone1</dropzone>
+                        <offset>0</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>ff36bcf1db9123006a1b9cb6db96196b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>6</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_widget>
+                                <posx>3</posx>
+                                <posy>42</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7336bcf1db9123006a1b9cb6db96197b</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_7336bcf1db9123006a1b9cb6db96197b</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>9</width>
+                            </sys_grid_canvas_pane>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>6</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_widget>
+                                <posx>3</posx>
+                                <posy>11</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961973</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_ff36bcf1db9123006a1b9cb6db961973</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>9</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3336bcf1db9123006a1b9cb6db96196e</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3b36bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glideapp.knowledge.RenderKnowledge</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7336bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>Knowledge</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>current_page</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7f36bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>95f67094dbc1af406a1b9cb6db961983</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>topic</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db96196e</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>Knowledge</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bb36bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bf36bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db96196e</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>180</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>fb36bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone0</dropzone>
+                        <offset>1</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>3736bcf1db9123006a1b9cb6db96195f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>4</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_widget>
+                                <posx>0</posx>
+                                <posy>38</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db961979</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_7736bcf1db9123006a1b9cb6db961979</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>3</width>
+                            </sys_grid_canvas_pane>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>4</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_widget>
+                                <posx>0</posx>
+                                <posy>7</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db961972</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_b336bcf1db9123006a1b9cb6db961972</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>3</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3336bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>render_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db961960</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db961962</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7f36bcf1db9123006a1b9cb6db961960</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db961962</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>Can We Help You?</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glideapp.servicecatalog.RenderCategory</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bb36bcf1db9123006a1b9cb6db961960</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>100</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bf36bcf1db9123006a1b9cb6db96195f</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>e15706fc0a0a0aa7007fc21e1ab70c2f</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>type</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db96195f</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>category</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db961960</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone0</dropzone>
+                        <offset>0</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>3f36bcf1db9123006a1b9cb6db961965</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>7</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_widget>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db96196f</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_3f36bcf1db9123006a1b9cb6db96196f</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>3</width>
+                            </sys_grid_canvas_pane>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>7</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_widget>
+                                <posx>0</posx>
+                                <posy>31</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961977</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_7b36bcf1db9123006a1b9cb6db961977</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>3</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3336bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db961966</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glideapp.servicecatalog.RenderCategory</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3b36bcf1db9123006a1b9cb6db961968</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>Operation management</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db961968</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>type</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>category</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7f36bcf1db9123006a1b9cb6db961966</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>render_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db961968</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bb36bcf1db9123006a1b9cb6db961966</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db961966</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>fb36bcf1db9123006a1b9cb6db961968</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961965</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>91a9e0510a0a3c7401d20d86782fc9a0</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>current_page</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961967</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>4da11b86c611229701f1d31a48c9245d</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone1</dropzone>
+                        <offset>1</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>3336bcf1db9123006a1b9cb6db961963</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>4</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_widget>
+                                <posx>3</posx>
+                                <posy>17</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961975</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_3f36bcf1db9123006a1b9cb6db961975</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>9</width>
+                            </sys_grid_canvas_pane>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>4</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_widget>
+                                <posx>3</posx>
+                                <posy>48</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7f36bcf1db9123006a1b9cb6db96197c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_7f36bcf1db9123006a1b9cb6db96197c</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>9</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db961965</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glideapp.knowledge.RenderKnowledge</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3b36bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>FAQ</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>topic</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>FAQ</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7336bcf1db9123006a1b9cb6db961965</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>current_page</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>4da11b86c611229701f1d31a48c9245d</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bf36bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>100</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db961965</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>fb36bcf1db9123006a1b9cb6db961964</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961963</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone0</dropzone>
+                        <offset>1</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>3736bcf1db9123006a1b9cb6db96195f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>4</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_widget>
+                                <posx>0</posx>
+                                <posy>38</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db961979</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_7736bcf1db9123006a1b9cb6db961979</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>3</width>
+                            </sys_grid_canvas_pane>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>4</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_widget>
+                                <posx>0</posx>
+                                <posy>7</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db961972</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_b336bcf1db9123006a1b9cb6db961972</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>3</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3336bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>render_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db961960</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3f36bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db961962</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7b36bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7f36bcf1db9123006a1b9cb6db961960</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db961962</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>Can We Help You?</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glideapp.servicecatalog.RenderCategory</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bb36bcf1db9123006a1b9cb6db961960</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>100</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bf36bcf1db9123006a1b9cb6db96195f</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>e15706fc0a0a0aa7007fc21e1ab70c2f</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>type</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db96195f</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>category</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db961960</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961961</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone>dropzone1</dropzone>
+                        <offset>0</offset>
+                        <page display_value="PA New Tab">33363cf1db9123006a1b9cb6db9619a1</page>
+                        <summary/>
+                        <sys_created_by>yanyong.peng</sys_created_by>
+                        <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                        <sys_id>ff36bcf1db9123006a1b9cb6db96196b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>yanyong.peng</sys_updated_by>
+                        <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>6</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_widget>
+                                <posx>3</posx>
+                                <posy>42</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7336bcf1db9123006a1b9cb6db96197b</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_7336bcf1db9123006a1b9cb6db96197b</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>9</width>
+                            </sys_grid_canvas_pane>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                                <height>6</height>
+                                <portal_widget display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_widget>
+                                <posx>3</posx>
+                                <posy>11</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>ff36bcf1db9123006a1b9cb6db961973</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_ff36bcf1db9123006a1b9cb6db961973</sys_update_name>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <width>9</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3336bcf1db9123006a1b9cb6db96196e</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_size</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3736bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>10pt</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>3b36bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>com.glideapp.knowledge.RenderKnowledge</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7336bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>Knowledge</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>real_time</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7736bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>current_page</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>7f36bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>95f67094dbc1af406a1b9cb6db961983</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title_align</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b336bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>left</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>topic</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>b736bcf1db9123006a1b9cb6db96196e</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>Knowledge</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>publisher_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bb36bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>filter_indicator</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>bf36bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>widget_height</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f336bcf1db9123006a1b9cb6db96196e</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>180</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>subscriber_widget</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>f736bcf1db9123006a1b9cb6db96196d</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value/>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>show_border</name>
+                                <portal_section display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_section>
+                                <sys_created_by>yanyong.peng</sys_created_by>
+                                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                                <sys_id>fb36bcf1db9123006a1b9cb6db96196c</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>yanyong.peng</sys_updated_by>
+                                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>4</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_widget>
+                <posx>3</posx>
+                <posy>17</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>3f36bcf1db9123006a1b9cb6db961975</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_3f36bcf1db9123006a1b9cb6db961975</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>9</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>5</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961969</portal_widget>
+                <posx>0</posx>
+                <posy>62</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>4846bcf1db9123006a1b9cb6db96197e</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_4846bcf1db9123006a1b9cb6db96197e</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>12</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>6</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_widget>
+                <posx>3</posx>
+                <posy>42</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>7336bcf1db9123006a1b9cb6db96197b</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_7336bcf1db9123006a1b9cb6db96197b</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>9</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>4</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_widget>
+                <posx>0</posx>
+                <posy>38</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>7736bcf1db9123006a1b9cb6db961979</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_7736bcf1db9123006a1b9cb6db961979</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>3</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>7</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">3f36bcf1db9123006a1b9cb6db961965</portal_widget>
+                <posx>0</posx>
+                <posy>31</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>7b36bcf1db9123006a1b9cb6db961977</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_7b36bcf1db9123006a1b9cb6db961977</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>3</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>4</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">3336bcf1db9123006a1b9cb6db961963</portal_widget>
+                <posx>3</posx>
+                <posy>48</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>7f36bcf1db9123006a1b9cb6db96197c</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_7f36bcf1db9123006a1b9cb6db96197c</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>9</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>4</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">3736bcf1db9123006a1b9cb6db96195f</portal_widget>
+                <posx>0</posx>
+                <posy>7</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>b336bcf1db9123006a1b9cb6db961972</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_b336bcf1db9123006a1b9cb6db961972</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>3</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">7f363cf1db9123006a1b9cb6db9619a1</grid_canvas>
+                <height>6</height>
+                <portal_widget display_value="Created 2018-10-22 20:21:01">ff36bcf1db9123006a1b9cb6db96196b</portal_widget>
+                <posx>3</posx>
+                <posy>11</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>yanyong.peng</sys_created_by>
+                <sys_created_on>2018-10-22 12:21:01</sys_created_on>
+                <sys_id>ff36bcf1db9123006a1b9cb6db961973</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_name>7f363cf1db9123006a1b9cb6db9619a1</sys_name>
+                <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_ff36bcf1db9123006a1b9cb6db961973</sys_update_name>
+                <sys_updated_by>yanyong.peng</sys_updated_by>
+                <sys_updated_on>2018-10-22 12:21:01</sys_updated_on>
+                <width>9</width>
+            </sys_grid_canvas_pane>
+        </related_items_node>
+    </sys_grid_canvas>
+</record_update>

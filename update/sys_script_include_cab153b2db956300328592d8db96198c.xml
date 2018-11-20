@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_envision_itam.EnvisionAjax</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>EnvisionAjax</name>
+        <script><![CDATA[var EnvisionAjax = Class.create();
+EnvisionAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	//用户拥有的设备数量(client和businesses rule调用)
+	getUserAssetCount:function(user,modelCategory){
+		if(!user){
+			user=this.getParameter("sysparm_user");
+		}
+		if(!modelCategory){
+			modelCategory=this.getParameter("sysparm_modelCategory");
+		}
+		var ga=new GlideAggregate("alm_asset");
+		ga.addAggregate("SUM","quantity");
+		ga.addQuery("assigned_to",user);
+		ga.addQuery("model_category",modelCategory);
+		ga.addQuery("install_status","1");//使用中
+		ga.query();
+		var data={modelCategory:"",count:"0"};
+			if(ga.next()){
+				data.count=ga.getAggregate("SUM","quantity");
+			}
+			var gr=new GlideRecord("cmdb_model_category");
+			gr.get(modelCategory);
+			data.modelCategory=gr.x_envision_itam_zh_name+"";
+			return JSON.stringify(data);
+		},
+		//调拨类型变更时，清空调拨资产
+		clearTransferAsset:function(){
+			var sysId=this.getParameter("sysparm_sysId");
+			var gr=new GlideRecord("alm_asset");
+			gr.addQuery("x_envision_itam_transfer_order",sysId);
+			gr.query();
+			while(gr.next()){
+				gr.x_envision_itam_transfer_order="";
+				gr.update();
+			}
+		},
+		type: 'EnvisionAjax'
+	});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-26 02:14:57</sys_created_on>
+        <sys_id>cab153b2db956300328592d8db96198c</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>EnvisionAjax</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_include_cab153b2db956300328592d8db96198c</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-14 07:40:01</sys_updated_on>
+    </sys_script_include>
+</record_update>

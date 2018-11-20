@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>库存调拨时&#13;
+如果是不同资产协管员之间的库存调拨，则需要输入计划"完成时间"。&#13;
+如果是同一资产协管员之间的库存调拨，则不需要输入计划"完成时间"。</description>
+        <field>stockroom</field>
+        <global>true</global>
+        <messages/>
+        <name>计划完成时间必填校验(调入仓库)</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	//库存调拨
+	if(g_form.getValue("transfer_type")!="stockroom"){
+		return ;
+	}
+	g_form.getReference("delivery_stockroom",function(resp){
+		g_form.getReference("stockroom",function(resp2){
+			if(resp.manager==resp2.manager  && g_user.userID==resp.manager){
+				g_form.setMandatory("plan_complete_time",false);
+			} else {
+				g_form.setMandatory("plan_complete_time",true);
+			}
+		});
+	});
+	
+	
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-30 05:58:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fa7ae494dbe52700328592d8db961953</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>计划完成时间必填校验(调入仓库)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_fa7ae494dbe52700328592d8db961953</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-30 08:53:01</sys_updated_on>
+        <table>x_envision_itam_transfers_order</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

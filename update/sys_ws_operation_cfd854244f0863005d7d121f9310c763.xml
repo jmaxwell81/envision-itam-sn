@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>盘点计划详情列表</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	//资产类型
+	var modelCategory=request.queryParams["modelCategory"];
+	var sysId=request.queryParams["sysId"];
+	var userId=request.queryParams["userId"];
+	var state=request.queryParams["state"];
+	var modelCategoryList=[];
+	var detailList=[];
+	var stockCount=0;//账存总数
+	var stockTakeCount=0;//已盘总数
+	var profitCount=0;//盘赢总数
+	var taskState="1";//盘点任务状态,0-未完成，1-已完成
+	var taskType="";//盘点类型，2-交接盘点，3-日常盘点
+	
+	//资产类型为空，分组获取当前计划对应的所有资产类型
+	var modelGr=new GlideAggregate("x_envision_itam_stock_take_detail");
+	modelGr.addAggregate("MAX","asset.model_category");
+	modelGr.addAggregate("MAX","asset.model_category.sys_id");
+	modelGr.addAggregate("MAX","asset.model_category.x_envision_itam_zh_name");
+	modelGr.addAggregate("MAX","asset.model_category.asset_class");
+	modelGr.groupBy("asset.model_category");
+	modelGr.addQuery("task_number",sysId);
+	modelGr.orderBy("asset.model_category.x_envision_itam_sort");
+	modelGr.query();
+	//gs.info(">>>>>>JK:string1:"+modelGr.getEncodedQuery());
+	//打印日志
+	var modelCategoryNameList=[];
+	var haveConsumable=false;//是否有耗材类型
+	var consumableModelCategoryList=[];//耗材类型列表
+	while(modelGr.next()){
+		var modeCategoryName=modelGr.getAggregate("MAX","asset.model_category");
+		var assetClass=modelGr.getAggregate("MAX","asset.model_category.asset_class");
+		//gs.info(">>>>>>JK:assetClass:"+assetClass);
+		var modelCategoryZHName=modelGr.getAggregate("MAX","asset.model_category.x_envision_itam_zh_name");
+		var modelCategorySysId=modelGr.getAggregate("MAX","asset.model_category.sys_id");
+		if(!modeCategoryName){
+			continue;
+		}
+		//modelCategoryNameList.push(modeCategoryName);
+		var modelCategory2={
+			sys_id:modelCategorySysId+"",
+			u_zh_name:modelCategoryZHName+"",
+			name:modeCategoryName+"",
+		};
+		if(assetClass=='alm_consumable'){
+			haveConsumable=true;
+			consumableModelCategoryList.push(modelCategory2);
+			continue;
+		}
+		modelCategoryList.push(modelCategory2);
+	}
+	//gs.info(">>>>>>JK:modelCategoryNameList:"+modelCategoryNameList.toString());
+	var tempModelCategoryList=modelCategoryList;
+	if(modelCategory && modelCategory!=""){
+		tempModelCategoryList=[];
+		var temp={
+			sys_id:modelCategory
+		};
+		tempModelCategoryList.push(temp);
+	}
+	//只查询耗材
+	if(modelCategory=='consumable'){
+		tempModelCategoryList=consumableModelCategoryList;
+	}
+	
+	for(var i in tempModelCategoryList){ 
+		//盘赢总数统计
+		//实际盘点人是自己且盘点管理员不是自己，则是为他人盘点，为盘赢
+		var gr2=new GlideAggregate("x_envision_itam_stock_take_detail");
+		gr2.addAggregate("SUM","stock_take_quantity");
+		setStateQuery(gr2,"gain");//盘赢查询条件
+		gr2.addQuery("asset.model_category",tempModelCategoryList[i].sys_id);
+		gr2.addQuery("task_number",sysId);
+		gr2.query();
+		if(gr2.next()){
+			profitCount=gr2.getAggregate("SUM","stock_take_quantity");
+		}
+		
+		var gr=new GlideAggregate("x_envision_itam_stock_take_detail");
+		gr.addAggregate("MAX","sys_id");
+		gr.addAggregate("MAX","asset");
+		gr.addAggregate("MAX","asset.model_category");
+		gr.addAggregate("MAX","asset.model.sys_id");
+		gr.addAggregate("SUM","stock_quantity");
+		gr.addAggregate("SUM","stock_take_quantity");
+		gr.addQuery("asset.model_category",tempModelCategoryList[i].sys_id);
+		gr.addQuery("task_number",sysId);
+		//资产型号分组统计
+		gr.groupBy("asset.model");
+		gr.query();
+		//获取该资产类别下对应的所有型号资产
+		
+		while(gr.next()){
+			var assetModel=gr.getAggregate("MAX","asset.model.sys_id");
+			var assetName=gr.getAggregate("MAX","asset");
+			if(!assetModel){
+				continue;
+			}
+			//查询的是耗材
+			if(modelCategory=="consumable"){
+				assetName=gr.getAggregate("MAX","asset.model_category")+" "+assetName;
+			}
+			var picture="";
+			var obj={
+				sys_id:gr.getAggregate("MAX","sys_id")+"",
+				u_stock_quantity:gr.getAggregate("SUM","stock_quantity")+"",
+				u_stock_take_quantity:gr.getAggregate("SUM","stock_take_quantity")+"",
+				display_name:assetName+"",
+				model:assetModel+"",
+				picture:""+picture,
+				assetTagList:[],
+				
+			};
+			stockCount+=parseInt(obj.u_stock_quantity);
+			stockTakeCount+=parseInt(obj.u_stock_take_quantity);
+			
+			//耗材不查询IT台账编号
+			if(modelCategory!="consumable"){
+				//获取当前型号对应的资产编码
+				var assetGr=new GlideRecord("x_envision_itam_stock_take_detail");
+				assetGr.addQuery("asset.model",obj.model);
+				assetGr.addQuery("task_number",sysId);
+				setStateQuery(assetGr,state);
+				//gs.info(">>>>>>JK:queryString:"+assetGr.getEncodedQuery());
+				assetGr.query();
+				
+				while(assetGr.next()){
+					//实际盘点人是自己且盘点责任人不是自己，则是为他人盘点，为盘赢
+					var profitNum=0;
+					if(assetGr.real_stock_take_user==userId && assetGr.managed_by!=userId){
+						profitNum=1;
+					}
+					var assetObj={
+						snAssetTag:assetGr.asset.x_envision_itam_sn_asset_tag+"",
+						profitNum:profitNum+"",
+						u_stock_take_quantity:assetGr.stock_take_quantity+"",
+					};
+					obj.assetTagList.push(assetObj);
+					//只要有一条清单未完成，则该盘点任务为完成
+					if(assetGr.stock_take_quantity<=0){
+						taskState="0";
+					}
+					if(!taskType){
+						taskType=assetGr.task_number.plan_type;
+					}
+				}
+				if(obj.assetTagList.length>0){
+					detailList.push(obj);
+				}
+			} else {
+				detailList.push(obj);
+			}
+		}
+		
+	}
+	var resp={
+		list:detailList,
+		stockCount:stockCount+"",
+		stockTakeCount:stockTakeCount+"",
+		profitCount:profitCount+"",
+		modelCategoryList:modelCategoryList,
+		taskState:taskState,
+		taskType:taskType+"",
+		haveConsumable:haveConsumable+"",
+	};
+	return resp;
+	
+	//状态查询条件
+	function setStateQuery(assetGr,state){
+		if(state=="has"){//已盘
+			assetGr.addQuery("stock_take_quantity",">","0");
+		} else if(state=="last"){//未盘
+			assetGr.addQuery("stock_take_quantity","<=","0");
+		} else if(state=="gain"){//盘赢
+			//实际盘点人是自己且盘点管理员不是自己，则是为他人盘点，为盘赢
+			assetGr.addQuery("stock_take_quantity",">","0");
+			assetGr.addQuery("real_stock_take_user",userId);
+			assetGr.addQuery("managed_by","!=",userId);
+		}
+	}
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/stock_take_plan_detail_list</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/stock_take_plan_detail_list</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-17 09:42:23</sys_created_on>
+        <sys_id>cfd854244f0863005d7d121f9310c763</sys_id>
+        <sys_mod_count>100</sys_mod_count>
+        <sys_name>盘点计划详情列表</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_cfd854244f0863005d7d121f9310c763</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-16 03:01:18</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

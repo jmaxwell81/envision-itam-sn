@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>设备入库</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var resp={status:"9999"};
+		var data=request.body.data;
+		if(!data || data.length<=0){
+			resp.msg="请求数据为空";
+			return resp;
+		}
+		if(!data.userId){
+			resp.msg="用户数据为空";
+			return resp;
+		}
+		if(!data.stockroomSysId){
+			resp.msg="仓库不能为空";
+			return resp;
+		}
+		if(!data.list || data.list.length<=0){
+			resp.msg="设备不能为空";
+			return resp;
+		}
+		var gr=new GlideRecord("alm_asset");
+		gr.addQuery("sys_id","IN",data.list.toString());
+		gr.query();
+		if(data.remark){
+			gr.work_notes=data.remark;
+		} 
+ 
+		//in stock
+		gr.install_status="6";
+		gr.stockroom=data.stockroomSysId;
+		gr.install_date=new GlideDateTime();
+		gr.assigned_to="";
+		gr.owned_by=data.userId;
+		gr.managed_by=data.userId;
+		gr.updateMultiple();
+		resp.status="0000";
+		return resp;
+	})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/device_enter</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/device_enter</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-11 08:14:25</sys_created_on>
+        <sys_id>c711cdae4f3313005d7d121f9310c73e</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>设备入库</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_c711cdae4f3313005d7d121f9310c73e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-13 01:34:06</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_export_set">
+    <sys_export_set action="INSERT_OR_UPDATE">
+        <append_timestamp>false</append_timestamp>
+        <export_definition display_value="ed_t_sys_update_preview_xml">8baedc3adbfda3406a1b9cb6db961951</export_definition>
+        <export_target display_value="update_set_test">c3be58fadbfda3406a1b9cb6db9619e6</export_target>
+        <file_name>es_t_sys_update_preview_xml.csv</file_name>
+        <format>CSV</format>
+        <max_rows>0</max_rows>
+        <name>es_t_sys_update_preview_xml</name>
+        <sys_class_name>sys_export_set</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-19 09:44:00</sys_created_on>
+        <sys_id>0bce107adbfda3406a1b9cb6db9619ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>es_t_sys_update_preview_xml</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_export_set_0bce107adbfda3406a1b9cb6db9619ef</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-19 09:44:00</sys_updated_on>
+        <use_display_value>true</use_display_value>
+        <use_label>false</use_label>
+    </sys_export_set>
+</record_update>

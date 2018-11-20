@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-28 02:05:55</sys_created_on>
+        <sys_id>dc0361afdb1da300328592d8db96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_envision_itam_missing_order.x_envision_itam.missing_order_user</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_security_acl display_value="x_envision_itam_missing_order">100361afdb1da300328592d8db961939</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_dc0361afdb1da300328592d8db96193c</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-28 02:05:55</sys_updated_on>
+        <sys_user_role display_value="x_envision_itam.missing_order_user" name="x_envision_itam.missing_order_user">580361afdb1da300328592d8db961930</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

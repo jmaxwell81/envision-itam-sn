@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="入库任务清单" max_length="40" name="x_envision_itam_in_stockroom_task_detail" type="collection">
+        <element label="资产" max_length="32" name="asset_tag" reference="alm_asset" type="reference"/>
+        <element default="1" label="发货数量" max_length="40" name="delivery_number" type="integer"/>
+        <element default="0" label="入库数量" max_length="40" name="in_stock_number" type="integer"/>
+        <element label="入库时间" max_length="40" name="in_stock_time" type="glide_date_time"/>
+        <element attributes="readonly_clickthrough=true" label="资产类型" max_length="32" name="model_category" reference="cmdb_model_category" type="reference"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="单号" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="实际入库人" max_length="32" name="operator" reference="sys_user" type="reference"/>
+        <element label="IT资产编号" max_length="40" name="sn_asset_tag" type="string"/>
+        <element attributes="readonly_clickthrough=true" label="入库任务" max_length="32" name="task_number" reference="x_envision_itam_in_stockroom_task" type="reference"/>
+        <index name="index">
+            <element name="asset_tag"/>
+        </index>
+        <index name="index2">
+            <element name="model_category"/>
+        </index>
+        <index name="index3">
+            <element name="task_number"/>
+        </index>
+        <index name="index4">
+            <element name="operator"/>
+        </index>
+    </element>
+</database>

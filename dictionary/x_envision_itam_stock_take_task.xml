@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_envision_itam_task" label="盘点任务" max_length="40" name="x_envision_itam_stock_take_task" sizeclass="65" type="collection">
+        <element label="Assistor" max_length="4000" name="assistor" reference="sys_user" type="glide_list"/>
+        <element attributes="readonly_clickthrough=true" label="Cost center" max_length="32" name="cost_center" reference="cmn_cost_center" type="reference"/>
+        <element label="Hardwares" max_length="32" name="hardwares" reference="alm_hardware" type="reference"/>
+        <element attributes="readonly_clickthrough=true" label="Parent" max_length="32" name="parent" read_only="true" reference="x_envision_itam_stock_take_task" type="reference"/>
+        <element attributes="readonly_clickthrough=true" label="Stockroom" max_length="32" name="plan_scope" reference="alm_stockroom" type="reference"/>
+        <element choice="1" label="Type" mandatory="true" max_length="40" name="plan_type" type="string">
+            <choice>
+                <element label="Audit" sequence="100" value="1"/>
+                <element label="审计盘点" language="zh" sequence="100" value="1"/>
+                <element label="Handover" sequence="200" value="2"/>
+                <element label="交接盘点" language="zh" sequence="200" value="2"/>
+                <element label="Daily" sequence="300" value="3"/>
+                <element label="日常盘点" language="zh" sequence="300" value="3"/>
+            </choice>
+        </element>
+        <element choice="1" label="Scope" mandatory="true" max_length="40" name="scope" type="choice">
+            <choice>
+                <element label="Stockroom" sequence="1" value="1"/>
+                <element label="仓库" language="zh" sequence="1" value="1"/>
+                <element label="Cost center" sequence="2" value="2"/>
+                <element label="成本中心" language="zh" sequence="2" value="2"/>
+                <element label="Part" sequence="3" value="3"/>
+                <element label="部分" language="zh" sequence="3" value="3"/>
+                <element label="All" sequence="4" value="4"/>
+                <element label="全部" language="zh" sequence="4" value="4"/>
+            </choice>
+        </element>
+    </element>
+</database>

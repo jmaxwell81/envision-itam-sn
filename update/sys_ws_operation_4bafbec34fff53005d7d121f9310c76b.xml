@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>盘点计划列表</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	// 盘点计划
+	var gr=new GlideAggregate("x_envision_itam_stock_take_detail");
+	var sysId=request.queryParams["sysId"];
+	var userId = request.queryParams["userId"];
+	var status = request.queryParams["u_status"];
+	
+	var pageNum=request.queryParams.pageNum;
+	pageNum=pageNum?pageNum:1;
+	var pageSize=5;
+	
+	var queryStringone = "managed_by="+userId+"^ORtask_number.assistorLIKE"+userId+"^task_number.stateIN"+status;
+	
+	
+	gr.addAggregate("SUM","stock_quantity");
+	gr.addAggregate("SUM","stock_take_quantity");
+	gr.addAggregate("MAX","task_number");
+	gr.addEncodedQuery(queryStringone);
+	gr.groupBy("task_number");
+	gr.setGroup(true);
+	gr.orderBy("task_number");
+	gr.chooseWindow((pageNum-1)*pageSize,pageNum*pageSize);
+	gr.query();
+	
+	//gs.info(">>>>>>JK:queryString:"+gr.getEncodedQuery());
+	
+	var list=[];
+	while(gr.next()){
+		var obj = {
+			pageSize:pageSize+"",
+			sys_id:gr.task_number+"",
+			u_number:gr.task_number.number+"",    //单据号
+			//stock_quantity: gr.stock_quantity+"",  //帐存数
+			//stock_take_quantity: gr.stock_take_quantity+"",  //实盘数
+			u_stockroom: (gr.task_number.plan_scope?gr.task_number.plan_scope.name+"":""), //仓库名称
+			u_plan_type: gr.task_number.plan_type+"",   //盘点类型
+			u_start_time: gr.task_number.start_time+"",  //开始时间
+			u_stop_time: gr.task_number.stop_time+"",   //结束时间
+			state: gr.task_number.state+"",  //状态
+			u_desicription: gr.task_number.description+"", //备注
+			stock_count:gr.getAggregate("SUM","stock_quantity")+"",  //帐存数
+			stock_take_count:gr.getAggregate("SUM","stock_take_quantity")+"",  //实盘数
+			
+		};
+		list.push(obj);
+	}
+	return list;
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/stock_plan_list</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/stock_plan_list</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-13 06:08:09</sys_created_on>
+        <sys_id>4bafbec34fff53005d7d121f9310c76b</sys_id>
+        <sys_mod_count>105</sys_mod_count>
+        <sys_name>盘点计划列表</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_4bafbec34fff53005d7d121f9310c76b</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-16 07:50:23</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

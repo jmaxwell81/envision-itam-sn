@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>盘点计划详情(硬件)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var sysId=request.queryParams["sysId"];
+	var gr=new GlideRecord("x_envision_itam_stock_take_task");
+	gr.addQuery("sys_id",sysId);
+	gr.query();
+	var obj={};
+	if(gr.next()){
+		obj={
+			sys_id:gr.sys_id+"",
+			stockroom:gr.plan_scope.name+"",
+			stockroomSysId:gr.plan_scope+"",
+			start_time:gr.start_time+"",
+			stop_time:gr.stop_time+"",
+			assistorCount:"0",
+		
+		};
+		if(gr.assistor){
+			//协助者
+			obj.assistorCount=gr.assistor.split(",").length;
+		}
+		
+		//盘点统计
+		var ga=new GlideAggregate("x_envision_itam_stock_take_detail");
+		ga.addQuery("asset.sys_class_name","alm_hardware");
+		ga.addQuery("task_number",gr.sys_id);
+		ga.addAggregate("SUM","stock_quantity");
+		ga.addAggregate("SUM","stock_take_quantity");
+		ga.groupBy("task_number");
+		ga.query();
+		if(ga.next()){
+			obj.u_stock_quantity=ga.getAggregate("SUM","stock_quantity");
+			obj.u_stock_take_quantity=ga.getAggregate("SUM","stock_take_quantity");
+			obj.remain_quantity=obj.u_stock_quantity-obj.u_stock_take_quantity;
+			obj.percent=(obj.u_stock_take_quantity/obj.u_stock_quantity)*100.00;
+			obj.percent=obj.percent.toFixed(2);
+			
+		}
+	}
+    
+	return obj;
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/stock_take_plan_detail</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/stock_take_plan_detail</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-16 05:56:02</sys_created_on>
+        <sys_id>7a5b71c04fc023005d7d121f9310c70d</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>盘点计划详情(硬件)</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_7a5b71c04fc023005d7d121f9310c70d</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-16 06:10:54</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

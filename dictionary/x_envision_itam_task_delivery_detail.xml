@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="清单" max_length="40" name="x_envision_itam_task_delivery_detail" type="collection">
+        <element default="1" label="Asset Count" max_length="40" name="asset_count" type="integer"/>
+        <element label="Contract" max_length="32" name="contract" reference="ast_contract" type="reference"/>
+        <element default="3" label="Depreciable Life" max_length="40" name="depreciable_life" type="integer"/>
+        <element label="Lease" max_length="40" name="is_lease" type="boolean"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return 'xxxx';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice_field="acquisition_method" dependent="model_category" dependent_on_field="model_category" label="Model" max_length="32" name="model" reference="cmdb_model" reference_cascade_rule="clear" reference_qual="javascript:var gURI = new GlideURI();new SNApiUtil().assetModelRefQual(current,gURI.get(&quot;sysparm_dependent&quot;));" type="reference" use_dependent_field="true" use_reference_qualifier="advanced"/>
+        <element label="Model Category" max_length="32" name="model_category" reference="cmdb_model_category" reference_cascade_rule="restrict" reference_qual="javascript:new ModelAndCategoryFilters().assetModelCategoryRefQual(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Asset Price" max_length="20" name="original_value" type="price"/>
+        <element label="Mates Receipt" max_length="32" name="parent_id" reference="x_envision_itam_take_delivery" reference_floats="true" type="reference"/>
+        <element label="Remark" max_length="255" name="remark" type="string_full_utf8"/>
+        <index name="index">
+            <element name="model_category"/>
+        </index>
+        <index name="index2">
+            <element name="parent_id"/>
+        </index>
+        <index name="index3">
+            <element name="contract"/>
+        </index>
+        <index name="index4">
+            <element name="model"/>
+        </index>
+    </element>
+</database>

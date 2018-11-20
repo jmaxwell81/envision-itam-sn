@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="ldap_server_url">
+    <ldap_server_url action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <operational_status>true</operational_status>
+        <order>100</order>
+        <server display_value="Envision_disabled_ldap">398acfffdb406b006a1b9cb6db9619f2</server>
+        <sys_class_name>ldap_server_url</sys_class_name>
+        <sys_created_by>junhui.lei</sys_created_by>
+        <sys_created_on>2018-08-28 00:58:13</sys_created_on>
+        <sys_id>b98a8333db806b006a1b9cb6db961948</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>LDAP://172.16.3.36:389/</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>ldap_server_url_b98a8333db806b006a1b9cb6db961948</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-11-16 13:49:57</sys_updated_on>
+        <url>LDAP://172.16.3.36:389/</url>
+    </ldap_server_url>
+</record_update>

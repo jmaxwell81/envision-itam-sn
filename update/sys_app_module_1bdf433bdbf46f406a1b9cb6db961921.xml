@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="task de">5bdf433bdbf46f406a1b9cb6db96191e</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>task delivery details</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_envision_itam_task_delivery_detail</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>ITAM 管理员</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>junhui.lei</sys_created_by>
+        <sys_created_on>2018-10-04 08:08:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1bdf433bdbf46f406a1b9cb6db961921</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>清单s</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_app_module_1bdf433bdbf46f406a1b9cb6db961921</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-24 03:31:48</sys_updated_on>
+        <timeline_page/>
+        <title>清单s</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

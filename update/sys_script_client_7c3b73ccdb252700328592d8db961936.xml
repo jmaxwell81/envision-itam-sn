@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>sys_created_on</field>
+        <global>true</global>
+        <messages/>
+        <name>显示收货清单</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   if(g_form.isNewRecord()){
+	  g_form.setSectionDisplay("delivery_list",false); 
+   } else {
+	   g_form.setSectionDisplay("delivery_list",true);
+   }
+   
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-30 02:28:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7c3b73ccdb252700328592d8db961936</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>显示收货清单</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_7c3b73ccdb252700328592d8db961936</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-30 02:35:03</sys_updated_on>
+        <table>x_envision_itam_take_delivery</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

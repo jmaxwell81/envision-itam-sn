@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_hp_cascading_filter">
+    <sys_ui_hp_cascading_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <cascading_filter_reference_field>cmdb_model_category</cascading_filter_reference_field>
+        <conditions/>
+        <display_field>display_name</display_field>
+        <look_up_name/>
+        <name>资产型号</name>
+        <parent display_value="资产类型">cd3aa127dbc567806a1b9cb6db96190f</parent>
+        <publisher_reference/>
+        <sys_class_name>sys_ui_hp_cascading_filter</sys_class_name>
+        <sys_created_by>junhui.lei</sys_created_by>
+        <sys_created_on>2018-10-15 16:29:56</sys_created_on>
+        <sys_id>2f8b6527dbc567806a1b9cb6db9619bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>资产型号</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ui_hp_cascading_filter_2f8b6527dbc567806a1b9cb6db9619bd</sys_update_name>
+        <sys_updated_by>junhui.lei</sys_updated_by>
+        <sys_updated_on>2018-10-15 16:29:56</sys_updated_on>
+        <table>cmdb_model</table>
+    </sys_ui_hp_cascading_filter>
+    <sys_translated_text action="delete_multiple" query="documentkey=2f8b6527dbc567806a1b9cb6db9619bd"/>
+</record_update>

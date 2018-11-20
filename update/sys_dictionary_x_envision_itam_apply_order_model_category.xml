@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_dictionary action="INSERT_OR_UPDATE" element="model_category" table="x_envision_itam_apply_order">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes/>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+	//资产类型为空，则显示资产对应的资产类型
+	if(!current.model_category){
+		return current.asset.model_category; 	
+	}
+	return current.model_category;
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Model category</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>model_category</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Reference">reference</internal_type>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <name>x_envision_itam_apply_order</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="cmdb_model_category">cmdb_model_category</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>asset_class=alm_hardware</reference_qual>
+        <reference_qual_condition table="cmdb_model_category">asset_class=^EQ<item endquery="false" field="asset_class" goto="false" newquery="false" operator="=" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-26 03:04:15</sys_created_on>
+        <sys_id>d0ca573adb956300328592d8db96194e</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Model category</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_dictionary_x_envision_itam_apply_order_model_category</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-14 07:34:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>true</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+</record_update>

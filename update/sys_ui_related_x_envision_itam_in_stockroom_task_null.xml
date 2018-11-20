@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_related sys_domain="global" table="x_envision_itam_in_stockroom_task" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="入库任务 - Default view" name="x_envision_itam_in_stockroom_task" related_list="NULL" sys_domain="global" view="Default view">dfc92316db6423006a1b9cb6db9619e2</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_envision_itam_in_stockroom_task_detail.task_number</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-17 07:55:22</sys_created_on>
+            <sys_id>97c92316db6423006a1b9cb6db9619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-17 07:55:22</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="入库任务 - Default view" name="x_envision_itam_in_stockroom_task" related_list="NULL" sys_domain="global" view="Default view">dfc92316db6423006a1b9cb6db9619e2</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_envision_itam_transfer_stockroom_task.rela_number</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-17 07:55:22</sys_created_on>
+            <sys_id>9bc92316db6423006a1b9cb6db9619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-17 07:55:22</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="入库任务 - Default view" name="x_envision_itam_in_stockroom_task" related_list="NULL" sys_domain="global" view="Default view">dfc92316db6423006a1b9cb6db9619e2</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>task_sla.task</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-17 07:55:22</sys_created_on>
+            <sys_id>9fc92316db6423006a1b9cb6db9619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-17 07:55:22</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>入库任务 - Default view</calculated_name>
+            <filter/>
+            <name>x_envision_itam_in_stockroom_task</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-09-17 07:55:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dfc92316db6423006a1b9cb6db9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>In Stockroom Task - Default view</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_ui_related_x_envision_itam_in_stockroom_task_null</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-09-17 07:55:22</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

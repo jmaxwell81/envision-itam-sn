@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>入库任务设备清单</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var taskNumber=request.queryParams["taskNumber"];
+	var modelCategory=request.queryParams["modelCategory"]; 
+	//默认显示未签收设备(0:未签收，1：已签收)
+	var isStocked=request.queryParams["isStocked"];
+	isStocked=(!isStocked?0:isStocked);
+	//关键字搜索
+	var keyword=request.queryParams["keyword"]; 
+	var pageNum=request.queryParams.pageNum;
+	pageNum=pageNum?pageNum:1;
+	var pageSize=6;
+	
+	//获取入库任务对应的资产类别数据
+	var categoryGa=new GlideAggregate("x_envision_itam_in_stockroom_task_detail");
+	categoryGa.addAggregate("SUM","delivery_number");//应入库数
+	categoryGa.addAggregate("SUM","in_stock_number");//已入库数
+	categoryGa.addQuery("task_number",taskNumber);
+	if(keyword!=null && keyword!=""){
+		categoryGa.addEncodedQuery("asset_tagLIKE"+keyword+"^ORasset_tag.display_nameLIKE"+keyword);	
+	}
+	//categoryGa.addQuery("in_stock_number",isStocked);
+	//model_category 必要有值 ，否则无法分组，不能使用asset_tag.model_category
+	categoryGa.groupBy("model_category");
+	categoryGa.query();
+	categoryGa.orderByDesc("model_category.x_envision_itam_sort");
+	//gs.info(">>>>>>JK:query:"+categoryGa.getEncodedQuery());
+	var categoryList=[];
+	var categorySysIdList=[];
+	var resp={};
+		var total=0;//所有设备总数
+		var inStockTotal=0;//已入库总数 
+		var modelCategoryCount={};//设备分类对应的数量 {sysId:count}
+			while(categoryGa.next()){
+				if(!categoryGa.model_category){
+					continue;
+				}
+				
+				var obj={
+					modelCategoryZhName:categoryGa.model_category.x_envision_itam_zh_name+"",
+					modelCategory:categoryGa.model_category.name+"",
+					modelCategorySysId:categoryGa.model_category.sys_id+"",
+					count:categoryGa.getAggregate("SUM","delivery_number")+"",
+					inStockCount:categoryGa.getAggregate("SUM","in_stock_number")+"",
+				};
+				//设备类型-应入库数量
+				modelCategoryCount[obj.modelCategorySysId]=obj.count;
+				//设备类型-已入库数量
+				modelCategoryCount[obj.modelCategorySysId+"-InStock"]=categoryGa.getAggregate("SUM","in_stock_number");
+				
+				total+=parseInt(obj.count);
+				inStockTotal+=parseInt(obj.inStockCount);
+				categorySysIdList.push(categoryGa.model_category.sys_id);
+				categoryList.push(obj);
+			}
+			//获取入库任务设备清单
+			var gr=new GlideRecord("x_envision_itam_in_stockroom_task_detail");
+			gr.addQuery("task_number",taskNumber);
+			
+	
+			var query=gr.addQuery("in_stock_number",isStocked);
+			if(isStocked==0){
+				query.addOrCondition("in_stock_number","");
+			}
+			if(keyword!=null && keyword!=""){
+				gr.addEncodedQuery("asset_tagLIKE"+keyword+"^ORasset_tag.display_nameLIKE"+keyword);	
+			}
+			if(modelCategory!=null && modelCategory!=""){
+				gr.addQuery("model_category",modelCategory);
+			} else {
+				gr.addQuery("model_category","IN",categorySysIdList.toString());
+			}
+			//gs.info(">>>>>>JK:query:"+gr.getEncodedQuery());
+			gr.chooseWindow((pageNum-1)*pageSize,pageNum*pageSize);
+			gr.query();
+			var list=[];
+			
+			while(gr.next()){
+				//图片， file_name=picture 为封面图
+				var picture="";
+				if(gr.asset_tag.model){
+					var attGr=new GlideRecord("sys_attachment");
+					attGr.addEncodedQuery("content_typeLIKEimage^file_name=picture^table_sys_id="+gr.asset_tag.model.sys_id);
+					attGr.query();
+					if(attGr.next()){
+						var sysEncodedAttachment = new GlideSysAttachment();
+						picture = sysEncodedAttachment.getContentBase64(attGr);
+					}
+				}
+				var data={
+					sys_id:gr.sys_id+"",
+					asset_sys_id:gr.asset_tag+"",
+					u_sn_asset_tag:gr.x_envision_itam_sn_asset_tag+"",
+					number:gr.number+"",
+					picture:picture,
+					display_name:gr.asset_tag.display_name+"",
+					asset_tag:gr.asset_tag.asset_tag+"",
+					u_managed_by:gr.asset_tag.owned_by.name+"",
+				};
+				
+				list.push(data);
+			}
+			resp.categoryList=categoryList;
+			resp.list=list;
+			resp.total=total;
+			resp.inStockTotal=inStockTotal;
+			resp.pageSize=pageSize;
+			//设备类型-已入库数量
+			resp.categoryInStockCount=modelCategoryCount[modelCategory+"-InStock"];
+			//设备类型-应入库数量
+			resp.categoryCount=modelCategoryCount[modelCategory];
+			//所有类别
+			if(modelCategory=="" || modelCategory==null){
+				resp.categoryInStockCount=inStockTotal;
+				resp.categoryCount=total;
+			}
+				
+			//已签收总数-按类别
+// 			if(isStocked=="1"){
+// 				resp.stockedTotal=list.length;
+// 				if(modelCategory!=null && modelCategory!=""){
+// 					resp.notStockedTotal=modelCategoryCount[modelCategory]-list.length;
+// 				} else {
+// 					resp.notStockedTotal=total-resp.stockedTotal;
+// 				}
+				
+// 			}
+// 			//未签收总数-按类别
+// 			if(isStocked=="0"){
+// 				resp.notStockedTotal=list.length;
+// 				if(modelCategory!=null && modelCategory!=""){
+// 					resp.stockedTotal=modelCategoryCount[modelCategory]-list.length;
+// 				} else {
+// 					resp.stockedTotal=total-resp.notStockedTotal;	
+// 				}
+				
+// 			}
+			return resp;
+			
+		})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/in_stockroom_task_detail_list</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/in_stockroom_task_detail_list</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-20 02:35:27</sys_created_on>
+        <sys_id>5ae35e514f8023005d7d121f9310c796</sys_id>
+        <sys_mod_count>102</sys_mod_count>
+        <sys_name>入库任务设备清单</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_5ae35e514f8023005d7d121f9310c796</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-09 12:00:57</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

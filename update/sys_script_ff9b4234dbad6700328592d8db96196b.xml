@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_envision_itam_stock_take_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_envision_itam_stock_take_task">stateCHANGESTO01^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="01"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>开始盘点后切分盘点子任务</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	//gs.info(">>>>>>JK：开始生成盘点任务清单");
+	var gr=new GlideRecord("alm_asset");
+	//数据结构，key=stockroom/cost_center.sysId  value=List<Hardware>
+	var data={};
+		var keyData={};//key=stockroom/cost_center.sysId value=<stockroom/cost_center>
+			var key="";
+			if(current.plan_type=="1"){
+				//Audit 审计盘点 责任人以成本中心切分
+				key="cost_center";
+			} else  {
+				//Daily,Handover 责任人以仓库切分
+				key="stockroom";
+			}
+			//未锁定的资产
+			gr.addQuery("x_envision_itam_is_locked",false);
+			//只能是硬件和耗材
+			gr.addEncodedQuery("sys_class_nameINalm_consumable,alm_hardware");
+			//仓库范围 盘点
+			if(current.scope=="1"){
+				gr.addQuery("stockroom",current.plan_scope);
+			} else if(current.scope=="2"){
+				//成本中心范围 盘点
+				gr.addQuery("cost_center",current.cost_center);
+				gr.addQuery("install_status","IN","6");//In stock
+			} else if(current.scope=="3"){
+				//选择性盘点
+				gr.addQuery("x_envision_itam_stock_take_task",current.sys_id);
+				gr.addQuery("install_status","IN","6");//In stock
+			} else if(current.scope=="4"){
+				//全盘
+				gr.addQuery("install_status","IN","6");//In stock
+				//gr.setLimit(100);
+			}
+			groupBy();
+			//1.仓库范围 且按仓库划分责任人时不生成子任务
+			//2.成本中心范围 且按成本中心划分责任人时不生成子任务
+			var isSubTask=true;
+			if(key=="stockroom" && current.scope=="1"){
+				isSubTask=false;
+				current.managed_by=current.plan_scope.manager;
+				current.update();
+			} else if(key=="cost_center" && current.scope=="2"){
+				isSubTask=false;
+				current.managed_by=current.cost_center.manager;
+				current.update();
+			}
+			for(var p in data){
+				var list=data[p];
+				var task=new GlideRecord(current.getTableName());
+				if(isSubTask){
+					//生成盘点子任务
+					for(var jj in current){
+						task[jj]=current[jj];
+					}
+					task.number=global.getNextObjNumberPadded();
+					task.parent=current.sys_id;
+					task.managed_by=keyData[p].manager;
+					if(key=="stockroom"){
+						//按仓库划分责任人,把子任务的范围改为仓库
+						task.scope="1";
+						task.plan_scope=keyData[p].stockroom;
+						task.cost_center="";
+					} else {
+						//按成本中心划分责任人,把子任务的范围改为成本中心
+						task.scope="2";
+						task.cost_center=keyData[p].cost_center;
+						task.plan_scope="";
+					}
+					task.insert();
+				}
+				
+				for(var i=0;i<list.length;i++){
+					var asset=list[i];
+					//生成盘点任务清单
+					var detail=new GlideRecord("x_envision_itam_stock_take_detail");
+					if(isSubTask){
+						detail.task_number=task.sys_id;
+					} else {
+						detail.task_number=current.sys_id;
+					}
+					detail.asset=asset.sys_id;
+					detail.stock_take_state="1";//executing
+					detail.stock_take_method="2";//Scan
+					detail.managed_by=keyData[p].manager;
+					detail.stockroom=asset.stockroom;
+					detail.stock_quantity=asset.quantity;
+					detail.insert();
+					
+				}
+			}
+			
+			//分组，以成本中心或仓库
+			function groupBy(){
+				var haveAsset=false;
+				gs.info(">>>>>>JK:query:"+gr.getEncodedQuery());
+				gr.query();
+				while(gr.next()){
+					haveAsset=true;
+					gr.x_envision_itam_stock_take="";
+					if(gr.sys_class_name=='alm_hardware'){
+						//锁定资产
+						gr.x_envision_itam_is_locked=true;
+					}
+					gr.update();
+					
+					//gs.info(">>>>>>JK:display_name:"+gr.x_envision_itam_sn_asset_tag);
+					var assetData={
+						sys_id:gr.sys_id+"",
+						display_name:gr.display_name+"",
+						managed_by:gr.managed_by+"",
+						owned_by:gr.owned_by+"",
+						assigned_to:gr.assigned_to+"",
+						stockroom:gr.stockroom+"",
+						quantity:gr.quantity+"",
+					};
+					var list=[];
+					if(data[gr[key]]!=null && data[gr[key]].length>0){
+						list=data[gr[key]];
+					}
+					list.push(assetData);
+					data[gr[key]]=list;
+					
+					if(!keyData[gr[key]]){
+						if(key=="cost_center"){
+							keyData[gr[key]]={
+								cost_center:gr.cost_center+"",
+								manager:gr.cost_center.manager+"",//盘点责任人是成本中心管理员
+								stockroom:gr.stockroom+"",
+							};
+						} else if(key=="stockroom"){
+							keyData[gr[key]]={
+								cost_center:gr.cost_center+"",
+								manager:gr.stockroom.manager+"",//盘点责任人是仓库管理员
+								stockroom:gr.stockroom+"",
+							};
+							
+						}
+					}
+				}
+				if(!haveAsset){
+					gs.addErrorMessage("无法开始盘点任务");
+					if(key=="stockroom"){
+						gs.addErrorMessage("1.请确保仓库关联了资产");
+					} else {
+						gs.addErrorMessage("1.请确保成本中心关联了资产");
+					}
+					gs.addErrorMessage("2.请确保资产不处于正在盘点的任务中");
+					gs.addErrorMessage("2.请确保资产处于仓库中的状态");
+					current.state="-5";//临时果断状态,因为无法变为0，原因未知
+					current.update();
+				}
+			}
+			
+		})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-01 02:18:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ff9b4234dbad6700328592d8db96196b</sys_id>
+        <sys_mod_count>91</sys_mod_count>
+        <sys_name>开始盘点后切分盘点子任务</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_ff9b4234dbad6700328592d8db96196b</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-16 07:20:36</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=ff9b4234dbad6700328592d8db96196b"/>
+</record_update>

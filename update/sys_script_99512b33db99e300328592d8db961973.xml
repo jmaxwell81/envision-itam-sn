@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_envision_itam_restore_order</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>保存成功后发送小程序通知(归还)</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var title="IT资产归还成功通知";
+	var wx=new x_envision_itam.MiniProgramMsg();
+	var contentItem=[
+		{
+			key:"单号",value:current.number+""
+		},{
+			key:"设备",value:current.asset.display_name+""
+		},{
+			key:"归还仓库",value:current.stockroom.name+""
+		} 
+	];
+	wx.send(current.apply_user.employee_number,title,null,contentItem,null);
+		
+	})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-29 05:58:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>99512b33db99e300328592d8db961973</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>保存成功后发送小程序通知(归还)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_99512b33db99e300328592d8db961973</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-02 08:11:55</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=99512b33db99e300328592d8db961973"/>
+</record_update>

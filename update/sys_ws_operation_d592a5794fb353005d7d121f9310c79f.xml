@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>帮助中心</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var gr = new GlideRecord("kb_knowledge");
+	
+ 	var queryString = "kb_knowledge_base=0be1c7efdb84e7006a1b9cb6db9619ed^kb_category=d1f24fefdb84e7006a1b9cb6db96194e^workflow_state=published";
+ 	gr.addEncodedQuery(queryString);
+	gr.query();
+	var list=[];
+	var snApiUtil=new SNApiUtil();
+	while(gr.next()){
+		var obj={
+			number: gr.number+"",
+			kb_category: gr.kb_category+"",
+			kb_knowledge_base: gr.kb_knowledge_base+"",
+			workflow_state: gr.workflow_state+"",
+			short_description: gr.short_description+"",
+			text: snApiUtil.htmlParse(gr.text)+"",
+		};
+		list.push(obj);
+		
+	}
+	return list;
+	
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/user_help</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/user_help</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-09 03:02:43</sys_created_on>
+        <sys_id>d592a5794fb353005d7d121f9310c79f</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_name>帮助中心</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_d592a5794fb353005d7d121f9310c79f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-13 01:34:25</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

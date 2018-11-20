@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>batch_id</field>
+        <global>true</global>
+        <messages/>
+        <name>Onload Tag Batch</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	var gr = GlideRecord("x_envision_itam_sn_tag_batch");
+	var year = g_form.getValue("valid_year");
+	if(!year){
+		year = (new GlideDate()).getByFormat("yy");
+		g_form.setValue("valid_year",year);
+	}
+	gr.addQuery("valid_year",year);
+	gr.query();
+	var batchCount = gr.RowCount()+1;
+	g_form.setValue("u_batch_id",(Array(3).join("0") + batchCount).slice(-3));
+	g_form.addInfoMessage("---Onload Tag Batch--"+year+"---"+(Array(3).join("0") + batchCount).slice(-3));
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>junhui.lei</sys_created_by>
+        <sys_created_on>2018-08-28 07:36:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c2cedc48db5c6b006a1b9cb6db961975</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Onload Tag Batch</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_c2cedc48db5c6b006a1b9cb6db961975</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-09-13 09:17:50</sys_updated_on>
+        <table>x_envision_itam_sn_tag_batch</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

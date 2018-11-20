@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="scope" label="盘点范围" language="zh" table="x_envision_itam_stock_take_task">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>scope</element>
+            <help/>
+            <hint/>
+            <label>盘点范围</label>
+            <language>zh</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>junhui.lei</sys_created_by>
+            <sys_created_on>2018-10-31 11:28:12</sys_created_on>
+            <sys_id>c670872cdba56700328592d8db9619cb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>盘点范围</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_stock_take_task_scope_zh</sys_update_name>
+            <sys_updated_by>junhui.lei</sys_updated_by>
+            <sys_updated_on>2018-10-31 11:30:02</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

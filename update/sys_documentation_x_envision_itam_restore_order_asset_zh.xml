@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="asset" label="资产" language="zh" table="x_envision_itam_restore_order">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>asset</element>
+            <help/>
+            <hint/>
+            <label>资产</label>
+            <language>zh</language>
+            <name>x_envision_itam_restore_order</name>
+            <plural>资产s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yangdong.luo</sys_created_by>
+            <sys_created_on>2018-10-30 06:01:16</sys_created_on>
+            <sys_id>970ce4d4dbe52700328592d8db9619af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>资产</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_restore_order_asset_zh</sys_update_name>
+            <sys_updated_by>yangdong.luo</sys_updated_by>
+            <sys_updated_on>2018-10-30 06:01:16</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

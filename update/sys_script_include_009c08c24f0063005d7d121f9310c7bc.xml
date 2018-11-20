@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_envision_itam.SNApiUtil</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SNApiUtil</name>
+        <script><![CDATA[var SNApiUtil = Class.create();
+SNApiUtil.prototype = {
+	initialize: function() {
+	},
+	//登录日志,channel- 1:PC 2:mobile
+	//data:{userId,channel,systemInfo}
+		saveLoginLog:function(data){
+			var log=new GlideRecord("x_envision_itam_login_log");
+			var loginLog=new GlideRecord("x_envision_itam_login_log");
+			log.addQuery("user",data.userId);
+			log.addQuery("channel",data.channel);
+			log.orderByDesc("login_time");
+			log.setLimit(1);
+			log.query();
+			if(log.next()){
+				loginLog.last_login_time=log.login_time;
+			}
+			
+			loginLog.user=data.userId;
+			loginLog.login_time=new GlideDateTime();
+			loginLog.channel=data.channel;
+			loginLog.system_info=JSON.stringify(data.systemInfo);
+			loginLog.insert();
+		},
+		htmlParse:function(html){
+			//&#xff0c;  == ，
+			
+			html=html.replace(/&#xff0c;/g,"，");
+			// &#61; == =
+			html=html.replace(/&#61;/g,"=");
+			html=html.replace(/&#xff1a;/g,"：");
+			html=html.replace(/&#xff1b;/g,"；");
+			return html;
+		},
+		//获取资产状态数据
+		getAssetState:function(value,language){
+			var choice=new GlideRecord("sys_choice");
+			choice.addQuery("element","install_status");
+			choice.addQuery("name","alm_hardware");
+			if(value){
+				choice.addQuery("value",value);
+			}
+			choice.addQuery("language",language);
+			choice.query();
+			choice.next();
+			return choice;
+		},
+		assetModelRefQual : function(current,modelCategory) {  
+			if(modelCategory){
+				return 'cmdb_model_categoryLIKE' +
+				modelCategory;
+			} 
+			var categoryClause = '';
+			var isCategoryDefined = (current.model_category.toString() != '');
+			if (isCategoryDefined) {
+				var category = new GlideRecord('cmdb_model_category');
+				category.get(current.model_category.toString());
+				categoryClause = 'cmdb_model_categoryLIKE' +
+				category.sys_id.toString();
+				 
+			}  
+			return categoryClause;
+		},
+		type: 'SNApiUtil'
+	};
+
+
+
+
+
+
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-22 00:41:18</sys_created_on>
+        <sys_id>009c08c24f0063005d7d121f9310c7bc</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>SNApiUtil</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_include_009c08c24f0063005d7d121f9310c7bc</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-11 08:42:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

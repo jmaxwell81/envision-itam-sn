@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>查询设备图片</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var assetId=request.queryParams["sysId"];
+	
+	//图片，轮播图  file_name=image1 为封面图
+	//签收时上传的图片
+	var imageList=[];
+	var attGr=new GlideRecord("sys_attachment");
+	attGr.addEncodedQuery("content_typeLIKEimage^file_nameINx_envision_itam_image1,x_envision_itam_image2,x_envision_itam_image3,x_envision_itam_image4^table_sys_id="+assetId);
+	attGr.query();
+	while(attGr.next()){
+		var sysEncodedAttachment = new GlideSysAttachment();
+		var image = sysEncodedAttachment.getContentBase64(attGr);
+		imageList.push(image);
+	}
+	return imageList;
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/device_images</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/device_images</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-05 08:04:24</sys_created_on>
+        <sys_id>06a14096dbad2b00328592d8db9619d8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>查询设备图片</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_06a14096dbad2b00328592d8db9619d8</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-05 08:09:14</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

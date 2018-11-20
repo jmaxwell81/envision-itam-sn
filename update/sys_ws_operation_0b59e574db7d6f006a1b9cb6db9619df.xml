@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>校验手机是否关联用户</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var mobilePhone=request.queryParams.mobilePhone+"";
+	var resp={status:"0000"};
+		if(mobilePhone.length<11){
+			resp.msg="手机号码格式不正确";
+			resp.status="9999";
+			return resp;
+		}
+		var gr=new GlideRecord("sys_user");
+		gr.addEncodedQuery("mobile_phoneLIKE"+mobilePhone);
+		gr.addActiveQuery();
+		gr.query();
+		if(gr.next()){
+			resp.userId=gr.sys_id+"";
+			return resp;
+		}
+		resp.status="9999";
+		resp.msg="该手机号码未关联用户";
+		return resp;
+		
+	})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/check_phone</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/check_phone</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-13 10:02:08</sys_created_on>
+        <sys_id>0b59e574db7d6f006a1b9cb6db9619df</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>校验手机是否关联用户</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_0b59e574db7d6f006a1b9cb6db9619df</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-13 10:41:32</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

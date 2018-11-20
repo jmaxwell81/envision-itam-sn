@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>根据设备类别查询设备列表</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var gr=new GlideRecord("alm_hardware");
+	var modelCategorySysIds=request.queryParams["modelCategorySysIds"];
+	var userId=request.queryParams["userId"];
+	var isCount=request.queryParams["isCount"];
+	var keyword=request.queryParams['keyword'];
+	var owned_by_name=request.queryParams['owned_by_name'];
+	var owned_by=request.queryParams['owned_by'];
+	var install_status=request.queryParams['install_status'];
+	var language=request.queryParams['language'];
+	var pageNum=request.queryParams.pageNum;//页码数
+	pageNum=pageNum?pageNum:1;
+	var pageSize=6;
+	var snApiUtil=new SNApiUtil();
+	
+	//默认查询所有类别资产
+	var queryString="assigned_to="+userId+"^ORowned_by="+userId;
+	if(owned_by && owned_by!=""){
+		//查询指定责任人的设备
+		queryString="owned_by="+owned_by;
+	} else {
+		if(isCount){
+			//查询管理员管理的设备
+			queryString="managed_by="+userId;
+		}
+	}
+	
+	if(modelCategorySysIds && modelCategorySysIds!=null && modelCategorySysIds!=""){
+		queryString+="^model_categoryIN"+modelCategorySysIds;
+	}
+	if(keyword && keyword!=""){//关键字
+		queryString+="^asset_tagLIKE"+keyword+"^ORdisplay_nameLIKE"+keyword+"^ORmodel.display_nameLIKE"+keyword;
+	}
+	if(owned_by_name && owned_by_name!=""){//责任人
+		queryString+="^owned_by.nameLIKE"+owned_by_name;
+	}
+	if(install_status && install_status!=""){//设备状态
+		queryString+="^install_status="+install_status;
+	}
+	
+	//gs.info(">>>>>>JK:queryString:"+queryString);
+	gr.addQuery(queryString);
+	gr.addEncodedQuery("^serial_numberISNOTEMPTY");
+	
+	gr.chooseWindow((pageNum-1)*pageSize,pageNum*pageSize);
+	
+	gr.query();
+	var list=[];
+	while(gr.next()){
+		//图片， file_name=picture 为封面图
+		var picture="";
+		var attGr=new GlideRecord("sys_attachment");
+		attGr.addEncodedQuery("content_typeLIKEimage^file_name=picture^table_sys_id="+gr.model.sys_id);
+		attGr.query();
+		if(attGr.next()){
+			var sysEncodedAttachment = new GlideSysAttachment();
+			picture = sysEncodedAttachment.getContentBase64(attGr);
+		}
+		var choice=snApiUtil.getAssetState(gr.install_status,language);
+		var obj={
+			sys_id:gr.sys_id+"",
+			picture:picture+"",
+			u_sn_asset_tag:gr.x_envision_itam_sn_asset_tag+"",
+			u_is_locked:gr.x_envision_itam_is_locked+"",
+			display_name:gr.display_name+"",
+			serial_number:gr.serial_number+"",
+			asset_tag:gr.asset_tag+"",
+			install_status:choice.label+"",
+			install_status_value:gr.install_status+"",
+			managed_by:gr.managed_by.name+"",
+			owned_by:gr.owned_by.name+"",
+			assigned_to:gr.assigned_to.name+"",
+			pageSize:pageSize+"",
+		};
+		list.push(obj);
+	}
+	//统计管理员负责数，其他人负责数
+	if(isCount){
+		var resp={};
+			var ga=new GlideAggregate("alm_hardware");
+			ga.addEncodedQuery(queryString);
+			ga.addAggregate("SUM","quantity");
+			ga.setGroup(false);
+			ga.query();
+			//总数
+			if(ga.next()){
+				resp.total=ga.getAggregate("SUM","quantity");
+			}
+			//管理员负责数
+			queryString+="^owned_by="+userId;
+			ga.addEncodedQuery(queryString);
+			ga.addAggregate("SUM","quantity");
+			ga.setGroup(false);
+			ga.query();
+			var manage_count=0;
+			if(ga.next()){
+				manage_count=ga.getAggregate("SUM","quantity");
+			}
+			resp.manage_count=manage_count;
+			//其它人管理数
+			resp.other_count=resp.total-manage_count;
+			resp.list=list;
+			return resp;
+		}
+		return list;
+		
+	})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/my_device_list</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/my_device_list</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-07 10:19:53</sys_created_on>
+        <sys_id>e091c11d4fb753005d7d121f9310c7af</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>根据设备类别查询设备列表</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_e091c11d4fb753005d7d121f9310c7af</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-09 09:52:24</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

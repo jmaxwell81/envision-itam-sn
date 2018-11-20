@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="登录日志" max_length="40" name="x_envision_itam_login_log" type="collection">
+        <element choice="1" label="Channel" max_length="60" name="channel" type="choice">
+            <choice>
+                <element label="Mobile" value="2"/>
+                <element label="PC" value="1"/>
+            </choice>
+        </element>
+        <element label="Last login time" max_length="40" name="last_login_time" type="glide_date_time"/>
+        <element label="Login time" max_length="40" name="login_time" type="glide_date_time"/>
+        <element label="System info" max_length="1000" name="system_info" type="string_full_utf8"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

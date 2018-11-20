@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>领用/借用申请列表</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var userId=request.queryParams.userId;
+	var status=request.queryParams.status;//状态 1-待确认，2-已确认
+	status=status?status:"1";
+	var pageNum=request.queryParams.pageNum;
+	pageNum=pageNum?pageNum:1;
+	var pageSize=5;
+	
+	var gr=new GlideRecord("x_envision_itam_apply_order");
+	gr.addQuery("apply_user",userId);
+	gr.addQuery("status",status);
+	gr.chooseWindow((pageNum-1)*pageSize,pageNum*pageSize);
+	gr.orderBy("apply_time");
+	gr.query();
+	var list=[];
+	while(gr.next()){
+		var applyTime=new GlideDateTime(gr.apply_time+"");
+		var agreeTime=new GlideDateTime(gr.agree_time+"");
+		var obj={};
+			obj.pageSize=pageSize+"";
+			obj.sys_id=gr.sys_id+"";
+			obj.asset=gr.asset.display_name+"";
+			obj.asset_sys_id=gr.asset.sys_id+"";
+			obj.sn_asset_tag=gr.asset.x_envision_itam_sn_asset_tag+"";
+			obj.order_no=gr.order_no+"";
+			obj.order_type=gr.order_type+"";
+			obj.apply_time=applyTime.getLocalDate().getByFormat("YYYY-MM-dd")+" "+applyTime.getLocalTime().getByFormat("HH:mm");
+			obj.agree_time=agreeTime && agreeTime!=""?agreeTime.getLocalDate().getByFormat("YYYY-MM-dd")+" "+agreeTime.getLocalTime().getByFormat("HH:mm"):"";
+			obj.agree_way=gr.agree_way+"";
+			obj.description=gr.description+"";
+			obj.duration=gr.duration+"";
+			obj.unit=gr.unit+"";
+			obj.status=gr.status+"";
+			list.push(obj);
+		}
+		return list;
+		
+	})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/apply_asset_list</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/apply_asset_list</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-11 02:15:26</sys_created_on>
+        <sys_id>d02b2dc0db352f006a1b9cb6db9619b3</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>领用/借用申请列表</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_d02b2dc0db352f006a1b9cb6db9619b3</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-12 11:01:29</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

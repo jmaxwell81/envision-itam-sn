@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>提交盘点（单个，批量）</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var data=request.body.data;
+	var resp={
+		status:"9999"
+	};
+	//list 为 资产码或者耗材型号码
+	if(!data.list || data.list.length<=0){
+		resp.msg="请上传盘点数据";
+		return resp;
+	}
+	if(!data.userId || !data.sysId || !data.stockroom){
+		resp.msg="请求参数不全";
+		return resp;
+	}
+	
+	var gr=new GlideRecord("x_envision_itam_stock_take_detail");
+	
+	if(data.list.length==1){
+		//单个盘点,适用于网络情况好，扫码一个盘点一个的情况
+		return update(data.list[0]);
+	} else {
+		for(var i in data.list){
+			resp=update(data.list[i]);
+			if(resp.status!='0000'){
+				continue;
+			}
+		}
+	}
+	
+	
+	resp.status="0000";
+	return resp;
+	
+	function update(obj){
+		 
+		var asset=new GlideRecord("alm_asset");
+		asset.addQuery("x_envision_itam_sn_asset_tag",obj.code);
+		//被锁定的设备，说明有盘点单
+		//asset.addQuery("x_envision_itam_is_locked",true);
+		asset.query();
+		if(asset.next()){
+			var gr=new GlideRecord("x_envision_itam_stock_take_detail");
+			gr.addQuery("task_number",data.sysId);
+			//gr.addQuery("managed_by",data.userId);
+			gr.addQuery("asset.x_envision_itam_sn_asset_tag",obj.code);
+			gr.query();
+			if(gr.next()){
+				//Finished
+				if(gr.stock_take_state=="2"){
+					resp.msg="该资产已被盘点过";
+					return resp;
+				}
+				gr.stock_take_state="2";//Finished
+				gr.stock_take_time=new GlideDateTime();
+				gr.finish_time=new GlideDateTime();
+				gr.stock_take_quantity=obj.count;
+				gr.real_stock_take_user=data.userId;//实际盘点人
+				//获取资产当前所属仓库
+				gr.real_stockroom=gr.asset.stockroom;
+				gr.update();
+				
+				//解锁资产
+				asset.x_envision_itam_is_locked=false;
+				//资产协管员/责任人变更
+				asset.owned_by=gr.task_number.managed_by;
+				asset.managed_by=gr.task_number.managed_by;
+				asset.update();
+			} else {
+				//不是盘点计划单的管理员，该设备被他人盘点完成
+				
+// 				//创建计划单
+// 				var plan=new GlideRecord("x_envision_itam_stock_take_task");
+// 				plan.initiator=data.userId;
+// 				plan.plan_scope=data.stockroom;
+// 				if(asset.stockroom){
+// 					plan.plan_scope=asset.stockroom;
+// 				}
+// 				plan.plan_type="3";//Daily
+// 				plan.description="他人盘点";
+// 				plan.assistor=data.userId;//不是当前设备责任人盘点到的设备
+// 				plan.status="3";//finished
+// 				plan.start_time=new GlideDate();
+// 				plan.stop_time=new GlideDate();
+// 				plan.finished_time=new GlideDateTime();
+// 				plan.insert();
+// 				//计划单详情
+// 				var detail=new GlideRecord("x_envision_itam_stock_take_detail");
+// 				detail.asset=asset.sys_id;
+				 
+				 
+// 				detail.managed_by=asset.managed_by;
+				 
+// 				detail.task_number=plan.sys_id;
+// 				detail.real_stock_take_user=data.userId;//实际盘点人
+// 				detail.stockroom=data.stockroom;
+// 				if(asset.stockroom){
+// 					detail.stockroom=asset.stockroom;
+// 				}
+// 				detail.real_stockroom=data.stockroom;
+// 				detail.stock_quantity=asset.quantity;
+// 				detail.stock_take_method="2";//Scan
+// 				detail.stock_take_quantity=obj.count;
+// 				detail.stock_take_state="2";//finished
+// 				detail.stock_take_time=new GlideDateTime();
+// 				detail.insert();
+				
+// 				//解锁资产
+// 				asset.x_envision_itam_is_locked=false;
+// 				asset.update();
+			}
+		} else {
+			resp.msg="该设备不在盘点计划中";
+			return resp;
+		}
+		resp.status="0000";
+		return resp;
+	}
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/submit_stock_take</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/submit_stock_take</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-16 08:00:26</sys_created_on>
+        <sys_id>18b7764c4f8423005d7d121f9310c742</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>提交盘点（单个，批量）</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_18b7764c4f8423005d7d121f9310c742</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-12 06:37:21</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

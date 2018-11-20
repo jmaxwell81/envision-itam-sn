@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Finish Import</action_name>
+        <active>true</active>
+        <client>true</client>
+        <comments/>
+        <condition/>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>true</list_action>
+        <list_banner_button>true</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Complete Import</name>
+        <onclick>finishImport()</onclick>
+        <order>100</order>
+        <script><![CDATA[function finishImport(){
+	var ga = new GlideAjax('ImportAjax'); //Call script include to escape text
+	var tableName=location.pathname.split("_list.do")[0].substring(1);
+	if(tableName.indexOf("hardware")>=0){
+		ga.addParam('sysparm_name', 'importHardware');	
+	} else if(tableName.indexOf("consumable")>=0){
+		ga.addParam('sysparm_name', 'importConsumable');	
+	}
+	
+	ga.getXML(callback);
+	 
+	function callback(response) {
+		var resp = response.responseXML.documentElement.getAttribute("answer");
+	}
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-08-30 08:34:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6106cb64db102f006a1b9cb6db96193b</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>Complete Import</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ui_action_6106cb64db102f006a1b9cb6db96193b</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-09-14 10:19:30</sys_updated_on>
+        <table>x_envision_itam_import_hardware</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

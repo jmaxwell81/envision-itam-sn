@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_envision_itam.missing_order_user" name="x_envision_itam.missing_order_user">580361afdb1da300328592d8db961930</contains>
+        <role display_value="IT资产协管员" name="IT资产协管员">6a63d905db70e300328592d8db9619e3</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-28 02:23:44</sys_created_on>
+        <sys_id>49172923db5da300328592d8db96190a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_envision_itam.missing_order_user.IT资产协管员</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_user_role_contains_49172923db5da300328592d8db96190a</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-28 02:23:44</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

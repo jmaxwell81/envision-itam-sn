@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Role Home" max_length="40" name="x_envision_itam_role_home" type="collection">
+        <element label="Code" max_length="40" name="code" type="string"/>
+        <element label="Home" max_length="32" name="home" reference="sys_portal_page" type="reference"/>
+        <element label="Roles" max_length="32" name="roles" reference="sys_user_role" type="reference"/>
+        <element label="Short description" max_length="255" name="short_description" type="string_full_utf8"/>
+        <index name="index">
+            <element name="home"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>bind_asset</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-25 06:56:33</sys_created_on>
+        <sys_id>e2b8436adbd92300328592d8db961963</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bind_asset</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ui_policy_action_e2b8436adbd92300328592d8db961963</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-25 06:56:33</sys_updated_on>
+        <table>x_envision_itam_sn_tag</table>
+        <ui_policy display_value="绑定资产不可选">58a8036adbd92300328592d8db961933</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

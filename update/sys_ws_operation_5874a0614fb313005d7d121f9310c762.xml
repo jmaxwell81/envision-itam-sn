@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>设备详情</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	//资产详情
+	var sysId=request.queryParams["sysId"];
+	//扫描资产二维码
+	var snAssetTag=request.queryParams["snAssetTag"];
+	var language=request.queryParams["language"];
+	//入库任务ID
+	var taskId=request.queryParams["taskId"];
+	//领用/借用申请ID
+	var applySysId=request.queryParams.applySysId;
+	var userId=request.queryParams.userId;
+	var snApiUtil=new SNApiUtil();
+	var gr=new GlideRecord("alm_asset");
+	
+	if(!gs.nil(snAssetTag) && snAssetTag!=""){
+		gr.addQuery("x_envision_itam_sn_asset_tag",snAssetTag);
+	} else if(!gs.nil(sysId) && sysId!=""){
+		gr.addQuery("sys_id",sysId);
+	}
+	gr.query();
+	if(gr.next()){
+		//设备详情
+		var modelGr=gr.model;
+		var install_date="";
+		if(gr.u_inventory_time){
+			var gd=new GlideDateTime(gr.u_inventory_time+"");
+			install_date=gd.getLocalDate().getByFormat("yyyy-MM-dd")+" "+gd.getLocalTime().getByFormat("HH:mm:ss");
+		}
+		
+		//状态国际化数据
+		var choice=snApiUtil.getAssetState(gr.install_status,language);
+		var choice2=snApiUtil.getAssetState("6",language);//In stock
+		var obj={
+			sys_id:gr.sys_id+"",
+			//入库时，默认的设备状态为In Stock
+			state:{
+				value:"6",
+				label:choice2.label+""
+			},
+			u_is_locked:gr.x_envision_itam_is_locked+"",
+			model_category_zh_name:gr.model_category.x_envision_itam_zh_name+"",
+			model_number:modelGr.display_name+"",
+			model_manufacturer_name:modelGr.manufacturer.name+"",
+			model_description:modelGr.description+"",
+			serial_number:gr.serial_number+"",
+			it_asset_tag:gr.x_envision_itam_sn_asset_tag+"",
+			asset_tag:gr.asset_tag+"",
+			u_sn_asset_tag:gr.x_envision_itam_sn_asset_tag+"",
+			install_date:install_date+"",
+			install_status:choice.label+"",
+			install_status_value:gr.install_status+"",
+			stockroom_name:(gr.stockroom?gr.stockroom.name+"":""),
+			stockroom:gr.stockroom.sys_id+"",
+			managed_by_sys_id:gr.managed_by+"",
+			owned_by_sys_id:gr.owned_by+"",
+			company_name:(gr.owned_by.company?gr.owned_by.company.name+"":""),
+			department_name:(gr.owned_by.department?gr.owned_by.department.name+"":""),
+			managed_by_name:(gr.managed_by?gr.managed_by.name:"")+"",
+			managed_by_mobile_phone:(gr.managed_by?gr.managed_by.mobile_phone+"":""),
+			owned_by_name:(gr.owned_by?gr.owned_by.name:"")+"",
+			owned_by_mobile_phone:(gr.owned_by?gr.owned_by.mobile_phone+"":""),
+			assigned_to_name:(gr.assigned_to?gr.assigned_to.name:"")+"",
+			assigned_to_mobile_phone:(gr.assigned_to?gr.assigned_to.mobile_phone+"":""),
+			assigend_to_is_external:gr.assigned_to.x_envision_itam_is_external+"",
+			
+		};
+		//获取入库任务默认仓库
+		if(taskId){
+			var task=new GlideRecord("x_envision_itam_in_stockroom_task");
+			task.addQuery("sys_id",taskId);
+			task.query();
+			task.next();
+			obj.defaultStockroom={
+				sys_id:task.stockroom+"",
+				name:task.stockroom.name+"",
+				u_stock_code:task.stockroom.x_envision_itam_stock_code+""
+			};
+		}
+		//场景 1：借用申请签收  2:扫码签收
+		if(applySysId || snAssetTag){
+			obj.signType="1";//in use 使用中
+			//判断该用户是否已经领用了同类型的资产(只限定个人计算机)
+			if(gr.model_category.x_envision_itam_model_code=='01'){
+				var ga=new GlideRecord("alm_hardware");
+				ga.addQuery("assigned_to",userId);
+				ga.addQuery("model_category",gr.model_category);
+				ga.addQuery("install_status","1");//使用中
+				ga.query();
+				if(ga.next()){
+					obj.signType="2";//借用中
+				} 
+			}
+			
+		}
+		return obj;
+	}
+	return {};
+		
+		
+	})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/device_detail</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/device_detail</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-08 03:12:01</sys_created_on>
+        <sys_id>5874a0614fb313005d7d121f9310c762</sys_id>
+        <sys_mod_count>96</sys_mod_count>
+        <sys_name>设备详情</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_5874a0614fb313005d7d121f9310c762</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-15 02:31:14</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

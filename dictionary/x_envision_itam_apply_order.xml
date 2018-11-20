@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="领用/借用单" max_length="40" name="x_envision_itam_apply_order" type="collection">
+        <element label="Agree time" max_length="40" name="agree_time" read_only="true" type="glide_date_time"/>
+        <element choice="1" label="Agree way" max_length="40" name="agree_way" read_only="true" type="choice">
+            <choice>
+                <element label="邮件" sequence="1" value="1"/>
+                <element label="企业微信" sequence="2" value="2"/>
+                <element label="小程序" sequence="3" value="3"/>
+            </choice>
+        </element>
+        <element default="javascript:new GlideDateTime()" label="Apply time" max_length="40" name="apply_time" read_only="true" type="glide_date_time"/>
+        <element label="Apply user" mandatory="true" max_length="32" name="apply_user" reference="sys_user" type="reference"/>
+        <element dependent="model_category" dependent_on_field="model_category" label="Asset" max_length="32" name="asset" reference="alm_hardware" reference_qual="install_status=6^x_envision_itam_sn_asset_tagISNOTEMPTY^ pre_allocated=false^x_envision_itam_is_locked=false^stockroomISNOTEMPTY" reference_qual_condition="install_status=6^x_envision_itam_sn_asset_tagISNOTEMPTY^pre_allocated=false^x_envision_itam_is_locked=false^stockroomISNOTEMPTY^EQ" type="reference" use_dependent_field="true"/>
+        <element label="Description" max_length="1000" name="description" type="string_full_utf8"/>
+        <element label="Duration" mandatory="true" max_length="40" name="duration" type="integer"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;if(current.order_type==&quot;2&quot;){&#13;&#10;&#9;&#9;var applyTime=new GlideDateTime(current.apply_time+&quot;&quot;);&#13;&#10;&#9;&#9;var duration=parseInt(current.duration);&#13;&#10;&#9;&#9;//借用才有到期时间&#13;&#10;&#9;&#9;if(current.unit==&quot;1&quot;){&#13;&#10;&#9;&#9;&#9;//天&#13;&#10;&#9;&#9;&#9;applyTime.addDaysLocalTime(duration);&#13;&#10;&#9;&#9;} else if(current.unit==&quot;2&quot;){&#13;&#10;&#9;&#9;&#9;//周&#13;&#10;&#9;&#9;&#9;applyTime.addWeeksLocalTime(duration);&#13;&#10;&#9;&#9;} else if(current.unit==&quot;3&quot;){&#13;&#10;&#9;&#9;&#9;//月&#13;&#10;&#9;&#9;&#9;applyTime.addMonthsLocalTime(duration);&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;return applyTime;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#9;&#13;&#10;})(current);" label="Expire time" max_length="40" name="expire_time" read_only="true" type="glide_date_time" virtual="true"/>
+        <element label="Image" max_length="40" name="image" type="user_image"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;//资产类型为空，则显示资产对应的资产类型&#13;&#10;&#9;if(!current.model_category){&#13;&#10;&#9;&#9;return current.asset.model_category; &#9;&#13;&#10;&#9;}&#13;&#10;&#9;return current.model_category;&#13;&#10;&#13;&#10;})(current);" label="Model category" mandatory="true" max_length="32" name="model_category" reference="cmdb_model_category" reference_qual="asset_class=alm_hardware" reference_qual_condition="asset_class=^EQ" type="reference" virtual="true"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="order_no" read_only="true" type="string"/>
+        <element choice="3" default="1" label="Order type" max_length="40" name="order_type" read_only="true" type="choice">
+            <choice>
+                <element label="领用" sequence="100" value="1"/>
+                <element label="借用" sequence="200" value="2"/>
+            </choice>
+        </element>
+        <element label="Sended expiration notification" max_length="40" name="sended_expiration_notification" type="boolean"/>
+        <element choice="3" default="1" label="Status" max_length="40" name="status" read_only="true" type="choice">
+            <choice>
+                <element label="Pending agree" sequence="1" value="1"/>
+                <element label="未确认" language="zh" sequence="1" value="1"/>
+                <element label="Agreed" sequence="2" value="2"/>
+                <element label="已确认" language="zh" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element choice="3" default="1" label="Unit" mandatory="true" max_length="40" name="unit" type="choice">
+            <choice>
+                <element label="天" sequence="1" value="1"/>
+                <element label="周" sequence="2" value="2"/>
+                <element label="月" sequence="3" value="3"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="model_category"/>
+        </index>
+        <index name="index2">
+            <element name="apply_user"/>
+        </index>
+        <index name="index3">
+            <element name="asset"/>
+        </index>
+    </element>
+</database>

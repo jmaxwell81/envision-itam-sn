@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>u_guid</col_name_string>
+        <index_col_name element="u_guid" name="sys_user">5798bf67db48e7006a1b9cb6db96193c</index_col_name>
+        <logical_table_name>sys_user</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-10-25 02:29:40</sys_created_on>
+        <sys_id>0babca66db192300328592d8db961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_user</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_index_sys_user_u_guid</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-10-25 02:29:40</sys_updated_on>
+        <table display_value="User" name="sys_user">cab19a33db3313006a1b9cb6db961947</table>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

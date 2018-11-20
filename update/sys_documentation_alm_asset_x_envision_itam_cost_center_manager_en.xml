@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="x_envision_itam_cost_center_manager" label="Cost center Manager" language="en" table="alm_asset">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_envision_itam_cost_center_manager</element>
+            <help/>
+            <hint/>
+            <label>Cost center Manager</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <plural>Cost center Managers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-10 01:51:04</sys_created_on>
+            <sys_id>9d4cd873dba9eb006a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Cost center Manager</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_alm_asset_x_envision_itam_cost_center_manager_en</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-10 01:51:04</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_envision_itam_import_hardware" label="Import Consumable" max_length="40" name="x_envision_itam_import_consumable" type="collection">
+        <element label="Quantity" max_length="40" name="quantity" type="integer"/>
+    </element>
+</database>

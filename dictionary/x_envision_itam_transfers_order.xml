@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="调拨单" max_length="40" name="x_envision_itam_transfers_order" sizeclass="39" type="collection">
+        <element label="Complete time" max_length="40" name="actual_complete_time" read_only="true" type="glide_date_time"/>
+        <element label="Cost center" mandatory="true" max_length="32" name="cost_center" reference="cmn_cost_center" type="reference"/>
+        <element label="Delivery cost center" mandatory="true" max_length="32" name="delivery_cost_center" reference="cmn_cost_center" type="reference"/>
+        <element attributes="readonly_clickthrough=true" label="Delivery manager" max_length="32" name="delivery_manager" read_only="true" reference="sys_user" type="reference"/>
+        <element label="调出仓库" max_length="32" name="delivery_stockroom" reference="alm_stockroom" type="reference"/>
+        <element attributes="readonly_clickthrough=true" label="Manager" max_length="32" name="manager" read_only="true" reference="sys_user" type="reference"/>
+        <element default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" max_length="40" name="order_no" read_only="true" type="string" use_dynamic_default="true"/>
+        <element label="Plan complete time" max_length="40" name="plan_complete_time" type="glide_date_time"/>
+        <element label="Start time" max_length="40" name="start_time" read_only="true" type="glide_date_time"/>
+        <element choice="3" default="1" label="Status" max_length="40" name="status" read_only="true" type="choice">
+            <choice>
+                <element label="待调拨" sequence="1" value="1"/>
+                <element label="调拨中" sequence="2" value="2"/>
+                <element label="已完成" sequence="3" value="3"/>
+            </choice>
+        </element>
+        <element label="调入仓库" max_length="32" name="stockroom" reference="alm_stockroom" type="reference"/>
+        <element choice="3" default="cost_center" label="Transfer type" mandatory="true" max_length="40" name="transfer_type" type="choice">
+            <choice>
+                <element label="成本中心转移" sequence="1" value="cost_center"/>
+                <element label="库存调拨" sequence="2" value="stockroom"/>
+            </choice>
+        </element>
+    </element>
+</database>

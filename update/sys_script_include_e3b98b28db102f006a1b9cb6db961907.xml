@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_envision_itam.ImportAjax</api_name>
+        <client_callable>true</client_callable>
+        <description>Import 导入相关功能</description>
+        <name>ImportAjax</name>
+        <script><![CDATA[var ImportAjax = Class.create();
+ImportAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	importHardware:function(){
+		function deleteRecord(){
+			gr.deleteMultiple();
+			gs.addInfoMessage("当前Excel导入的临时数据已被清空");
+		}
+		//gs.addInfoMessage("开始导入数据");
+		var gr=new GlideRecord("x_envision_itam_import_hardware");
+		gr.orderBy("sys_import_row");
+		gr.query();
+		var resp={
+			error_message:"",
+		};
+		var hasData=false;
+		//循环校验数据合法性，一旦有不合法，则整个数据都不提交
+		while(gr.next()){
+			hasData=true;
+			var msg="Excel 第"+(gr.sys_import_row+2)+"行 ";
+			var msg2=" ,请修改后重新导入Excel，当前数据已被清空";
+			if(gs.nil(gr.po_number)){
+				resp.error_message=msg+" PO Number为空"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			if(gs.nil(gr.asset_tag)){
+				resp.error_message=msg+"  Asset Tag为空"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			
+			var gr2=new GlideRecord("alm_asset");
+			gr2.addQuery("asset_tag",gr.asset_tag);
+			gr2.query();
+			if(gr2.next()){
+				gs.addErrorMessage(msg+" Asset Tag 已经存在"+msg2);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			
+			if(gs.nil(gr.managed_by)){
+				resp.error_message=msg+"  Managed By为空或不存在"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			
+			if(gs.nil(gr.manufacturer)){
+				resp.error_message=msg+"  Manufacturer为空"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			
+			if(gs.nil(gr.model_category)){
+				resp.error_message=msg+" Model Category为空"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			if(gs.nil(gr.model_number)){
+				resp.error_message=msg+" Model Number为空"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			//通过厂商，型号反向查找资产类别和型号
+			var model=new GlideRecord("cmdb_model");
+			model.addQuery("model_number",gr.model_number);
+			model.addQuery("manufacturer",gr.manufacturer);
+			model.query();
+			
+			if(model.next()){
+				gr.model=model.sys_id;
+				gr.update();
+			} else {
+				resp.error_message=msg+" Manufacturer 与 Model Number无法在SN中找到对应的Model"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			
+		}
+		if(!hasData){
+			gs.addErrorMessage("当前Excel导入的数据为空，请重新上传Excel");
+			return ;
+		}
+		
+		//转换数据至目标表
+		gr.query();
+		var hasPo=false;
+		while(gr.next()){
+			var contract=new GlideRecord("ast_contract");
+			contract.addQuery("po_number",gr.po_number);
+			contract.addActiveQuery();
+			contract.query();
+			//PO合同不存在，则新增
+			if(!contract.next()){
+				hasPo=true;
+				contract.po_number=gr.po_number;
+				//Purchase Order
+				contract.contract_model="0c81e836c3102000b959fd251eba8f5d";
+				contract.short_description="Excel Import PO Number Generate Contract";
+				contract.insert();
+			}
+			
+			//生成资产数据
+			var asset=new GlideRecord("alm_hardware");
+			asset.install_status="9";//In transit
+			asset.managed_by=gr.managed_by;
+			asset.model_category=gr.model_category;
+			asset.model=gr.model;
+			asset.asset_tag=gr.asset_tag;
+			asset.po_number=gr.po_number;
+			asset.insert();
+			
+			//生成入库任务单
+			var task=new GlideRecord("x_envision_itam_in_stockroom_task");
+			task.addQuery("po_number",gr.po_number);
+			task.query();
+			if(!task.next()){
+				//PO Number不存在时创建新的入库Task
+				task.state="-5";//Pending
+				task.managed_by=gr.managed_by;
+				task.po_number=gr.po_number;
+				task.description="Excel导入生成任务单";
+				task.insert();
+			}
+			var detail=new GlideRecord("x_envision_itam_in_stockroom_task_detail");
+			detail.addQuery("task_number",task.sys_id);
+			detail.addQuery("asset_tag",gr.asset_tag);
+			detail.query();
+			if(!detail.next()){
+				//当前资产不存在入库任务清单中时创建入库清单
+				detail.asset_tag=asset.sys_id;
+				detail.task_number=task.sys_id;
+				detail.model_category=gr.model_category;
+				detail.delivery_number=1;
+				detail.insert();
+			}
+		}
+		if(hasPo){
+			gs.addInfoMessage("PO Contract导入成功");
+		}
+		gs.addInfoMessage("资产数据导入成功");
+		gs.addInfoMessage("入库任务生成成功");
+		gs.addInfoMessage("所有数据导入完成");
+		deleteRecord();
+		return JSON.stringify(resp);
+	},
+	deleteData:function(){
+		var gr=new GlideRecord("x_envision_itam_import_hardware");
+		gr.query();
+		if(gr.next()){
+			gr.deleteMultiple();
+		}
+	},
+	importConsumable:function(){
+		function deleteRecord(){
+			gr.deleteMultiple();
+			gs.addInfoMessage("当前Excel导入的临时数据已被清空");
+		}
+		//gs.addInfoMessage("开始导入数据");
+		var gr=new GlideRecord("x_envision_itam_import_consumable");
+		gr.orderBy("sys_import_row");
+		gr.query();
+		var resp={
+			error_message:"",
+		};
+		var hasData=false;
+		//循环校验数据合法性，一旦有不合法，则整个数据都不提交
+		while(gr.next()){
+			hasData=true;
+			var msg="Excel 第"+(gr.sys_import_row+2)+"行 ";
+			var msg2=" ,请修改后重新导入Excel，当前数据已被清空";
+			if(gs.nil(gr.po_number)){
+				resp.error_message=msg+" PO Number为空"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			
+			if(gs.nil(gr.managed_by)){
+				resp.error_message=msg+"  Managed By为空或不存在"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			
+			if(gs.nil(gr.manufacturer)){
+				resp.error_message=msg+"  Manufacturer为空"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			if(gs.nil(gr.model_number)){
+				resp.error_message=msg+" Model Number为空"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			//通过厂商，型号反向查找资产类别和型号
+			var model=new GlideRecord("cmdb_model");
+			model.addQuery("model_number",gr.model_number);
+			model.addQuery("manufacturer",gr.manufacturer);
+			model.query();
+			
+			if(model.next()){
+				gr.model=model.sys_id;
+				gr.update();
+			} else {
+				resp.error_message=msg+" Manufacturer 与 Model Number无法在SN中找到对应的Model"+msg2;
+				gs.addErrorMessage(resp.error_message);
+				deleteRecord();
+				return JSON.stringify(resp);
+			}
+			
+		}
+		if(!hasData){
+			gs.addErrorMessage("当前Excel导入的数据为空，请重新上传Excel");
+			return ;
+		}
+		
+		//转换数据至目标表
+		gr.query();
+		var hasPo=false;
+		while(gr.next()){ 
+			var contract=new GlideRecord("ast_contract");
+			contract.addQuery("po_number",gr.po_number);
+			contract.addActiveQuery();
+			contract.query();
+			//PO合同不存在，则新增
+			if(!contract.next()){
+				hasPo=true;
+				contract.po_number=gr.po_number;
+				//Purchase Order
+				contract.contract_model="0c81e836c3102000b959fd251eba8f5d";
+				contract.short_description="Excel Import PO Number Generate Contract";
+				contract.insert();
+			}
+			
+			//生成耗材数据
+			var asset=new GlideRecord("alm_consumable");
+			asset.addQuery("model",gr.model);
+			asset.addQuery("install_status","9");//In transit
+			//asset.addQuery("managed_by",gr.managed_by);
+			asset.query();
+			if(asset.next()){
+				//更新数量
+				asset.quantity=asset.quantity+gr.quantity;
+				asset.update();
+			} else {
+				asset.install_status="9";//In transit
+				asset.managed_by=gr.managed_by;
+				asset.owned_by=gr.managed_by;
+				asset.model_category=gr.model_category;
+				asset.model=gr.model;
+				asset.po_number=gr.po_number;
+				asset.quantity=gr.quantity;
+				asset.insert();
+			}
+			 
+		}
+		if(hasPo){
+			gs.addInfoMessage("PO Contract导入成功");
+		}
+		gs.addInfoMessage("耗材数据导入成功");
+		deleteRecord();
+		return JSON.stringify(resp);
+	},
+	deleteConsumableData:function(){
+		gr.deleteMultiple();
+		gs.addInfoMessage("当前Excel导入的临时数据已被清空");
+	},
+	type: 'ImportAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-08-30 08:50:52</sys_created_on>
+        <sys_id>e3b98b28db102f006a1b9cb6db961907</sys_id>
+        <sys_mod_count>70</sys_mod_count>
+        <sys_name>ImportAjax</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_include_e3b98b28db102f006a1b9cb6db961907</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-09-14 10:36:38</sys_updated_on>
+    </sys_script_include>
+</record_update>

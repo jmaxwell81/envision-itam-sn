@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>查看耗材(我的耗材，选择耗材)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	// 我的耗材列表
+	var language=request.queryParams["language"];
+	var status=request.queryParams.status;
+	var gr=new GlideRecord("alm_consumable");
+	var userId = request.queryParams.userId;
+	var stockroom_id = request.queryParams.stockroom_id;
+	if(status=="1"){
+		//使用中
+		gr.addQuery("assigned_to",userId);
+	} else {
+		//仓库中
+		gr.addQuery("managed_by",userId);
+	} 
+	if(!gs.nil(stockroom_id) && stockroom_id!=""){
+		gr.addQuery("stockroom",stockroom_id);
+	}
+	var pageNum=request.queryParams.pageNum;
+	pageNum=pageNum?pageNum:1;
+	var pageSize=5;
+	 
+	gr.addQuery("install_status",status);
+	//Consumed
+	gr.addQuery("install_status","!=","10");
+	//gs.info(">>>>>JK:query:"+gr.getEncodedQuery());
+	gr.chooseWindow((pageNum-1)*pageSize,pageNum*pageSize);
+	gr.query();
+	
+	var list=[];
+	while(gr.next()){
+		var picture="";
+		var attGr=new GlideRecord("sys_attachment");
+		
+		//封面图
+		attGr.addEncodedQuery("content_typeLIKEimage^file_name=picture^table_sys_id="+gr.model.sys_id);
+		attGr.query();
+		while(attGr.next()){
+			var sysEncodedAttachment2 = new GlideSysAttachment();
+			picture = sysEncodedAttachment2.getContentBase64(attGr);
+			
+			
+		}
+		//状态国际化数据
+		var display_name=gr.model_category.x_envision_itam_zh_name+"  "+gr.display_name;
+		var obj = {
+			sys_id:gr.sys_id+"",
+			pageSize:pageSize+"",
+			picture:picture,
+			display_name:display_name,//耗材名称
+			quantity:gr.quantity+"",//耗材数量
+			status:gr.install_status+"",
+			//unil:gr.unil+"", //单位
+		};
+		list.push(obj);
+	}
+	return list;
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/my_consumable_list</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/my_consumable_list</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-09 02:09:55</sys_created_on>
+        <sys_id>fa6421f94fb353005d7d121f9310c767</sys_id>
+        <sys_mod_count>59</sys_mod_count>
+        <sys_name>查看耗材(我的耗材，选择耗材)</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_fa6421f94fb353005d7d121f9310c767</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-15 06:45:23</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

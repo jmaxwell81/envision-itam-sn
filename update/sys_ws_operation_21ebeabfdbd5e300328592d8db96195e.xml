@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>领用/借用资产确认(通过email,企业微信确认)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var resp={
+		status:"0000",
+		msg:"确认成功"
+	};
+	var p=request.queryParams["p"];
+	//gs.info(">>>>>>JK:p:"+p);
+	var data;
+	try{
+		var dataStr=gs.base64Decode(p);
+		//gs.info(">>>>>>JK:dataStr:"+dataStr);
+		data=JSON.parse(dataStr);
+	}catch(e){
+		gs.error(">>>>>>JK:"+e);
+		resp.status="9999";
+		resp.msg="非法请求";
+		return resp;
+	}
+	
+	
+	var gr=new GlideRecord("x_envision_itam_apply_order");
+	gr.get(data.sys_id);
+	if(!gr.isValid()){
+		resp.status="9999";
+		resp.msg="请求无效";
+		return resp;
+	}
+	var applyTime=new GlideDateTime(gr.sys_created_on+"");
+	applyTime.addSeconds(data.expire*60*60);
+	if(applyTime.onOrBefore(new GlideDateTime())){
+		resp.status="9999";
+		resp.msg="请求已失效";
+		return resp;
+	}
+	if(gr.status=="2"){
+		resp.status="9999";
+		resp.msg="请勿重复请求";
+		return resp;
+	}
+	
+	var asset=new GlideRecord("alm_asset");
+	asset.get(gr.asset.sys_id);
+	//资产日志
+	var logGr=new GlideRecord("x_envision_itam_asset_log");
+	logGr.asset=gr.asset;
+	logGr.asset_name=asset.display_name;
+	logGr.asset_type="alm_hardware";
+	logGr.sys_created_by=gr.apply_user;
+	logGr.operated=new GlideDateTime();
+	
+	//操作前日志
+	logGr.delivery_state=asset.install_status;
+	logGr.delivery_stockroom=asset.stockroom;
+	logGr.delivery_managed_by=asset.managed_by;
+	logGr.delivery_owned_by=asset.owned_by;
+	logGr.delivery_assigned_to=asset.assigned_to;
+	logGr.operator=gr.apply_user;
+	
+	
+	logGr.log_type="2";//领用
+	asset.install_status="1";//使用中
+	if(gr.order_type=="2"){
+		logGr.log_type= "6";//借用
+		asset.install_status="11";//Borrow，借用中
+	}
+	//申请人是编内人员
+	if(!gr.apply_user.x_envision_itam_is_external){
+		asset.owned_by=gr.apply_user;
+	}
+	asset.assigned_to=gr.apply_user;
+	asset.assigned=new GlideDateTime();
+	//清空预分配信息
+	asset.pre_allocated=false;
+	asset.reserved_for="";
+	asset.substatus="";
+	//最后出库仓库
+	asset.x_envision_itam_out_stockroom=asset.stockroom;
+	asset.assigned_to=gr.apply_user;
+	asset.update();
+	
+	//操作后日志
+	logGr.asset_state=asset.install_status;
+	logGr.managed_by=asset.managed_by;
+	logGr.owned_by=asset.owned_by;
+	logGr.assigned_to=asset.assigned_to;
+	
+	logGr.description=logGr.log_type.getDisplayValue()+"  "+asset.display_name+" x1";
+	logGr.insert();
+	
+	
+	gr.agree_way=data.agree_way;
+	gr.agree_time=new GlideDateTime();
+	gr.status="2";//已确认
+	gr.update();
+	
+	
+	
+	
+	return resp;
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/apply_asset</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/apply_asset</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-29 02:21:32</sys_created_on>
+        <sys_id>21ebeabfdbd5e300328592d8db96195e</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>领用/借用资产确认(通过email,企业微信确认)</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_21ebeabfdbd5e300328592d8db96195e</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-14 09:31:44</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

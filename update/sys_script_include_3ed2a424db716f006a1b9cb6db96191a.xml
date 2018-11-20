@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_envision_itam.Encode</api_name>
+        <client_callable>false</client_callable>
+        <description>js encode </description>
+        <name>Encode</name>
+        <script><![CDATA[var Encode = Class.create();
+Encode.prototype = {
+	initialize: function() {
+	},
+	stringifyPrimitive :function(v) {
+		switch (typeof v) {
+			case 'string':
+			return v;
+			
+			case 'boolean':
+			return v ? 'true' : 'false';
+			
+			case 'number':
+			return isFinite(v) ? v : '';
+			
+			default:
+			return '';
+		}
+	},
+	stringify:function(obj, sep, eq, name) {
+		var encode=new x_envision_itam.Encode();
+		sep = sep || '&';
+		eq = eq || '=';
+		if (obj === null) {
+			obj = undefined;
+		}
+		
+		if (typeof obj === 'object') {
+			return Object.keys(obj).map(function(k) {
+				var ks = encodeURIComponent(encode.stringifyPrimitive(k)) + eq;
+				if (Array.isArray(obj[k])) {
+					return obj[k].map(function(v) {
+						return ks + encodeURIComponent(encode.stringifyPrimitive(v));
+					}).join(sep);
+				} else {
+					return ks + encodeURIComponent(encode.stringifyPrimitive(obj[k]));
+				}
+			}).join(sep);
+			
+		}
+		
+		if (!name) return '';
+			return encodeURIComponent(encode.stringifyPrimitive(name)) + eq +
+		encodeURIComponent(encode.stringifyPrimitive(obj));
+	},
+	type: 'Encode'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-12 10:16:22</sys_created_on>
+        <sys_id>3ed2a424db716f006a1b9cb6db96191a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Encode</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_include_3ed2a424db716f006a1b9cb6db96191a</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-12 10:31:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

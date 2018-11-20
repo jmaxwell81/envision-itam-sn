@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_envision_itam.ClientDateTimeUtils</api_name>
+        <client_callable>true</client_callable>
+        <description>客户端脚本 日期工具类 </description>
+        <name>ClientDateTimeUtils</name>
+        <script><![CDATA[var ClientDateTimeUtils = Class.create();
+ClientDateTimeUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	type: 'ClientDateTimeUtils',
+	//Takes a date/time field and adds time to it.
+	//params = sysparm_fdt (the first date/time field), sysparm_addtype (type of time to add - second, minute, hour, day, week, month, year), sysparm_addtime (amount of time to add based on the type).
+	addDateTimeAmount: function(){
+		var firstDT = this.getParameter('sysparm_fdt'); //First Date-Time Field
+		var addTYPE = this.getParameter('sysparm_addtype'); //What to add - second (addSeconds()), minute (need to add conversion), hour (need to add conversion), day (addDays()), week (addWeeks()), month (addMonths()), year (addYears())
+		var addTIME = this.getParameter('sysparm_addtime'); //How much time to add
+		var day = new GlideDateTime(firstDT);
+		if(addTYPE == 'second'){
+			day.addSeconds(addTIME);
+		}else if (addTYPE == 'minute'){
+			day.addSeconds(addTIME*60);
+		}else if (addTYPE == 'hour'){
+			day.addSeconds(addTIME*(60*60));
+		}else if (addTYPE == 'day'){
+			day.addDaysLocalTime(addTIME);
+		}else if (addTYPE == 'week'){
+			day.addWeeksLocalTime(addTIME);
+		}else if (addTYPE == 'month'){
+			day.addMonthsLocalTime(addTIME);
+		}else if (addTYPE == 'year'){
+			day.addYearsLocalTime(addTIME);
+		}else {
+			day.addSeconds(addTIME);
+		}
+		//return "First Date: " + firstDT + " -Time to Add: " + addTIME + " -Add Type: " + addTYPE + " -Added Time: " + day;
+		return day;
+	},
+	
+	 
+											
+											
+										});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-02 05:49:54</sys_created_on>
+        <sys_id>51f588d9dba9a700328592d8db96195f</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>ClientDateTimeUtils</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_include_51f588d9dba9a700328592d8db96195f</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-02 06:10:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

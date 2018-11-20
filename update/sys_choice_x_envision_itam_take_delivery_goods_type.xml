@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="goods_type" table="x_envision_itam_take_delivery" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>goods_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>日常采购</label>
+            <language>en</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>100</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-23 06:14:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3efb2802db5d23006a1b9cb6db9619aa</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-23 06:15:50</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>goods_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>项目采购</label>
+            <language>en</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>200</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-23 06:14:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b10ca8cedb1d23006a1b9cb6db9619fe</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-23 06:15:53</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>goods_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>租赁设备</label>
+            <language>en</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>300</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-23 06:15:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c81c6802db5d23006a1b9cb6db96194d</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-23 06:15:54</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>goods_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>临时借用</label>
+            <language>en</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>400</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-23 06:16:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0a1c2802db5d23006a1b9cb6db9619a1</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-23 06:16:12</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>goods_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>其它</label>
+            <language>en</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>500</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-23 06:16:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>364ce802db5d23006a1b9cb6db9619e3</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-23 06:16:23</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>goods_type</element>
+            <name>x_envision_itam_take_delivery</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-23 06:14:50</sys_created_on>
+            <sys_id>a90c2802db5d23006a1b9cb6db961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>goods_type</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_choice_x_envision_itam_take_delivery_goods_type</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-23 06:14:50</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

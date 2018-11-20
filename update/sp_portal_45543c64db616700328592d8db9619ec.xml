@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <default>false</default>
+        <homepage display_value="email_url_page">85e0b4a0db616700328592d8db961902</homepage>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page/>
+        <logo/>
+        <notfound_page/>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu/>
+        <sqanda_knowledge_base/>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-31 01:16:27</sys_created_on>
+        <sys_id>45543c64db616700328592d8db9619ec</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>跳转API</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sp_portal_45543c64db616700328592d8db9619ec</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-31 02:48:32</sys_updated_on>
+        <theme/>
+        <title>跳转API</title>
+        <url_suffix>api_redirect</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=45543c64db616700328592d8db9619ec"/>
+</record_update>

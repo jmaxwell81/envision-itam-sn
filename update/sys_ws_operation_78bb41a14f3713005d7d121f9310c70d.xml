@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>我的记录/耗材出入记录</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var userId = request.queryParams.userId; 
+	var goodsType = request.queryParams.goodsType; 
+	var dateRange = request.queryParams.dateRange; 
+	var inputValue = request.queryParams.inputValue; 
+	var logType = request.queryParams.logType;
+	var stockroom = request.queryParams.stockroom; 
+	var pageNow = request.queryParams.pageNow;
+	var pageSize = request.queryParams.pageSize;
+	var u_class = request.queryParams.u_class;
+	var queryString = "operator="+userId;
+	
+	//时间条件组装
+	if(dateRange){
+		if(dateRange == "week"){
+			queryString += "^operatedBETWEENjavascript:gs.beginningOfLastWeek()@javascript:gs.endOfToday()";
+		}else if(dateRange == "month"){
+			queryString += "^operatedBETWEENjavascript:gs.beginningOfLast30Days()@javascript:gs.endOfToday()";
+		}else{
+			queryString += "^operatedBETWEENjavascript:gs.beginningOfOneYearAgo()@javascript:gs.endOfToday()";
+		}
+	}else{
+		//一周内
+		queryString += "^operatedBETWEENjavascript:gs.beginningOfLastWeek()@javascript:gs.endOfToday()";
+		
+	}
+	 
+	//输入条件组装
+	if(inputValue){
+		queryString += "^operator.nameLIKE"+ inputValue +"^ORasset_nameLIKE"+inputValue;  
+	}
+	//仓库条件组装
+	if(stockroom){
+		queryString += "^delivery_stockroom="+stockroom+"^ORstockroom=" + stockroom;
+	}
+
+	
+	
+	var gr=new GlideRecord("x_envision_itam_asset_log");
+	gr.orderByDesc("operated");
+	gr.addQuery(queryString);
+	if( u_class && u_class!=""){
+	 gr.addQuery("asset_type",u_class);	
+	}
+	gr.chooseWindow((pageNow-1)*pageSize,pageNow*pageSize);
+	gr.query();
+	gs.info(">>>>>>JK:query:"+gr.getEncodedQuery());
+	var list=[];
+	while(gr.next()){
+		var created=new GlideDateTime(gr.sys_created_on+"");
+		var obj = {
+			Description:gr.description+"",
+			Operator:gr.operator.name+"",
+			CreatedData:created.getLocalDate().getByFormat("YYYY-MM-dd")+"",
+			CreatedTime:created.getLocalTime().getByFormat("HH:mm")+""
+		};
+		list.push(obj);
+	}
+	return list;
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/my_assetlogs_list</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/my_assetlogs_list</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-08 06:19:14</sys_created_on>
+        <sys_id>78bb41a14f3713005d7d121f9310c70d</sys_id>
+        <sys_mod_count>106</sys_mod_count>
+        <sys_name>我的记录/耗材出入记录</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_78bb41a14f3713005d7d121f9310c70d</sys_update_name>
+        <sys_updated_by>junhui.lei</sys_updated_by>
+        <sys_updated_on>2018-09-19 07:34:49</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="报废单" max_length="40" name="x_envision_itam_retire_order" type="collection">
+        <element label="Cause" mandatory="true" max_length="200" name="cause" type="string_full_utf8"/>
+        <element label="Facilitator" mandatory="true" max_length="32" name="facilitator" reference="core_company" type="reference"/>
+        <element label="Image" max_length="40" name="image" type="user_image"/>
+        <element choice="1" label="Method" mandatory="true" max_length="40" name="method" type="choice">
+            <choice>
+                <element label="Donated" sequence="0" value="donated"/>
+                <element label="捐赠" language="zh" sequence="0" value="donated"/>
+                <element label="Sold" sequence="1" value="sold"/>
+                <element label="售卖" language="zh" sequence="1" value="sold"/>
+                <element label="Disposed" sequence="2" value="disposed"/>
+                <element label="环保处理" language="zh" sequence="2" value="disposed"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Plan date" mandatory="true" max_length="40" name="plan_date" type="glide_date"/>
+        <element label="Recycle value" max_length="20" name="recycle_value" type="currency"/>
+        <element label="Result" max_length="200" name="result" type="string_full_utf8"/>
+        <element choice="3" default="1" label="Status" max_length="40" name="status" read_only="true" type="choice">
+            <choice>
+                <element label="待处理" sequence="0" value="1"/>
+                <element label="已处理" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element label="Stockroom" mandatory="true" max_length="32" name="stockroom" reference="alm_stockroom" reference_qual="javascript:'type=19dfe22bdbdda300328592d8db9619b0'" type="reference" use_reference_qualifier="advanced"/>
+        <index name="index">
+            <element name="stockroom"/>
+        </index>
+        <index name="index2">
+            <element name="facilitator"/>
+        </index>
+    </element>
+</database>

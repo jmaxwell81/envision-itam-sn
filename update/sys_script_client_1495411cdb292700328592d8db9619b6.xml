@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <messages/>
+        <name>库存调拨才显示入库任务,SLA</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   if(g_form.getValue("transfer_type")=="stockroom"){
+	   g_form.showRelatedList("x_envision_itam_in_stockroom_task.parent");
+	   g_form.showRelatedList("task_sla.task");
+   } else {
+	   g_form.hideRelatedList("x_envision_itam_in_stockroom_task.parent");
+	   g_form.hideRelatedList("task_sla.task");
+   }
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-30 07:54:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1495411cdb292700328592d8db9619b6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>库存调拨才显示入库任务,SLA</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_1495411cdb292700328592d8db9619b6</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-30 07:55:21</sys_updated_on>
+        <table>x_envision_itam_transfers_order</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

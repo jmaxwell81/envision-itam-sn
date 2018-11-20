@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="报失单" max_length="40" name="x_envision_itam_missing_order" type="collection">
+        <element label="Apply user" mandatory="true" max_length="32" name="apply_user" reference="sys_user" type="reference"/>
+        <element label="Asset" mandatory="true" max_length="32" name="asset" reference="alm_hardware" reference_qual="javascript:'install_statusNOT IN8,12^owned_by='+current.apply_user" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Cause" mandatory="true" max_length="8000" name="cause" type="html"/>
+        <element label="Cost center" max_length="32" name="cost_center" read_only="true" reference="cmn_cost_center" type="reference"/>
+        <element default="javascript:new GlideDateTime()" label="Filling date" max_length="40" name="filling_date" read_only="true" type="glide_date"/>
+        <element label="Image" max_length="40" name="image" type="user_image"/>
+        <element label="Missing date" mandatory="true" max_length="40" name="missing_date" type="glide_date"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Result" max_length="200" name="result" type="string_full_utf8"/>
+        <element label="Salvage value" max_length="20" name="salvage_value" read_only="true" type="currency"/>
+        <element choice="3" default="1" label="Status" max_length="40" name="status" read_only="true" type="choice">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="cost_center"/>
+        </index>
+        <index name="index2">
+            <element name="apply_user"/>
+        </index>
+        <index name="index3">
+            <element name="asset"/>
+        </index>
+    </element>
+</database>

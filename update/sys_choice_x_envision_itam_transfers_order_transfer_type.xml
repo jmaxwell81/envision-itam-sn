@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="transfer_type" table="x_envision_itam_transfers_order" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transfer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>成本中心转移</label>
+            <language>en</language>
+            <name>x_envision_itam_transfers_order</name>
+            <sequence>1</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-27 06:19:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>96531593db15a300328592d8db96190a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-27 06:19:49</sys_updated_on>
+            <value>cost_center</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transfer_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>库存调拨</label>
+            <language>en</language>
+            <name>x_envision_itam_transfers_order</name>
+            <sequence>2</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-27 06:19:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9473d513db15a300328592d8db961940</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-27 06:20:10</sys_updated_on>
+            <value>stockroom</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>transfer_type</element>
+            <name>x_envision_itam_transfers_order</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-27 06:19:27</sys_created_on>
+            <sys_id>14735d13db15a300328592d8db9619ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>transfer_type</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_choice_x_envision_itam_transfers_order_transfer_type</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-27 06:19:27</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

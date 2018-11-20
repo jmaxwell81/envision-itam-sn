@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>start_time</field>
+        <global>true</global>
+        <messages/>
+        <name>开始时间不能低于当日</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	var now =new Date();
+	var today=now.getFullYear()+""+(now.getMonth()+1)+""+now.getDate();
+	var startTime=	g_form.getValue("start_time");
+	var startDate=startTime.split(" ")[0].replace(/\-/g,"");
+	
+	if(parseInt(startDate)<parseInt(today)){
+		g_form.addErrorMessage("开始日期"+g_form.getValue("start_time")+"不能早于今天");
+		g_form.clearValue("start_time");
+	} else {
+		g_form.clearMessages();
+	}
+	
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-17 02:40:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3e7aa40adbb523406a1b9cb6db9619cd</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>开始时间不能低于当日</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_3e7aa40adbb523406a1b9cb6db9619cd</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-19 01:13:59</sys_updated_on>
+        <table>x_envision_itam_stock_take_task</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

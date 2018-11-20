@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>借用设备快到期提醒(到期前3天)</name>
+        <run_as display_value="彭艳勇">4d5d479edbc42700328592d8db9619c6</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-11-12 02:19:19</run_start>
+        <run_time>1970-01-01 06:30:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[//通知时间=当前时间-3天  
+var notifyTime=new GlideDateTime();
+notifyTime.addDaysLocalTime(-3);
+var gr=new GlideRecord("x_envision_itam_apply_order");
+gr.addQuery("order_type","2");//借用
+gr.addQuery("sended_expiration_notification",false);
+//到期时间>=通知时间
+gr.addQuery("expire_time",">=",notifyTime);
+gr.query();
+gs.info(">>>>>>JK:开始执行借用设备到期提醒Job");
+while(gr.next()){
+	gr.sended_expiration_notification=true;
+	gr.update();
+	//发送邮件事件
+	gs.eventQueue("x_envision_itam.apply_asset_expire",gr,gs.getUserID(),gs.getUserName());
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-12 02:20:44</sys_created_on>
+        <sys_id>32e5365cdb7d2f006a1b9cb6db9619fc</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>借用设备快到期提醒(到期前3天)</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sysauto_script_32e5365cdb7d2f006a1b9cb6db9619fc</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-12 06:23:15</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

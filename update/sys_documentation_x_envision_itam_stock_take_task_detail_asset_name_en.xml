@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="asset_name" label="Asset name" language="en" table="x_envision_itam_stock_take_task_detail">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>asset_name</element>
+            <help/>
+            <hint/>
+            <label>Asset name</label>
+            <language>en</language>
+            <name>x_envision_itam_stock_take_task_detail</name>
+            <plural>Asset names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-09-13 09:06:59</sys_created_on>
+            <sys_id>69d3db85db2027806a1b9cb6db96190b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Asset name</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_stock_take_task_detail_asset_name_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-09-13 09:06:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

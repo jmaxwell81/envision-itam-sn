@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_envision_itam.MiniProgramMsg</api_name>
+        <client_callable>false</client_callable>
+        <description>小程序消息推送类</description>
+        <name>MiniProgramMsg</name>
+        <script><![CDATA[var MiniProgramMsg = Class.create();
+MiniProgramMsg.prototype = {
+	initialize: function() {
+	},
+	//empNos:员工号，多个以 | 分割,如：user1|user2|user3
+	//title:标题
+	//desc:描述
+	//contentItemArray:数组对象，消息内容键值对，最多允许10个item
+	//[ {"key": "会议室","value": "402"}]
+		//url:
+		send:function(empNos,title,desc,contentItemArray,url){
+			var Corpid = gs.getProperty("x_envision_itam.wx.corpid");
+			var Corpsecret = gs.getProperty("x_envision_itam.wx.corpsecret");
+			var Appid = gs.getProperty("x_envision_itam.wx.appid");
+			var accessToken = "";
+			//取AccessToken
+			try {
+				var tokenGr = new sn_ws.RESTMessageV2('x_envision_itam.wx_api', 'GetAccessToken');
+				tokenGr.setStringParameterNoEscape('Corpid', Corpid);
+				tokenGr.setStringParameterNoEscape('Corpsecret', Corpsecret);
+				var resp = tokenGr.execute();
+				var resBody = JSON.parse(resp.getBody());
+				accessToken = resBody.access_token;
+			}
+			catch(ex) {
+				var message = ex.getMessage();
+				gs.error(">>>>>>JK:推送小程序消息异常,获取accessToken异常:"+message);
+			}
+			if(!desc){
+				desc="";
+			}
+			var body = {
+				"touser" : empNos+"",
+				"msgtype" : "miniprogram_notice",
+				//"page":"pages/index/index",
+				"miniprogram_notice" : {
+					"appid": Appid,
+					"title": title,//消息标题，长度限制4-12个汉字
+					//"description":desc,//消息描述，长度限制4-12个汉字,否
+					"emphasis_first_item": true,//是否放大第一个content_item
+					"content_item":contentItemArray
+				}
+			};
+			if(url){
+				body.page="pages/forward/forward?redirectUrl="+gs.urlEncode(url);
+				var notice=body.miniprogram_notice;
+				if(desc){
+					notice.description=desc;
+				}
+				body.miniprogram_notice=notice;
+			}
+			
+			gs.info(">>>>>>JK:小程序推送通知:"+JSON.stringify(body));
+			//gs.info(">>>>>>JK:accessToken:"+accessToken);
+			//发送消息
+			try{
+				var r = new sn_ws.RESTMessageV2('x_envision_itam.wx_api', 'PushMessage');
+				r.setStringParameterNoEscape('ACCESS_TOKEN',accessToken);
+				
+				r.setRequestBody(JSON.stringify(body));
+				var response = r.execute();
+				var respBody=response.getBody();
+				if(respBody.errcode!=0){
+					gs.info(">>>>>>JK:微信小程序消息推送返回："+respBody);
+				}
+				return response;
+			}
+			catch(ex) {
+				var message = ex.getMessage();
+				gs.error(">>>>>>JK:推送小程序消息异常:"+message);
+			}
+		},
+		type: 'MiniProgramMsg'
+	};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-28 08:26:39</sys_created_on>
+        <sys_id>110abaefdbdda300328592d8db961977</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>MiniProgramMsg</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_include_110abaefdbdda300328592d8db961977</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-02 06:51:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

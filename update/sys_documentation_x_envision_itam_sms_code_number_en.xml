@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="number" label="单号" language="en" table="x_envision_itam_sms_code">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <help/>
+            <hint/>
+            <label>单号</label>
+            <language>en</language>
+            <name>x_envision_itam_sms_code</name>
+            <plural>单号s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-13 06:05:03</sys_created_on>
+            <sys_id>8b23383cdbf96f006a1b9cb6db961913</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>单号</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_sms_code_number_en</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-13 07:00:11</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

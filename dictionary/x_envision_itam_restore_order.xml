@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="归还单" max_length="40" name="x_envision_itam_restore_order" type="collection">
+        <element label="Apply user" mandatory="true" max_length="32" name="apply_user" reference="sys_user" type="reference"/>
+        <element label="Asset" max_length="32" name="asset" reference="alm_hardware" reference_qual="javascript:'install_statusIN1,11^owned_by='+current.apply_user" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Description" max_length="500" name="description" type="string_full_utf8"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="readonly_clickthrough=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;if(current.stockroom){&#13;&#10;&#9;&#9;return current.stockroom;&#13;&#10;&#9;}&#13;&#10;&#9;var gr=new GlideRecord(&quot;alm_stockroom&quot;);&#13;&#10;&#9;gr.addQuery(&quot;manager&quot;,gs.getUserID());&#13;&#10;&#9;gr.orderBy(&quot;x_envision_itam_sort&quot;);&#13;&#10;&#9;//gr.setLimit(1);&#13;&#10;&#9;gr.query();&#13;&#10;&#9;if(gr.next()){&#13;&#10;&#9;&#9;return gr.sys_id;&#13;&#10;&#9;}&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Stockroom" mandatory="true" max_length="32" name="stockroom" reference="alm_stockroom" reference_qual="javascript:'manager='+gs.getUserID()" type="reference" use_reference_qualifier="advanced" virtual="true"/>
+        <index name="index">
+            <element name="stockroom"/>
+        </index>
+        <index name="index2">
+            <element name="apply_user"/>
+        </index>
+        <index name="index3">
+            <element name="asset"/>
+        </index>
+    </element>
+</database>

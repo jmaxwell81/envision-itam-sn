@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_envision_itam_take_delivery" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Draft</label>
+            <language>en</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>100</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-03 07:57:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f01da5e5db29e700328592d8db96198a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 07:58:39</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>草稿</label>
+            <language>zh</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>100</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-24 08:44:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e5e71a52db956300328592d8db96192a</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 07:56:19</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pending store</label>
+            <language>en</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>200</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-03 07:57:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>09dc21e5db29e700328592d8db961900</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 07:58:32</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>待入库</label>
+            <language>zh</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>200</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-24 08:45:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>00f71a52db956300328592d8db9619eb</sys_id>
+            <sys_mod_count>6</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 07:56:22</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>In stock</label>
+            <language>en</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>300</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-03 07:58:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>402da5e5db29e700328592d8db9619fa</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 07:58:37</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>已入库</label>
+            <language>zh</language>
+            <name>x_envision_itam_take_delivery</name>
+            <sequence>300</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-03 07:54:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e35c6965db29e700328592d8db961939</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 07:56:29</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_envision_itam_take_delivery</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-24 08:44:48</sys_created_on>
+            <sys_id>08f79652db956300328592d8db9619e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_choice_x_envision_itam_take_delivery_state</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-24 08:44:48</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

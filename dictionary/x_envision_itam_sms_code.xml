@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="短信验证码记录" max_length="40" name="x_envision_itam_sms_code" type="collection">
+        <element default="+86" label="区号" max_length="40" name="area_code" type="string"/>
+        <element label="错误码" max_length="40" name="error_code" type="string"/>
+        <element label="错误信息" max_length="255" name="error_msg" type="string_full_utf8"/>
+        <element label="失效时间" max_length="40" name="invalid_time" type="glide_date_time"/>
+        <element label="已失效" max_length="40" name="is_invalid" type="boolean"/>
+        <element label="手机号码" max_length="40" name="mobile_phone" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="单号" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="请求ID" max_length="40" name="request_id" type="string"/>
+        <element label="发送时间" max_length="40" name="send_time" type="glide_date_time"/>
+        <element label="验证码" max_length="40" name="sms_code" type="string"/>
+        <element label="使用时间" max_length="40" name="use_time" type="glide_date_time"/>
+    </element>
+</database>

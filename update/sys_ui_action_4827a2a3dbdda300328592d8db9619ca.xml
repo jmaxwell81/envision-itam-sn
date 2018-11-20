@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <comments>待处理状态时才允许选择待报废资产</comments>
+        <condition>current.status=="1"</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>true</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>选择待报废资产</name>
+        <onclick/>
+        <order>1001</order>
+        <script><![CDATA[current.update();
+//待报废
+var query="install_status=13^x_envision_itam_retire_orderISEMPTY^ORx_envision_itam_retire_order="+current.sys_id;
+gs.setRedirect("sys_m2m_template.do?sys_is_list=true&sys_is_related_list=true&sys_target=alm_hardware&sysparm_checked_items=&sysparm_collection="+current.getTableName()+"&sysparm_collectionID="+current.sys_id+"&sysparm_collection_key="+current.getTableName()+"&sysparm_collection_label=资产清单&sysparm_collection_related_field=&sysparm_collection_related_file=alm_hardware&sysparm_collection_relationship=&sysparm_fixed_query=&sysparm_form_type=o2m&sysparm_group_sort=&sysparm_list_css=&sysparm_m2m_ref=alm_hardware&sysparm_query="+query+"&sysparm_referring_url=%2f"+current.getTableName()+".do%3fsys_id="+current.sys_id+"%26sysparm_record_rows%3d1%26sysparm_record_target%3d"+current.getTableName()+"%26sysparm_record_row%3d1&sysparm_stack=no&sysparm_target=&sysparm_view=");]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-28 07:03:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4827a2a3dbdda300328592d8db9619ca</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>选择待报废资产</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ui_action_4827a2a3dbdda300328592d8db9619ca</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-30 01:57:56</sys_updated_on>
+        <table>x_envision_itam_retire_order</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

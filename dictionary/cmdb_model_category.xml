@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Model Category" max_length="40" name="cmdb_model_category" type="collection">
+        <element label="Model code" max_length="40" name="x_envision_itam_model_code" type="string"/>
+        <element label="Picture" max_length="40" name="x_envision_itam_picture" type="user_image"/>
+        <element label="Sort" max_length="40" name="x_envision_itam_sort" type="integer"/>
+        <element display="true" label="Zh name" max_length="255" name="x_envision_itam_zh_name" type="string_full_utf8"/>
+    </element>
+</database>

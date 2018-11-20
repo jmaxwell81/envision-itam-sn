@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="inventory_time" label="入库时间" language="zh" table="x_envision_itam_take_delivery">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>inventory_time</element>
+            <help/>
+            <hint/>
+            <label>入库时间</label>
+            <language>zh</language>
+            <name>x_envision_itam_take_delivery</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-03 08:00:27</sys_created_on>
+            <sys_id>e5adede5db29e700328592d8db96194a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>入库时间</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_take_delivery_inventory_time_zh</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 08:00:27</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_translated">
+    <sys_translated action="INSERT_OR_UPDATE">
+        <element>title</element>
+        <id/>
+        <label>我要借用IT资产</label>
+        <language>zh</language>
+        <name>sys_app_module</name>
+        <sys_class_name>sys_translated</sys_class_name>
+        <sys_created_by>yangdong.luo</sys_created_by>
+        <sys_created_on>2018-10-30 03:04:21</sys_created_on>
+        <sys_id>e3834018db652700328592d8db961965</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>我要借用IT资产</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_translated_e3834018db652700328592d8db961965</sys_update_name>
+        <sys_updated_by>junhui.lei</sys_updated_by>
+        <sys_updated_on>2018-10-30 06:53:16</sys_updated_on>
+        <value>Borrow IT asset</value>
+    </sys_translated>
+</record_update>

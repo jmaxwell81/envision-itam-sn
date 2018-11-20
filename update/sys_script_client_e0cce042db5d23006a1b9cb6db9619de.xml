@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>goods_type</field>
+        <global>true</global>
+        <messages/>
+        <name>isProject</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   if(newValue=="2"){
+	   //项目采购
+	   g_form.setValue("is_project",true);
+   } else {
+	   g_form.setValue("is_project",false);
+   }
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-23 06:19:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e0cce042db5d23006a1b9cb6db9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>isProject</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_e0cce042db5d23006a1b9cb6db9619de</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-23 06:19:05</sys_updated_on>
+        <table>x_envision_itam_take_delivery</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

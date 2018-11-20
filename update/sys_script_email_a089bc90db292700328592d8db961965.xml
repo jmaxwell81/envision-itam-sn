@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>transfer_asset</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+/* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+/* Optional GlideRecord */ event) {
+	var desc="您的IT资产调拨已完成";
+	if(current.transfer_type=="2"){
+		desc="您的IT资产正在调拨中";
+	}
+	template.print(desc+"<br/><br/>");
+	template.print("调拨单号："+current.order_no+"<br/><br/>");
+	if(current.transfer_type=="stockroom"){
+		template.print("调出仓库："+current.delivery_stockroom.name+"<br/><br/>");
+		template.print("调入仓库："+current.stockroom.name+"<br/><br/>");
+		template.print("计划完成时间："+current.getDisplayValue("plan_complete_time")+"<br/><br/>");
+	} else {
+		template.print("调出成本中心："+current.delivery_cost_center.name+"<br/><br/>");
+		template.print("调入成本中心："+current.cost_center.name+"<br/><br/>");
+	}
+	
+	
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-30 07:02:23</sys_created_on>
+        <sys_id>a089bc90db292700328592d8db961965</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>transfer_asset</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_email_a089bc90db292700328592d8db961965</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-02 08:39:20</sys_updated_on>
+    </sys_script_email>
+</record_update>

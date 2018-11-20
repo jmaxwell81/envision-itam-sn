@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_related sys_domain="global" table="x_162342_envision_sn_tag" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="SN Tag - Default view" name="x_162342_envision_sn_tag" related_list="NULL" sys_domain="global" view="Default view">4292651cdbd0eb006a1b9cb6db9619cf</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-08-29 06:41:05</sys_created_on>
+            <sys_id>0a92651cdbd0eb006a1b9cb6db9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-08-29 06:41:05</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>SN Tag - Default view</calculated_name>
+            <filter/>
+            <name>x_162342_envision_sn_tag</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-08-29 06:41:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4292651cdbd0eb006a1b9cb6db9619cf</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>SN Tag - Default view</sys_name>
+            <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_ui_related_x_162342_envision_sn_tag_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-09-13 01:31:45</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

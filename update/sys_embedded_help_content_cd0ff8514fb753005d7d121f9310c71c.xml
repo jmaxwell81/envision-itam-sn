@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_embedded_help_content">
+    <sys_embedded_help_content action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <content><![CDATA[ <h1 class="title topictitle1">Business units</h1>  <div class="body conbody">  <p class="p">Business units are a part of an organization that do a specific business function.</p>  <p class="p">Review the list of default business units and configure them to align with your business   needs.</p>  <p class="p">To modify a business unit, click the business unit name.</p>  <p class="p">To add a new business unit, click <span class="ph uicontrol">New</span>.</p> </div>]]></content>
+        <last_sync>2018-08-22 10:09:12</last_sync>
+        <modifier>normal</modifier>
+        <name>business_unit_list-normal</name>
+        <page>business_unit_list</page>
+        <product>1</product>
+        <qualifier/>
+        <role/>
+        <role_order>1000</role_order>
+        <snc_created>true</snc_created>
+        <sys_class_name>sys_embedded_help_content</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-08-07 10:08:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cd0ff8514fb753005d7d121f9310c71c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>business_unit_list-normal</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_embedded_help_content_cd0ff8514fb753005d7d121f9310c71c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-13 01:34:09</sys_updated_on>
+        <version>k</version>
+    </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=cd0ff8514fb753005d7d121f9310c71c"/>
+</record_update>

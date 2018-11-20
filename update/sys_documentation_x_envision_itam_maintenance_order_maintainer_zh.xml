@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="maintainer" label="维修商" language="zh" table="x_envision_itam_maintenance_order">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>maintainer</element>
+            <help/>
+            <hint/>
+            <label>维修商</label>
+            <language>zh</language>
+            <name>x_envision_itam_maintenance_order</name>
+            <plural>维修商s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yangdong.luo</sys_created_by>
+            <sys_created_on>2018-10-30 06:15:27</sys_created_on>
+            <sys_id>f24f6098dbe52700328592d8db961936</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>维修商</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_maintenance_order_maintainer_zh</sys_update_name>
+            <sys_updated_by>yangdong.luo</sys_updated_by>
+            <sys_updated_on>2018-10-30 06:15:27</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

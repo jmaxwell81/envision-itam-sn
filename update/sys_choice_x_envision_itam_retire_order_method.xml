@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="method" table="x_envision_itam_retire_order" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Donated</label>
+            <language>en</language>
+            <name>x_envision_itam_retire_order</name>
+            <sequence>0</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-03 02:24:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2bb064a9db65e700328592d8db96194a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 02:24:43</sys_updated_on>
+            <value>donated</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>捐赠</label>
+            <language>zh</language>
+            <name>x_envision_itam_retire_order</name>
+            <sequence>0</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-28 06:59:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7f166e63dbdda300328592d8db961961</sys_id>
+            <sys_mod_count>6</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 02:24:53</sys_updated_on>
+            <value>donated</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sold</label>
+            <language>en</language>
+            <name>x_envision_itam_retire_order</name>
+            <sequence>1</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-03 02:23:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5960a069db65e700328592d8db961943</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 02:23:50</sys_updated_on>
+            <value>sold</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>售卖</label>
+            <language>zh</language>
+            <name>x_envision_itam_retire_order</name>
+            <sequence>1</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-28 06:59:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>13366e63dbdda300328592d8db96193b</sys_id>
+            <sys_mod_count>7</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 02:24:53</sys_updated_on>
+            <value>sold</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Disposed</label>
+            <language>en</language>
+            <name>x_envision_itam_retire_order</name>
+            <sequence>2</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-03 02:24:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0890a829db65e700328592d8db96194a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 02:24:24</sys_updated_on>
+            <value>disposed</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>环保处理</label>
+            <language>zh</language>
+            <name>x_envision_itam_retire_order</name>
+            <sequence>2</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-28 07:00:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3f466e63dbdda300328592d8db9619b2</sys_id>
+            <sys_mod_count>6</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-03 02:24:53</sys_updated_on>
+            <value>disposed</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>method</element>
+            <name>x_envision_itam_retire_order</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-28 06:59:41</sys_created_on>
+            <sys_id>d7366e63dbdda300328592d8db96193c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>method</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_choice_x_envision_itam_retire_order_method</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-28 06:59:41</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

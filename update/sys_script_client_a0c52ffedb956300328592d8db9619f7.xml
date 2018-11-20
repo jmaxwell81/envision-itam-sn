@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>sys_created_on</field>
+        <global>true</global>
+        <messages/>
+        <name>校验表单</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+	var duration=g_form.getValue("duration");
+	var unit=g_form.getValue("unit");
+	var orderType=g_form.getValue("order_type");
+	var image=g_form.getValue("image");
+	if(orderType=="1"){ //领用
+		
+	} else if(unit=="3" && duration>12){ //月
+		g_form.addErrorMessage('按照"IT资产管理规范"的规定，借用时长最多不超过12个月。请修改');
+		return false;
+	}
+// 	if(!image){
+// 		g_form.addErrorMessage("请上传"+g_form.getLabelOf("image"));
+// 		return false;
+// 	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-26 03:43:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a0c52ffedb956300328592d8db9619f7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>校验表单</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_a0c52ffedb956300328592d8db9619f7</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-26 07:11:59</sys_updated_on>
+        <table>x_envision_itam_apply_order</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="delivery_list" section_id="83bb33ccdb252700328592d8db961983" sys_domain="global" table="x_envision_itam_take_delivery" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>12M.x_envision_itam_take_delivery.x_envision_itam_task_delivery_detail.parent_id</element>
+            <position>0</position>
+            <sys_created_by>junhui.lei</sys_created_by>
+            <sys_created_on>2018-11-02 08:24:19</sys_created_on>
+            <sys_id>3f896891db2da700328592d8db961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="delivery_list" display_value="delivery_list" name="x_envision_itam_take_delivery" sys_domain="global" view="Default view">83bb33ccdb252700328592d8db961983</sys_ui_section>
+            <sys_updated_by>junhui.lei</sys_updated_by>
+            <sys_updated_on>2018-11-02 08:24:19</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>delivery_list</caption>
+            <header>false</header>
+            <name>x_envision_itam_take_delivery</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-30 02:30:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>83bb33ccdb252700328592d8db961983</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>delivery_list</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_ui_section_83bb33ccdb252700328592d8db961983</sys_update_name>
+            <sys_updated_by>junhui.lei</sys_updated_by>
+            <sys_updated_on>2018-11-02 08:24:19</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

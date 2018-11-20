@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="scheduled_import_set">
+    <scheduled_import_set action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition/>
+        <conditional>false</conditional>
+        <data_source/>
+        <map/>
+        <name>/Groups Import</name>
+        <order/>
+        <parent/>
+        <post_script/>
+        <post_script_bool>false</post_script_bool>
+        <pre_script/>
+        <pre_script_bool>false</pre_script_bool>
+        <run_as display_value="雷俊辉">095c875edb082700328592d8db9619bb</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2018-11-13 07:27:29</run_start>
+        <run_time/>
+        <run_type>daily</run_type>
+        <sys_class_name>scheduled_import_set</sys_class_name>
+        <sys_created_by>junhui.lei</sys_created_by>
+        <sys_created_on>2018-11-13 07:27:29</sys_created_on>
+        <sys_id>ae0601f0db79af00328592d8db96191d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>/Groups Import</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>scheduled_import_set_ae0601f0db79af00328592d8db96191d</sys_update_name>
+        <sys_updated_by>junhui.lei</sys_updated_by>
+        <sys_updated_on>2018-11-13 07:27:29</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </scheduled_import_set>
+</record_update>

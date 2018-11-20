@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_envision_itam_stock_take_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_envision_itam_stock_take_task">stateCHANGESTO03^ORstateCHANGESTO02^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="03"/>
+            <item endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="true" value="02"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>任务完成后同时变更任务清单状态</name>
+        <order>1001</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var isSubTask=true;
+	//没有子任务管理的任务清单
+	finish(current.sys_id);
+	
+	//当前任务管理了子任务
+	//子任务关联的任务清单
+	if(isSubTask){
+		var task=new GlideRecord(current.getTableName());
+		task.addQuery("parent",current.sys_id);
+		task.query();
+		while(task.next()){
+			finish(task.sys_id);
+		}
+	}
+	
+	function finish(sysId){
+		var gr=new GlideRecord("x_envision_itam_stock_take_detail");
+		gr.addQuery("task_number",sysId);
+		gr.addQuery("stock_take_state","=","1");//executing
+		gr.query();
+		while(gr.next()){
+			isSubTask=false;
+			gr.stock_take_state="2";//finished
+			gr.finish_time=new GlideDateTime();
+			gr.update();
+		}
+	}
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-02 03:29:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>281627c9db69a700328592d8db961987</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>任务完成后同时变更任务清单状态</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_281627c9db69a700328592d8db961987</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-08 03:45:22</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=281627c9db69a700328592d8db961987"/>
+</record_update>

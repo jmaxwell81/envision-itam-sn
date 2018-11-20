@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="调拨单资产清单日志" max_length="40" name="x_envision_itam_transfer_order_asset_log" type="collection">
+        <element attributes="readonly_clickthrough=true" label="资产" max_length="32" name="asset" read_only="true" reference="alm_asset" type="reference"/>
+        <element label="Asset tag" max_length="40" name="asset_tag" type="string"/>
+        <element label="Display name" max_length="255" name="display_name" type="string_full_utf8"/>
+        <element label="IT asset tag" max_length="40" name="it_asset_tag" type="string"/>
+        <element label="Model" max_length="32" name="model" reference="cmdb_model" type="reference"/>
+        <element label="Model category" max_length="32" name="model_category" reference="cmdb_model_category" type="reference"/>
+        <element attributes="readonly_clickthrough=true" label="调拨单" max_length="32" name="transfer_order" read_only="true" reference="x_envision_itam_transfers_order" type="reference"/>
+        <index name="index">
+            <element name="transfer_order"/>
+        </index>
+        <index name="index2">
+            <element name="model_category"/>
+        </index>
+        <index name="index3">
+            <element name="model"/>
+        </index>
+        <index name="index4">
+            <element name="asset"/>
+        </index>
+    </element>
+</database>

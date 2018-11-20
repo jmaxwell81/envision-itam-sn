@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>用户登录</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var employee_number=request.queryParams["employee_number"];
+	var u_open_id=request.queryParams["u_open_id"];
+	var data=request.body.data;
+	var gr=new GlideRecord("sys_user");
+	gr.addActiveQuery();
+	if(!gs.nil(employee_number) && employee_number!=""){
+		//工号登录
+		gr.addQuery("employee_number",employee_number);
+	} else if(!gs.nil(u_open_id) && u_open_id!=""){
+		//openid登录
+		gr.addQuery("x_envision_itam_open_id",u_open_id);
+	}
+	gr.query();
+	var resp={};
+		if(gr.next()){
+			var gr2=new GlideRecord("alm_stockroom");
+			gr2.addQuery("manager",gr.sys_id);
+			gr2.query();
+			var isAdmin=false;
+			if(gr2.next())	{
+				//该用户存在管理的仓库，则视为管理员
+				isAdmin=true;
+			}
+			resp={
+				u_company_name:gr.company.name+"",
+				u_department_name:gr.department.name+"",
+				mobile_phone:gr.mobile_phone+"",
+				sys_id:gr.sys_id+"",
+				name:gr.name+"",
+				department:gr.department+"",
+				company:gr.company+"",
+				u_is_external:gr.x_envision_itam_is_external+"",
+				u_open_id:gr.x_envision_itam_open_id+"",
+				employee_number:gr.employee_number+"",
+				isAdmin:isAdmin+"",
+			};
+			data.systemInfo.clientIp=gs.getSession().getClientIP();
+			var snApiUtil=new SNApiUtil();
+			var log={"userId":gr.sys_id,"channel":"2","systemInfo":data.systemInfo};
+			snApiUtil.saveLoginLog(log);
+ 
+		}
+		
+		return resp;
+	})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/login</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/login</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-23 00:54:14</sys_created_on>
+        <sys_id>c0e69d1a4f0023005d7d121f9310c736</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>用户登录</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_c0e69d1a4f0023005d7d121f9310c736</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-02 09:25:33</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

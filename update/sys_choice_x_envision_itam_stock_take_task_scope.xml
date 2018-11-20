@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="scope" table="x_envision_itam_stock_take_task" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>scope</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Stockroom</label>
+            <language>en</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <sequence>1</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-31 03:39:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7e059d60dbe16700328592d8db9619b7</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-01 01:31:39</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>scope</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>仓库</label>
+            <language>zh</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <sequence>1</sequence>
+            <sys_created_by>junhui.lei</sys_created_by>
+            <sys_created_on>2018-10-31 11:32:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e651036cdba56700328592d8db9619cd</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-01 01:31:17</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>scope</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cost center</label>
+            <language>en</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <sequence>2</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-31 03:39:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bd159d60dbe16700328592d8db961921</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-01 01:31:37</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>scope</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>成本中心</label>
+            <language>zh</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <sequence>2</sequence>
+            <sys_created_by>junhui.lei</sys_created_by>
+            <sys_created_on>2018-10-31 11:32:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2c61036cdba56700328592d8db9619c1</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-01 01:31:20</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>scope</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Part</label>
+            <language>en</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <sequence>3</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-31 03:38:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>04e49560dbe16700328592d8db96190d</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-01 01:31:32</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>scope</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>部分</label>
+            <language>zh</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <sequence>3</sequence>
+            <sys_created_by>junhui.lei</sys_created_by>
+            <sys_created_on>2018-10-31 11:32:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>47310b2cdba56700328592d8db96195d</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-01 01:31:24</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>scope</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>All</label>
+            <language>en</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <sequence>4</sequence>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-31 03:38:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4bd4d160dbe16700328592d8db9619aa</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-01 01:31:29</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>scope</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>全部</label>
+            <language>zh</language>
+            <name>x_envision_itam_stock_take_task</name>
+            <sequence>4</sequence>
+            <sys_created_by>junhui.lei</sys_created_by>
+            <sys_created_on>2018-10-31 11:31:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e5318f2cdba56700328592d8db9619d8</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-01 01:31:27</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>scope</element>
+            <name>x_envision_itam_stock_take_task</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-31 03:38:06</sys_created_on>
+            <sys_id>3bd45d60dbe16700328592d8db961905</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>scope</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_choice_x_envision_itam_stock_take_task_scope</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-10-31 03:38:06</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

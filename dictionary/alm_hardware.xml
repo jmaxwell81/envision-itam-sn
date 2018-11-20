@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="alm_asset" label="Hardware" max_length="40" name="alm_hardware" type="collection">
+        <element label="image1" max_length="40" name="x_envision_itam_image1" type="user_image"/>
+        <element label="image2" max_length="40" name="x_envision_itam_image2" type="user_image"/>
+        <element label="image3" max_length="40" name="x_envision_itam_image3" type="user_image"/>
+        <element label="image4" max_length="40" name="x_envision_itam_image4" type="user_image"/>
+        <element label="报废单" max_length="32" name="x_envision_itam_retire_order" read_only="true" reference="x_envision_itam_retire_order" reference_floats="true" type="reference"/>
+        <index name="index">
+            <element name="x_envision_itam_retire_order"/>
+        </index>
+    </element>
+</database>

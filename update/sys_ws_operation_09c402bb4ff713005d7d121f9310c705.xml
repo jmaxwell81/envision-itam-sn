@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>新建盘点计划(日常、交接)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var resp={status:"9999"};
+		var data=request.body.data;
+		if(!data.stockroom){
+			resp.msg="仓库不能为空";
+			return resp;
+		}
+		if(!data.startTime){
+			resp.msg="开始时间不能为空";
+			return resp;
+		}
+		if(!data.stopTime){
+			resp.msg="截止时间不能为空";
+			return resp;
+		}
+		//判断该仓库是否已经存在盘点计划单
+		var startTime=new GlideDateTime(data.startTime+" 00:00:00");
+		var stopTime=new GlideDateTime(data.stopTime+" 23:59:59");
+		var gr=new GlideRecord("x_envision_itam_stock_take_task");
+		gr.addQuery("scope","1");//stockroom
+		gr.addQuery("plan_scope",data.stockroom);
+		//gr.addQuery("plan_type",data.playType);
+		gr.addQuery("state","NOT IN","03");//finished
+		gr.query();
+		if(gr.next()){
+			if(gr.start_time>startTime || gr.stop_time<stopTime){
+				
+			} else {
+				resp.msg="该时间段内已存在未完成的盘点计划";
+				return resp;
+			}
+			
+		}
+		
+		gr.initialize();
+		gr.plan_scope=data.stockroom;
+		gr.plan_type=data.planType;
+		gr.state="0";//Pending
+		if(gs.endOfToday()>=startTime){
+			gr.state="01";//Execting
+		}
+		gr.start_time=startTime;
+		gr.stop_time=stopTime;
+		gr.description=data.description;
+		gr.scope="1";//stockroom
+		gr.managed_by=data.userId;
+		gr.insert();
+		
+		//查询该仓库下所有的设备
+		var asset=new GlideRecord("alm_hardware");
+		asset.addQuery("stockroom",data.stockroom);
+		//只有存在IT台账编号才能进行盘点
+		asset.addEncodedQuery("x_envision_itam_sn_asset_tagISNOTEMPTY");
+		//只有未在盘点的设备才进行盘点
+		asset.addQuery("x_envision_itam_is_locked",false);
+		asset.query();
+		var hasAsset=false;
+		while(asset.next()){
+			hasAsset=true;
+			//按设备拆分计划单详情
+			var detail=new GlideRecord("x_envision_itam_stock_take_detail");
+			detail.task_number=gr.sys_id;
+			detail.stockroom=data.stockroom;
+			detail.stock_quantity=asset.quantity;
+			detail.stock_take_quantity=0;
+			detail.stock_take_method="2";
+			detail.asset=asset.sys_id;
+			detail.managed_by=asset.managed_by;
+			detail.insert();
+			
+			//设备状态锁定
+			asset.x_envision_itam_is_locked=true;
+			asset.update();
+		}
+		
+		if(!hasAsset){
+			resp.msg="该仓库不存在设备或设备处于盘点中,创建盘点计划失败";
+			gr.addQuery("sys_id",gr.sys_id);
+			gr.query();
+			if(gr.next()){
+				gr.deleteRecord();
+			}
+			return resp;
+		}
+		
+		resp.status="0000";
+		
+		return resp;
+	})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/add_stock_take_plan</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/add_stock_take_plan</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-15 09:46:38</sys_created_on>
+        <sys_id>09c402bb4ff713005d7d121f9310c705</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>新建盘点计划(日常、交接)</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_09c402bb4ff713005d7d121f9310c705</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-12 06:30:23</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

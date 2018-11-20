@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>绑定耗材</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var resp={
+		status:"9999"
+	};
+	var data=request.body.data;
+	if(gs.nil(data.userId) || data.userId=="" || gs.nil( data.assetSysId) || data.assetSysId==""){
+		resp.msg="请求参数不全";
+		return resp;
+	}
+	if(!data.selectedConsumable || data.selectedConsumable.length<=0) {
+		resp.msg="请选择耗材";
+		return resp;
+	}
+	for(var sysId in data.selectedConsumable){
+		var obj=data.selectedConsumable[sysId];
+		if(obj.count<=0){
+			continue;
+		}
+		//当前耗材数量变少
+		var gr=new GlideRecord("alm_consumable");
+		gr.addQuery("sys_id",sysId);
+		gr.query();
+		
+		if(gr.next()){
+			//增加一条已消耗的耗材记录
+			gr.sys_id="";
+			var gr2=new GlideRecord("alm_consumable");
+			for(var p in gr) {
+				gr2[p]=gr[p];
+			}
+			gr2.stockroom="";
+			gr2.substatus="";
+			gr2.managed_by="";
+			gr2.owned_by="";
+			gr2.assigned_to=data.userId;
+			gr2.install_status="10";//Consumed
+			gr2.quantity=obj.count;
+			gr2.parent=data.assetSysId;
+			gr2.insert();
+			
+			gr.quantity=(gr.quantity>=0?(gr.quantity-obj.count):(obj.count-gr.quantity));
+			if(gr.quantity<=0){
+				//已消耗完，直接删除该记录
+				gr.deleteRecord();
+			} else {
+				gr.update();
+			}
+			
+			//耗材绑定日志
+			var logGr=new GlideRecord("x_envision_itam_asset_log");
+			var now=new GlideDateTime();
+			
+			logGr.asset=gr.sys_id;
+			logGr.asset_name=gr2.model_category.x_envision_itam_zh_name+" "+gr.display_name;
+			logGr.log_type="5";//使用
+			logGr.asset_type="alm_consumable";
+			logGr.operated=now;
+			
+			//操作前日志
+			logGr.delivery_state=gr.install_status;
+			logGr.delivery_stockroom=gr.stockroom;
+			logGr.delivery_managed_by=gr.managed_by;
+			logGr.delivery_owned_by=gr.owned_by;
+			logGr.delivery_assigned_to=gr.assigned_to;
+			logGr.operator=data.userId;
+			
+			
+			//操作后日志
+			logGr.asset_state=gr2.install_status;
+			//logGr.stockroom="";
+			//logGr.managed_by=gr2.managed_by;
+			//logGr.owned_by=gr2.owned_by;
+			logGr.assigned_to=gr2.assigned_to;
+			logGr.description=logGr.log_type.getDisplayValue()+" "+gr.model_category.x_envision_itam_zh_name+" "+gr.display_name+" x"+gr2.quantity;
+			logGr.insert();
+		}
+		
+	}
+	resp.status="0000";
+	return resp;
+	
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/bind_consumable</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/bind_consumable</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-22 06:24:12</sys_created_on>
+        <sys_id>286b510e4f0463005d7d121f9310c736</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>绑定耗材</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_286b510e4f0463005d7d121f9310c736</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-15 03:29:37</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

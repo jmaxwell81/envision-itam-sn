@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_push_notif_app_install">
+    <sys_push_notif_app_install action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <last_registered_on>2018-11-14 15:01:45</last_registered_on>
+        <sys_class_name>sys_push_notif_app_install</sys_class_name>
+        <sys_created_by>junhui.lei</sys_created_by>
+        <sys_created_on>2018-10-15 17:30:03</sys_created_on>
+        <sys_id>56d9bde7db0d2340328592d8db9619e7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>11ed3b955e06ebc89b36ce323fcc699e45fa17c12081522a9dae789ca6730b16</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_push_application_id display_value="ServiceNow Mobile Application">ab704041ff1102009738ffffffffff33</sys_push_application_id>
+        <sys_push_platform_id display_value="Apple">20e71f30ff0002009738ffffffffff6b</sys_push_platform_id>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_push_notif_app_install_56d9bde7db0d2340328592d8db9619e7</sys_update_name>
+        <sys_updated_by>junhui.lei</sys_updated_by>
+        <sys_updated_on>2018-11-14 15:01:45</sys_updated_on>
+        <sys_user_id display_value="雷俊辉">095c875edb082700328592d8db9619bb</sys_user_id>
+        <token>11ed3b955e06ebc89b36ce323fcc699e45fa17c12081522a9dae789ca6730b16</token>
+    </sys_push_notif_app_install>
+</record_update>

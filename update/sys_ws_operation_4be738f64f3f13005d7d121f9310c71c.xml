@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>根据资产型号获取耗材产品信息(耗材入库扫码)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var obj={status:"9999"};
+		var modelNum=request.queryParams["modelNumber"];
+		var userId=request.queryParams["userId"];
+		if(!modelNum || !userId){
+			obj.msg="请求参数缺失";
+			return obj;
+		}
+	 
+		obj.status="0000";
+		var gr=new GlideRecord("cmdb_consumable_product_model");
+		gr.addQuery("model_number",modelNum);
+		gr.query();
+		if(gr.next()){
+			//必须先存在该责任人的在途的耗材记录数据，否则无法入库，入库成功后状态变更为库存中
+			//根据型号反向查询耗材数据
+			var gc=new GlideRecord("alm_consumable");
+			gc.addActiveQuery();
+			gc.addQuery("model",gr.sys_id);
+			gc.addQuery("install_status","9");//在途中 In transit
+			gc.addQuery("owned_by",userId); 
+			gc.query();
+			obj.data={};
+				if(gc.next()){
+					var picture=""; 
+					var attGr=new GlideRecord("sys_attachment");
+					
+					//图片， file_name=picture 为封面图
+					attGr.addEncodedQuery("content_typeLIKEimage^file_name=picture^table_sys_id="+gr.sys_id);
+					attGr.query();
+					if(attGr.next()){
+						var sysEncodedAttachment = new GlideSysAttachment();
+						picture = sysEncodedAttachment.getContentBase64(attGr);
+					}
+					
+					var data={
+						stockroom:gc.stockroom+"",
+						asset_sys_id:gc.sys_id+"",
+						model_number:modelNum+"",
+						display_name:gr.display_name+"",
+						picture:""+picture,
+						model_category_u_zh_name:gr.name+"",
+						model_category_name:modelNum+"",
+					};
+					obj.data=data;
+				} else {
+					obj.status="9999";
+					obj.msg="该型号耗材不存在或您不是该耗材责任人";
+					return obj;
+				}
+				
+			}
+			return obj;
+		})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/consumable_data_by_model_number</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/consumable_data_by_model_number</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-12 01:30:06</sys_created_on>
+        <sys_id>4be738f64f3f13005d7d121f9310c71c</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>根据资产型号获取耗材产品信息(耗材入库扫码)</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_4be738f64f3f13005d7d121f9310c71c</sys_update_name>
+        <sys_updated_by>junhui.lei</sys_updated_by>
+        <sys_updated_on>2018-09-29 05:57:17</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

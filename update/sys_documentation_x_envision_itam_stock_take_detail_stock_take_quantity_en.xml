@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="stock_take_quantity" label="Stock take quantity" language="en" table="x_envision_itam_stock_take_detail">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>stock_take_quantity</element>
+            <help/>
+            <hint/>
+            <label>Stock take quantity</label>
+            <language>en</language>
+            <name>x_envision_itam_stock_take_detail</name>
+            <plural>Stock take quantities</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-08 03:26:54</sys_created_on>
+            <sys_id>290f9e47db25ab006a1b9cb6db96190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Stock take quantity</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_stock_take_detail_stock_take_quantity_en</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-08 03:26:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

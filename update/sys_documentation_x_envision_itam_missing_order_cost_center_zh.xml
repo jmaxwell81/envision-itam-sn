@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="cost_center" label="成本中心" language="zh" table="x_envision_itam_missing_order">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>cost_center</element>
+            <help/>
+            <hint/>
+            <label>成本中心</label>
+            <language>zh</language>
+            <name>x_envision_itam_missing_order</name>
+            <plural>成本中心s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yangdong.luo</sys_created_by>
+            <sys_created_on>2018-10-30 07:03:26</sys_created_on>
+            <sys_id>bd4a78d0db292700328592d8db96191f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>成本中心</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_missing_order_cost_center_zh</sys_update_name>
+            <sys_updated_by>yangdong.luo</sys_updated_by>
+            <sys_updated_on>2018-10-30 07:03:26</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

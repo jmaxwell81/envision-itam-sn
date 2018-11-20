@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="description" label="Description" language="en" table="x_envision_itam_apply_order">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <help/>
+            <hint/>
+            <label>Description</label>
+            <language>en</language>
+            <name>x_envision_itam_apply_order</name>
+            <plural>Descriptions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-10-25 08:21:45</sys_created_on>
+            <sys_id>dc4c9f6edb1d2300328592d8db9619e4</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_name>Description</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_x_envision_itam_apply_order_description_en</sys_update_name>
+            <sys_updated_by>yangdong.luo</sys_updated_by>
+            <sys_updated_on>2018-10-30 05:53:56</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>耗材详情</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var obj={status:"9999"};
+		var language=request.queryParams["language"];
+		var sysId=request.queryParams["sysId"];
+		if(!sysId){
+			obj.msg="请求参数缺失";
+			return obj;
+		}
+		obj.status="0000";
+		
+		var gr=new GlideRecord("alm_consumable");
+		gr.addActiveQuery();
+		gr.addQuery("sys_id",sysId);
+		gr.query();
+		obj.data={};
+			if(gr.next()){
+				quantity=gr.quantity;
+				var imageList=[];
+				var attGr=new GlideRecord("sys_attachment");
+				
+				//轮播图
+				attGr.addEncodedQuery("content_typeLIKEimage^file_name!=picture^table_sys_id="+gr.model.sys_id);
+				attGr.query();
+				while(attGr.next()){
+					if("picture"!=attGr.file_name){
+						var sysEncodedAttachment2 = new GlideSysAttachment();
+						var image = sysEncodedAttachment2.getContentBase64(attGr);
+						imageList.push(image);
+					}
+				}
+				//状态国际化数据
+				var snApiUtil=new SNApiUtil();
+				var choice=snApiUtil.getAssetState(gr.install_status,language);
+				var data={
+					sys_id:gr.sys_id+"",
+					model_number:gr.model.model_number+"",
+					display_name:gr.display_name+"",
+					imageList:imageList,
+					model_category_name:gr.model_category.x_envision_itam_zh_name+"",
+					model_name:gr.model.display_name+"",
+					managed_by:(gr.managed_by?gr.managed_by.name+"":""),
+					owned_by:(gr.owned_by?gr.owned_by.name+"":""),
+					assigned_to:(gr.assigned_to?gr.assigned_to.name+"":""),
+					company:(gr.owned_by.company?gr.owned_by.company.name+"":""),
+					department:(gr.owned_by.department?gr.owned_by.department.name+"":""),
+					quantity:quantity+"",
+					stockroom:gr.stockroom?gr.stockroom.name+"":"",
+					install_status:choice.label+"",
+					install_status_value:gr.install_status+""
+				};
+				obj.data=data;
+			} else {
+				obj.status="9999";
+				obj.msg="该耗材不存在";
+				return obj;
+			}
+			
+			
+			return obj;
+		})(request, response);]]></operation_script>
+        <operation_uri>/api/x_envision_itam/sn_api/consumable_detail</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/consumable_detail</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-15 03:33:20</sys_created_on>
+        <sys_id>443130374ff313005d7d121f9310c719</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>耗材详情</sys_name>
+        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ws_operation_443130374ff313005d7d121f9310c719</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-08 09:28:33</sys_updated_on>
+        <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

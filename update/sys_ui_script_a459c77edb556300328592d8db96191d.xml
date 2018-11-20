@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>领用资产时提示转为借用场景</description>
+        <global>false</global>
+        <name>x_envision_itam.EnvisionUIScript</name>
+        <script><![CDATA[ var x_envision_itam = x_envision_itam || {};
+	
+	x_envision_itam.EnvisionUIScript = (function() {
+		"use strict";
+		
+		return {
+			applyAssetConfirm:function(){
+					alert(111);
+			},
+			
+			type:  "EnvisionUIScript"
+		};
+	})();
+	]]></script>
+        <script_name>EnvisionUIScript</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-26 01:40:01</sys_created_on>
+        <sys_id>a459c77edb556300328592d8db96191d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_envision_itam.EnvisionUIScript</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ui_script_a459c77edb556300328592d8db96191d</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-26 01:49:24</sys_updated_on>
+        <use_scoped_format>true</use_scoped_format>
+    </sys_ui_script>
+</record_update>

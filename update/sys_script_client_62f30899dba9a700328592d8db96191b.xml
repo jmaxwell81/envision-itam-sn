@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>start_time</field>
+        <global>true</global>
+        <messages/>
+        <name>设置结束时间</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	if(!g_form.getValue("stop_time")){
+		var cdt = g_form.getValue('start_time'); //Choose the field to add time from
+		var addtime = 7; //The amount of time to add
+		var addtype = 'day'; //The time type.   Can be second, minute, hour, day, week, month, year.
+		
+		var ajax = new GlideAjax('x_envision_itam.ClientDateTimeUtils');
+		ajax.addParam('sysparm_name', 'addDateTimeAmount');
+		ajax.addParam('sysparm_fdt', cdt);
+		ajax.addParam('sysparm_addtime', addtime);
+		ajax.addParam('sysparm_addtype', addtype);
+		ajax.getXML(function(resp){
+			var answer = resp.responseXML.documentElement.getAttribute("answer");
+			g_form.setValue("stop_time",answer);
+		});
+	}
+	
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-02 05:40:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>62f30899dba9a700328592d8db96191b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>设置结束时间</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_script_client_62f30899dba9a700328592d8db96191b</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-02 06:08:35</sys_updated_on>
+        <table>x_envision_itam_stock_take_task</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_envision_itam_task" label="调拨任务" max_length="40" name="x_envision_itam_transfer_stockroom_task" sizeclass="1" type="collection">
+        <element label="调出仓库" max_length="32" name="delivery_stockroom" reference="alm_stockroom" type="reference"/>
+        <element label="调入仓库" max_length="32" name="stockroom" reference="alm_stockroom" type="reference"/>
+    </element>
+</database>

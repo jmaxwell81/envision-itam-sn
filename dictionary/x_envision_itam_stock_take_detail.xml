@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="盘点清单" max_length="40" name="x_envision_itam_stock_take_detail" type="collection">
+        <element label="Asset" max_length="32" name="asset" reference="alm_asset" type="reference"/>
+        <element label="Description" max_length="200" name="description" type="string_full_utf8"/>
+        <element label="Finish time" max_length="40" name="finish_time" type="glide_date_time"/>
+        <element label="Managed by" max_length="32" name="managed_by" reference="sys_user" type="reference"/>
+        <element attributes="readonly_clickthrough=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;return current.asset.model_category;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Model category" max_length="32" name="model_category" reference="cmdb_model_category" type="reference" virtual="true"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Real stockroom" max_length="32" name="real_stockroom" reference="alm_stockroom" type="reference"/>
+        <element label="Real stock take user" max_length="32" name="real_stock_take_user" reference="sys_user" type="reference"/>
+        <element label="Stockroom" max_length="32" name="stockroom" reference="alm_stockroom" type="reference"/>
+        <element default="1" label="Stock quantity" max_length="40" name="stock_quantity" type="integer"/>
+        <element choice="3" default="2" label="Stock take method" max_length="40" name="stock_take_method" type="string">
+            <choice>
+                <element label="Scan" value="2"/>
+                <element label="System" value="1"/>
+                <element label="扫描盘点" language="zh" value="2"/>
+                <element label="系统盘点" language="zh" value="1"/>
+            </choice>
+        </element>
+        <element default="0" label="Stock take quantity" max_length="40" name="stock_take_quantity" type="integer"/>
+        <element choice="3" default="1" label="Stock take state" max_length="40" name="stock_take_state" type="string">
+            <choice>
+                <element label="Executing" value="1"/>
+                <element label="Finished" value="2"/>
+            </choice>
+        </element>
+        <element label="Stock take time" max_length="40" name="stock_take_time" type="glide_date_time"/>
+        <element attributes="readonly_clickthrouth=true" label="Stock task" max_length="32" name="task_number" read_only="true" reference="x_envision_itam_stock_take_task" type="reference"/>
+        <index name="index">
+            <element name="stockroom"/>
+        </index>
+        <index name="index2">
+            <element name="real_stockroom"/>
+        </index>
+        <index name="index3">
+            <element name="managed_by"/>
+        </index>
+        <index name="index4">
+            <element name="model_category"/>
+        </index>
+        <index name="index5">
+            <element name="real_stock_take_user"/>
+        </index>
+        <index name="index6">
+            <element name="task_number"/>
+        </index>
+        <index name="index7">
+            <element name="asset"/>
+        </index>
+    </element>
+</database>

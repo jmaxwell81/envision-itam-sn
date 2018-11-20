@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>po_number</field>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-10-23 06:22:21</sys_created_on>
+        <sys_id>9dbdec42db5d23006a1b9cb6db961976</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>po_number</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9dbdec42db5d23006a1b9cb6db961976</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-10-23 06:22:21</sys_updated_on>
+        <table>x_envision_itam_take_delivery</table>
+        <ui_policy display_value="临时借用或其它时PO不校验">778d6c42db5d23006a1b9cb6db9619c0</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

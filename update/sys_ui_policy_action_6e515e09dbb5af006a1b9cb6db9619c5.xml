@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>false</disabled>
+        <field>asset</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-14 07:35:18</sys_created_on>
+        <sys_id>6e515e09dbb5af006a1b9cb6db9619c5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>asset</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_ui_policy_action_6e515e09dbb5af006a1b9cb6db9619c5</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-14 07:36:17</sys_updated_on>
+        <table>x_envision_itam_apply_order</table>
+        <ui_policy display_value="选择了Model_category后 asset才可用">ad311e09dbb5af006a1b9cb6db961981</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

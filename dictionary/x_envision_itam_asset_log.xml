@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="资产操作日志" max_length="40" name="x_envision_itam_asset_log" type="collection">
+        <element label="资产" max_length="32" name="asset" reference="alm_asset" type="reference"/>
+        <element label="资产名称" max_length="40" name="asset_name" type="string"/>
+        <element choice="1" label="操作后状态" max_length="40" name="asset_state" type="integer">
+            <choice>
+                <element label="On order" sequence="1" value="2"/>
+                <element label="In stock" sequence="2" value="6"/>
+                <element label="In transit" sequence="3" value="9"/>
+                <element label="In use" sequence="4" value="1"/>
+                <element label="Consumed" sequence="5" value="10"/>
+                <element label="In maintenance" sequence="6" value="3"/>
+                <element label="Retired" sequence="7" value="7"/>
+                <element label="Missing" sequence="8" value="8"/>
+                <element label="Borrow" sequence="9" value="11"/>
+            </choice>
+        </element>
+        <element choice="1" label="资产类型" max_length="40" name="asset_type" read_only="true" type="string">
+            <choice>
+                <element label="Consumable" value="alm_consumable"/>
+                <element label="Hardware" value="alm_hardware"/>
+            </choice>
+        </element>
+        <element label="操作后使用人" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="原因" max_length="255" name="cause" type="string_full_utf8"/>
+        <element label="Creator" max_length="32" name="creator" reference="sys_user" type="reference"/>
+        <element label="Deliveror" max_length="32" name="deliveror" reference="sys_user" type="reference"/>
+        <element label="操作前使用人" max_length="32" name="delivery_assigned_to" reference="sys_user" type="reference"/>
+        <element label="操作前管理员" max_length="32" name="delivery_managed_by" reference="sys_user" type="reference"/>
+        <element label="操作前责任人" max_length="32" name="delivery_owned_by" reference="sys_user" type="reference"/>
+        <element choice="1" label="操作前状态" max_length="40" name="delivery_state" type="string">
+            <choice>
+                <element label="On order" sequence="0" value="2"/>
+                <element label="In stock" sequence="1" value="6"/>
+                <element label="In transit" sequence="2" value="9"/>
+                <element label="In use" sequence="3" value="1"/>
+                <element label="Consumed" sequence="4" value="10"/>
+                <element label="In maintenance" sequence="5" value="3"/>
+                <element label="Retired" sequence="6" value="7"/>
+                <element label="Missing" sequence="7" value="8"/>
+                <element label="Borrow" sequence="11" value="11"/>
+            </choice>
+        </element>
+        <element label="操作前仓库" max_length="32" name="delivery_stockroom" reference="alm_stockroom" type="reference"/>
+        <element label="描述" max_length="255" name="description" type="string_full_utf8"/>
+        <element label="入库图片" max_length="40" name="image1" type="user_image"/>
+        <element label="入库图片" max_length="40" name="image2" type="user_image"/>
+        <element label="入库图片" max_length="40" name="image3" type="user_image"/>
+        <element label="入库图片" max_length="40" name="image4" type="user_image"/>
+        <element choice="1" label="操作类型" max_length="40" name="log_type" type="string">
+            <choice>
+                <element label="出库" sequence="1" value="1"/>
+                <element label="领用" sequence="2" value="2"/>
+                <element label="归还" sequence="3" value="3"/>
+                <element label="入库" sequence="4" value="4"/>
+                <element label="使用" sequence="5" value="5"/>
+                <element label="借用" sequence="6" value="6"/>
+            </choice>
+        </element>
+        <element label="操作后管理员" max_length="32" name="managed_by" reference="sys_user" type="reference"/>
+        <element default="javascript:new GlideDateTime()" label="操作时间" max_length="40" name="operated" read_only="true" type="glide_date_time"/>
+        <element label="操作人" max_length="32" name="operator" reference="sys_user" type="reference"/>
+        <element label="操作后责任人" max_length="32" name="owned_by" reference="sys_user" type="reference"/>
+        <element label="操作后仓库" max_length="32" name="stockroom" reference="alm_stockroom" type="reference"/>
+        <index name="index">
+            <element name="creator"/>
+        </index>
+        <index name="index2">
+            <element name="delivery_owned_by"/>
+        </index>
+        <index name="index3">
+            <element name="managed_by"/>
+        </index>
+        <index name="index4">
+            <element name="deliveror"/>
+        </index>
+        <index name="index5">
+            <element name="delivery_assigned_to"/>
+        </index>
+        <index name="index6">
+            <element name="owned_by"/>
+        </index>
+        <index name="index7">
+            <element name="delivery_stockroom"/>
+        </index>
+        <index name="index8">
+            <element name="operator"/>
+        </index>
+        <index name="index9">
+            <element name="stockroom"/>
+        </index>
+        <index name="index10">
+            <element name="asset"/>
+        </index>
+        <index name="index11">
+            <element name="delivery_managed_by"/>
+        </index>
+        <index name="index12">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>

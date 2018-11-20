@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="DELETE" field="u_stock_take_state" table="u_stock_take_plan_detail" version="3">
+        <sys_choice_set action="DELETE">
+            <element>u_stock_take_state</element>
+            <name>u_stock_take_plan_detail</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-16 08:17:13</sys_created_on>
+            <sys_id>a114b366db8867006a1b9cb6db961985</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>u_stock_take_state</sys_name>
+            <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_choice_u_stock_take_plan_detail_u_stock_take_state</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-09-13 01:30:26</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
