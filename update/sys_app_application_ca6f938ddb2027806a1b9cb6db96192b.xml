@@ -15,15 +15,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ca6f938ddb2027806a1b9cb6db96192b</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Operation management</sys_name>
         <sys_overrides/>
         <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
         <sys_update_name>sys_app_application_ca6f938ddb2027806a1b9cb6db96192b</sys_update_name>
-        <sys_updated_by>junhui.lei</sys_updated_by>
-        <sys_updated_on>2018-10-16 06:52:07</sys_updated_on>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-21 02:41:42</sys_updated_on>
         <title>Operation management</title>
         <view_name/>
     </sys_app_application>

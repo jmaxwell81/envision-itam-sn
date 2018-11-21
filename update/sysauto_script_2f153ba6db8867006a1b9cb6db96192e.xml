@@ -35,25 +35,28 @@
 
 // gs.info(">>>>>>JK:data:"+data);
 
-
-var jspr = new global.JavascriptProbe('40');
-
-jspr.setName('发送短信验证码');
-jspr.setJavascript("var sms=new Packages.com.alicom.dysms.api.SmsDemo();sms.test();");
+var code="哈哈，这是短信验证码111"; 
+var paramJson='{code:\''+code+'\'}';
+var jspr = new global.JavascriptProbe('40');//mid server name
+jspr.setName('发送短信验证码');//描述，无实际意义
+jspr.setSource("DySmsClient.sendSms");//标示
+jspr.setJavascript("var sms=new Packages.com.n22.cs.sms.DySmsClient();sms.sendSms('LTAI6fneDZrkSGkG', 'sFzugAUPnfMtCDEWZaKja1jXQ5E9Pd', '远景能源', 'SMS_150940087', '18682245643', "+paramJson+");");
 var sys_id=jspr.create();
- ]]></script>
+
+ 
+]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>junhui.lei</sys_created_by>
         <sys_created_on>2018-08-24 06:52:05</sys_created_on>
         <sys_id>2f153ba6db8867006a1b9cb6db96192e</sys_id>
-        <sys_mod_count>136</sys_mod_count>
+        <sys_mod_count>145</sys_mod_count>
         <sys_name>test</sys_name>
-        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_package display_value="">5024965a4fef13005d7d121f9310c731</sys_package>
         <sys_policy/>
         <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
         <sys_update_name>sysauto_script_2f153ba6db8867006a1b9cb6db96192e</sys_update_name>
         <sys_updated_by>yanyong.peng</sys_updated_by>
-        <sys_updated_on>2018-11-19 07:48:12</sys_updated_on>
+        <sys_updated_on>2018-11-20 08:58:50</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

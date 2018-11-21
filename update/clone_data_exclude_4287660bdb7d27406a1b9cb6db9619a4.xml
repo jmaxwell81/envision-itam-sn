@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="clone_data_exclude">
+    <clone_data_exclude action="INSERT_OR_UPDATE">
+        <name>task</name>
+        <sys_class_name>clone_data_exclude</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-20 14:20:27</sys_created_on>
+        <sys_id>4287660bdb7d27406a1b9cb6db9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>clone_data_exclude_4287660bdb7d27406a1b9cb6db9619a4</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-20 14:20:27</sys_updated_on>
+    </clone_data_exclude>
+</record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="调拨单" max_length="40" name="x_envision_itam_transfers_order" sizeclass="39" type="collection">
+    <element extends="task" label="调拨单" max_length="40" name="x_envision_itam_transfers_order" sizeclass="40" type="collection">
         <element label="Complete time" max_length="40" name="actual_complete_time" read_only="true" type="glide_date_time"/>
         <element label="Cost center" mandatory="true" max_length="32" name="cost_center" reference="cmn_cost_center" type="reference"/>
         <element label="Delivery cost center" mandatory="true" max_length="32" name="delivery_cost_center" reference="cmn_cost_center" type="reference"/>

@@ -6,43 +6,50 @@
         <consumes_customized>false</consumes_customized>
         <default_operation_uri/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
-        <http_method>POST</http_method>
-        <name>保存短信验证码</name>
+        <http_method>GET</http_method>
+        <name>发送短信验证码</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 	var resp={
 		"status":"0000"
 	};
 	var mobilePhone=request.queryParams.mobilePhone+"";
-	var smsCode=request.queryParams.smsCode+"";
 	var areaCode=request.queryParams.areaCode+"";
+	
+	var code = "";
+    for (i = 0; i < 6; i++) {
+        code = code + Math.floor(Math.random() * 10);
+    }
 	
 	var gr=new GlideRecord("x_envision_itam_sms_code");
 	gr.mobile_phone=mobilePhone;
-	gr.sms_code=smsCode;
+	gr.sms_code=code;
 	var now=new GlideDateTime();
 	gr.send_time=new GlideDateTime();
 	now.addSeconds(5*60);
 	gr.invalid_time=now;
-	gr.error_code=request.queryParams.errorCode+"";
-	gr.error_msg=request.queryParams.errorMsg+"";
-	gr.request_id=request.queryParams.requestId+"";
 	gr.area_code=areaCode.indexOf("+")>=0?areaCode:"+"+areaCode;
+ 
+	var sys_id=gr.insert();
+	//发送短信验证码 
+	var signName=gs.getProperty("x_envision_itam.sms.sign_name");
+	var templateCode=gs.getProperty("x_envision_itam.sms.code.template");
+	var accessKeyId=gs.getProperty("x_envision_itam.sms.access_key_id");
+	var accessKeySecret=gs.getProperty("x_envision_itam.sms.access_key_secret");
 	
-	if(gr.error_code!="OK"){
-		gr.invalid_time=gr.send_time;
-		gr.is_invalid=true;
-		resp.status="9999";
-		resp.msg="短信发送失败";
-	}
-	gr.insert();
-	
+	var paramJson='{\"code\":\"'+code+'\"}';
+	var jspr = new global.JavascriptProbe('40');//mid server name
+	jspr.setName('发送短信验证码');//描述，无实际意义
+	jspr.setSource("DySmsClient.sendSms");//标示
+	jspr.setJavascript("var sms=new Packages.com.n22.cs.sms.DySmsClient();sms.sendSms('"+accessKeyId+"', '"+accessKeySecret+"', '"+signName+"', '"+templateCode+"', '"+mobilePhone+"', '"+paramJson+"','"+sys_id+"');");
+	jspr.create();
+
 	return resp;
 	
 })(request, response);]]></operation_script>
-        <operation_uri>/api/x_envision_itam/sn_api/save_sms_code</operation_uri>
+        <operation_uri>/api/x_envision_itam/sn_api/send_sms_code</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
         <produces_customized>false</produces_customized>
-        <relative_path>/save_sms_code</relative_path>
+        <relative_path>/send_sms_code</relative_path>
         <request_example/>
         <requires_acl_authorization>true</requires_acl_authorization>
         <requires_authentication>true</requires_authentication>
@@ -51,14 +58,14 @@
         <sys_created_by>yanyong.peng</sys_created_by>
         <sys_created_on>2018-11-13 06:11:36</sys_created_on>
         <sys_id>89b3bc3cdbf96f006a1b9cb6db961975</sys_id>
-        <sys_mod_count>16</sys_mod_count>
-        <sys_name>保存短信验证码</sys_name>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>发送短信验证码</sys_name>
         <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
         <sys_update_name>sys_ws_operation_89b3bc3cdbf96f006a1b9cb6db961975</sys_update_name>
         <sys_updated_by>yanyong.peng</sys_updated_by>
-        <sys_updated_on>2018-11-14 02:06:58</sys_updated_on>
+        <sys_updated_on>2018-11-20 09:57:41</sys_updated_on>
         <web_service_definition display_value="sn_api">0d9738204f3313005d7d121f9310c7b8</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

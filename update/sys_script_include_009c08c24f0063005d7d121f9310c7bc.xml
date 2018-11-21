@@ -85,7 +85,7 @@ SNApiUtil.prototype = {
         <sys_id>009c08c24f0063005d7d121f9310c7bc</sys_id>
         <sys_mod_count>40</sys_mod_count>
         <sys_name>SNApiUtil</sys_name>
-        <sys_package display_value="Envision" source="x_162342_envision">5024965a4fef13005d7d121f9310c731</sys_package>
+        <sys_package display_value="">5024965a4fef13005d7d121f9310c731</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
         <sys_update_name>sys_script_include_009c08c24f0063005d7d121f9310c7bc</sys_update_name>
