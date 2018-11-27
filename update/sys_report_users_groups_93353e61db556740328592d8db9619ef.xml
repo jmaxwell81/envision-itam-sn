@@ -2,7 +2,7 @@
 <record_update table="sys_report_users_groups">
     <sys_report_users_groups action="INSERT_OR_UPDATE">
         <group_id/>
-        <report_id display_value="待报废资产统计">1f353e61db556740328592d8db9619ee</report_id>
+        <report_id display_value="待报废资产总数">1f353e61db556740328592d8db9619ee</report_id>
         <sys_class_name>sys_report_users_groups</sys_class_name>
         <sys_created_by>junhui.lei</sys_created_by>
         <sys_created_on>2018-10-22 02:57:22</sys_created_on>

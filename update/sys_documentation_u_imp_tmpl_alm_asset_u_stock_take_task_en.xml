@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_stock_take_task" label="stock_take_task" language="en" table="u_imp_tmpl_alm_asset">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_stock_take_task</element>
+            <help/>
+            <hint/>
+            <label>stock_take_task</label>
+            <language>en</language>
+            <name>u_imp_tmpl_alm_asset</name>
+            <plural>stock_take_tasks</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:28</sys_created_on>
+            <sys_id>9482972fdbbd2b40328592d8db9619dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>stock_take_task</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_documentation_u_imp_tmpl_alm_asset_u_stock_take_task_en</sys_update_name>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:28</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="x_envision_itam_task" label="盘点任务" max_length="40" name="x_envision_itam_stock_take_task" sizeclass="65" type="collection">
+    <element extends="x_envision_itam_task" label="盘点任务" max_length="40" name="x_envision_itam_stock_take_task" sizeclass="67" type="collection">
         <element label="Assistor" max_length="4000" name="assistor" reference="sys_user" type="glide_list"/>
         <element attributes="readonly_clickthrough=true" label="Cost center" max_length="32" name="cost_center" reference="cmn_cost_center" type="reference"/>
         <element label="Hardwares" max_length="32" name="hardwares" reference="alm_hardware" type="reference"/>

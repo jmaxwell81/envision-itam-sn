@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="x_envision_itam_stock_take_task_detail">
     <x_envision_itam_stock_take_task_detail action="INSERT_OR_UPDATE">
-        <asset display_value="L-002387 - ">2f21a0b9db1123006a1b9cb6db961950</asset>
+        <asset/>
         <asset_name/>
         <assigned_to/>
         <assistor/>

@@ -2,7 +2,7 @@
 <record_update table="sys_report_users_groups">
     <sys_report_users_groups action="INSERT_OR_UPDATE">
         <group_id/>
-        <report_id display_value="无形资产总数">29ba9ba5db956740328592d8db9619fc</report_id>
+        <report_id display_value="借用资产及到期时间统计">29ba9ba5db956740328592d8db9619fc</report_id>
         <sys_class_name>sys_report_users_groups</sys_class_name>
         <sys_created_by>junhui.lei</sys_created_by>
         <sys_created_on>2018-10-22 05:41:05</sys_created_on>

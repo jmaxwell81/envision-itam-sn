@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_filter">
+    <sys_filter action="INSERT_OR_UPDATE">
+        <filter table="alm_asset">assigned_toDYNAMIC90d1921e5f510100a9ad2572f2b477fe^ORowned_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^stockroomISEMPTY<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="false" field="owned_by" goto="false" newquery="false" operator="DYNAMIC" or="true" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="false" field="stockroom" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+        </filter>
+        <group/>
+        <last_used/>
+        <mobile>false</mobile>
+        <roles/>
+        <sys_class_name>sys_filter</sys_class_name>
+        <sys_created_by>fayu.xu</sys_created_by>
+        <sys_created_on>2018-11-22 06:03:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e719c3a3dbbd2b40328592d8db9619f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assets under my</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_filter_e719c3a3dbbd2b40328592d8db9619f1</sys_update_name>
+        <sys_updated_by>fayu.xu</sys_updated_by>
+        <sys_updated_on>2018-11-22 06:03:27</sys_updated_on>
+        <table>alm_asset</table>
+        <title>Assets under my</title>
+        <user/>
+    </sys_filter>
+</record_update>

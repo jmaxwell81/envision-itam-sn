@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_export_definition">
+    <sys_export_definition action="INSERT_OR_UPDATE">
+        <field_list>title,user,view,order,sys_updated_on,read_roles,roles,sys_scope,sys_class_name,sys_created_on,sys_created_by,sys_name,sys_domain,sys_domain_path,layout,sys_overrides,sys_package,sys_policy,selectable,sys_id,sys_tags,sys_update_name,sys_updated_by,sys_mod_count</field_list>
+        <filter table="sys_portal_page">sys_updated_on&gt;=javascript:gs.beginningOfLast6Months()^EQ<item endquery="false" field="sys_updated_on" goto="false" newquery="false" operator="&gt;=" or="false" value="javascript:gs.beginningOfLast6Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <name>sys_portal_page</name>
+        <sys_class_name>sys_export_definition</sys_class_name>
+        <sys_created_by>yanyong.peng</sys_created_by>
+        <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+        <sys_id>9d0c6cdddb8e2f406a1b9cb6db9619a6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>sys_portal_page</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_export_definition_9d0c6cdddb8e2f406a1b9cb6db9619a6</sys_update_name>
+        <sys_updated_by>yanyong.peng</sys_updated_by>
+        <sys_updated_on>2018-11-27 05:34:51</sys_updated_on>
+        <table_name>sys_portal_page</table_name>
+        <view display_value="Exp_d9d0c6cdddb8e2f406a1b9cb6db9619a6" name="exp_d9d0c6cdddb8e2f406a1b9cb6db9619a6">cd3170d5dbce2f406a1b9cb6db961940</view>
+    </sys_export_definition>
+</record_update>

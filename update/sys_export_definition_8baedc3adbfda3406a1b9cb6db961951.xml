@@ -18,6 +18,6 @@
         <sys_updated_by>yanyong.peng</sys_updated_by>
         <sys_updated_on>2018-11-19 09:43:20</sys_updated_on>
         <table_name>sys_update_preview_xml</table_name>
-        <view display_value="Exp_d8baedc3adbfda3406a1b9cb6db961951" name="exp_d8baedc3adbfda3406a1b9cb6db961951">87aedc3adbfda3406a1b9cb6db961952</view>
+        <view/>
     </sys_export_definition>
 </record_update>

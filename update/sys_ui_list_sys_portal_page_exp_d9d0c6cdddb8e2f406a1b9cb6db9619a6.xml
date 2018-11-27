@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="sys_portal_page" version="2" view="exp_d9d0c6cdddb8e2f406a1b9cb6db9619a6">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>title</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0131b4d5dbce2f406a1b9cb6db96199d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>user</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8131b4d5dbce2f406a1b9cb6db96199d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>view</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0531b4d5dbce2f406a1b9cb6db96199d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>order</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8531b4d5dbce2f406a1b9cb6db96199d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0931b4d5dbce2f406a1b9cb6db96199d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>read_roles</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8931b4d5dbce2f406a1b9cb6db96199d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>roles</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0d31b4d5dbce2f406a1b9cb6db96199d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_scope</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8d31b4d5dbce2f406a1b9cb6db96199d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_class_name</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0131b4d5dbce2f406a1b9cb6db96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8131b4d5dbce2f406a1b9cb6db96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_by</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0531b4d5dbce2f406a1b9cb6db96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_name</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>11</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8531b4d5dbce2f406a1b9cb6db96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_domain</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>12</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0931b4d5dbce2f406a1b9cb6db96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_domain_path</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>13</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8931b4d5dbce2f406a1b9cb6db96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>layout</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>14</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0d31b4d5dbce2f406a1b9cb6db96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_overrides</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>15</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8d31b4d5dbce2f406a1b9cb6db96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_package</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>16</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0131b4d5dbce2f406a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_policy</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>17</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8131b4d5dbce2f406a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>selectable</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>18</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0531b4d5dbce2f406a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_id</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>19</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8531b4d5dbce2f406a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_tags</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>20</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0931b4d5dbce2f406a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_update_name</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>21</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8931b4d5dbce2f406a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_by</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>22</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>0d31b4d5dbce2f406a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_mod_count</element>
+            <list_id display_value="sys_portal_page" element="NULL" name="sys_portal_page" parent="NULL" relationship="NULL" sys_domain="global" view="cd3170d5dbce2f406a1b9cb6db961940">8931b4d5dbce2f406a1b9cb6db96199c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>23</position>
+            <sum>false</sum>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_id>8d31b4d5dbce2f406a1b9cb6db96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sys_portal_page</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>yanyong.peng</sys_created_by>
+            <sys_created_on>2018-11-27 05:29:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8931b4d5dbce2f406a1b9cb6db96199c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_portal_page</sys_name>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_ui_list_sys_portal_page_exp_d9d0c6cdddb8e2f406a1b9cb6db9619a6</sys_update_name>
+            <sys_updated_by>yanyong.peng</sys_updated_by>
+            <sys_updated_on>2018-11-27 05:29:06</sys_updated_on>
+            <sys_user/>
+            <view display_value="Exp_d9d0c6cdddb8e2f406a1b9cb6db9619a6" name="exp_d9d0c6cdddb8e2f406a1b9cb6db9619a6">cd3170d5dbce2f406a1b9cb6db961940</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

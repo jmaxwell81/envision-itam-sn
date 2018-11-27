@@ -6,6 +6,25 @@
             <element>x_envision_itam_asset_type</element>
             <hint/>
             <inactive>false</inactive>
+            <label>IT固定资产</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <sequence>0</sequence>
+            <sys_created_by>yangdong.luo</sys_created_by>
+            <sys_created_on>2018-11-21 07:41:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5606921bdbb567406a1b9cb6db9619bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>yangdong.luo</sys_updated_by>
+            <sys_updated_on>2018-11-21 07:41:48</sys_updated_on>
+            <value>IT固定资产</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_envision_itam_asset_type</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Hardware</label>
             <language>en</language>
             <name>alm_asset</name>

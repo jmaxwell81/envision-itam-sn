@@ -7,7 +7,7 @@
         <attributes>import_attribute_name=distinguishedName,edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>distinguishedName</column_label>
@@ -30,7 +30,7 @@
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
+        <max_length>80</max_length>
         <name>ldap_import</name>
         <next_element/>
         <primary>false</primary>
@@ -50,14 +50,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-17 10:22:05</sys_created_on>
         <sys_id>cae33726db8867006a1b9cb6db961901</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>distinguishedName</sys_name>
         <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
         <sys_update_name>sys_dictionary_ldap_import_u_distinguishedname</sys_update_name>
         <sys_updated_by>junhui.lei</sys_updated_by>
-        <sys_updated_on>2018-09-13 06:43:16</sys_updated_on>
+        <sys_updated_on>2018-11-22 02:45:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

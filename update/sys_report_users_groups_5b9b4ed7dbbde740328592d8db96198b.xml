@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="借用资产及到期时间统计">29ba9ba5db956740328592d8db9619fc</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>fayu.xu</sys_created_by>
+        <sys_created_on>2018-11-21 06:56:16</sys_created_on>
+        <sys_id>5b9b4ed7dbbde740328592d8db96198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>29ba9ba5db956740328592d8db9619fc</sys_name>
+        <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+        <sys_update_name>sys_report_users_groups_5b9b4ed7dbbde740328592d8db96198b</sys_update_name>
+        <sys_updated_by>fayu.xu</sys_updated_by>
+        <sys_updated_on>2018-11-21 06:56:16</sys_updated_on>
+        <user_id display_value="徐法宇">31dec39edb082700328592d8db961947</user_id>
+    </sys_report_users_groups>
+</record_update>

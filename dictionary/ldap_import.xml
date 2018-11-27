@@ -16,8 +16,8 @@
         <element attributes="import_attribute_name=description,edge_encryption_enabled=true" label="description" max_length="40" name="u_description" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="directReports" max_length="40" name="u_directreports" type="string"/>
         <element attributes="import_attribute_name=displayName,edge_encryption_enabled=true" label="displayName" max_length="40" name="u_displayname" type="string"/>
-        <element attributes="import_attribute_name=distinguishedName,edge_encryption_enabled=true" label="distinguishedName" max_length="40" name="u_distinguishedname" type="string"/>
-        <element attributes="import_attribute_name=dn,edge_encryption_enabled=true" label="dn" max_length="40" name="u_dn" type="string"/>
+        <element attributes="import_attribute_name=distinguishedName,edge_encryption_enabled=true" label="distinguishedName" max_length="80" name="u_distinguishedname" type="string"/>
+        <element attributes="import_attribute_name=dn,edge_encryption_enabled=true" label="dn" max_length="80" name="u_dn" type="string"/>
         <element attributes="import_attribute_name=dSCorePropagationData,edge_encryption_enabled=true" label="dSCorePropagationData" max_length="40" name="u_dscorepropagationdata" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="employeeID" max_length="40" name="u_employeeid" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="employeeType" max_length="40" name="u_employeetype" type="string"/>
@@ -138,7 +138,7 @@
         <element attributes="edge_encryption_enabled=true" label="servicePrincipalName" max_length="40" name="u_serviceprincipalname" type="string"/>
         <element attributes="import_attribute_name=showInAddressBook,edge_encryption_enabled=true" label="showInAddressBook" max_length="40" name="u_showinaddressbook" type="string"/>
         <element attributes="import_attribute_name=sn,edge_encryption_enabled=true" label="sn" max_length="40" name="u_sn" type="string"/>
-        <element attributes="import_attribute_name=source,edge_encryption_enabled=true" label="source" max_length="40" name="u_source" type="string"/>
+        <element attributes="import_attribute_name=source,edge_encryption_enabled=true" label="source" max_length="80" name="u_source" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="st" max_length="40" name="u_st" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="streetAddress" max_length="40" name="u_streetaddress" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="submissionContLength" max_length="40" name="u_submissioncontlength" type="string"/>

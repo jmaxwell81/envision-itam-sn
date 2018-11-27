@@ -3,6 +3,7 @@
     <element audit="true" label="Asset" max_length="40" name="alm_asset" sizeclass="6201" type="collection">
         <element choice="3" choice_field="security_type" label="资产分类" max_length="128" name="x_envision_itam_asset_type" type="string">
             <choice>
+                <element label="IT固定资产" sequence="0" value="IT固定资产"/>
                 <element label="Hardware" sequence="1" value="Hardware"/>
                 <element label="IT固定资产" language="zh" sequence="1" value="Hardware"/>
                 <element label="Expense" sequence="2" value="Expense"/>

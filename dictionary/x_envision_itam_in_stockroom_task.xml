@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="x_envision_itam_task" label="入库任务" max_length="40" name="x_envision_itam_in_stockroom_task" sizeclass="31" type="collection">
+    <element extends="x_envision_itam_task" label="入库任务" max_length="40" name="x_envision_itam_in_stockroom_task" sizeclass="38" type="collection">
         <element label="Assistant" max_length="4000" name="assistant" reference="sys_user" type="glide_list"/>
         <element attributes="readonly_clickthrough=true" label="Retire order" max_length="32" name="retire_order" read_only="true" reference="x_envision_itam_retire_order" type="reference"/>
         <element label="Stockroom" mandatory="true" max_length="32" name="stockroom" reference="alm_stockroom" type="reference"/>

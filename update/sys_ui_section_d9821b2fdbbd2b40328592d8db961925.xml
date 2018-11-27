@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="d9821b2fdbbd2b40328592d8db961925" sys_domain="global" table="u_imp_tmpl_alm_asset" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961926</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_acquisition_method</element>
+            <position>1</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db961927</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>19821b2fdbbd2b40328592d8db961927</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_asset_tag</element>
+            <position>3</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>99821b2fdbbd2b40328592d8db961927</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>1d821b2fdbbd2b40328592d8db961927</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_asset_type</element>
+            <position>5</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961927</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>6</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>11821b2fdbbd2b40328592d8db961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_assigned</element>
+            <position>7</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>91821b2fdbbd2b40328592d8db961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>8</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>15821b2fdbbd2b40328592d8db961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_assigned_to</element>
+            <position>9</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>10</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>19821b2fdbbd2b40328592d8db961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_beneficiary</element>
+            <position>11</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>99821b2fdbbd2b40328592d8db961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>12</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>1d821b2fdbbd2b40328592d8db961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_checked_in</element>
+            <position>13</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>14</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>11821b2fdbbd2b40328592d8db961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_checked_out</element>
+            <position>15</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>91821b2fdbbd2b40328592d8db961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>16</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>15821b2fdbbd2b40328592d8db961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_comments</element>
+            <position>17</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>18</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>19821b2fdbbd2b40328592d8db961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_company</element>
+            <position>19</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>99821b2fdbbd2b40328592d8db961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_contract_number</element>
+            <position>20</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>1d821b2fdbbd2b40328592d8db961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_cost</element>
+            <position>21</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>22</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>11821b2fdbbd2b40328592d8db96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_cost_center</element>
+            <position>23</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>91821b2fdbbd2b40328592d8db96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_cost_center_manager</element>
+            <position>24</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>15821b2fdbbd2b40328592d8db96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_department</element>
+            <position>25</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>26</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_disposal_reason</element>
+            <position>27</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>19821b2fdbbd2b40328592d8db961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>28</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>99821b2fdbbd2b40328592d8db961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_due</element>
+            <position>29</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>1d821b2fdbbd2b40328592d8db961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_due_in</element>
+            <position>30</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_expenditure_type</element>
+            <position>31</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>11821b2fdbbd2b40328592d8db961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_gl_account</element>
+            <position>32</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>91821b2fdbbd2b40328592d8db961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_installed</element>
+            <position>33</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>15821b2fdbbd2b40328592d8db961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_invoice_number</element>
+            <position>34</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_is_locked</element>
+            <position>35</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>19821b2fdbbd2b40328592d8db961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_it_asset_tag</element>
+            <position>36</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>99821b2fdbbd2b40328592d8db961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lease_contract</element>
+            <position>37</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>1d821b2fdbbd2b40328592d8db961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_location</element>
+            <position>38</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_managed_by</element>
+            <position>39</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>11821b2fdbbd2b40328592d8db961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>40</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>91821b2fdbbd2b40328592d8db961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ordered</element>
+            <position>41</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>15821b2fdbbd2b40328592d8db961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_order_received</element>
+            <position>42</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_owned_by</element>
+            <position>43</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>19821b2fdbbd2b40328592d8db961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_parent</element>
+            <position>44</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>99821b2fdbbd2b40328592d8db961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_purchased</element>
+            <position>45</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>1d821b2fdbbd2b40328592d8db961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_request_line</element>
+            <position>46</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_resale_price</element>
+            <position>47</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>11821b2fdbbd2b40328592d8db961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_reserved_for</element>
+            <position>48</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>91821b2fdbbd2b40328592d8db961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_retired_date</element>
+            <position>49</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>15821b2fdbbd2b40328592d8db961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_scheduled_retirement</element>
+            <position>50</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>51</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>19821b2fdbbd2b40328592d8db961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_serial_number</element>
+            <position>52</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>99821b2fdbbd2b40328592d8db961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>53</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>1d821b2fdbbd2b40328592d8db961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_state</element>
+            <position>54</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_stockroom</element>
+            <position>55</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>11821b2fdbbd2b40328592d8db961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_stock_take_task</element>
+            <position>56</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>91821b2fdbbd2b40328592d8db961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_substate</element>
+            <position>57</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>15821b2fdbbd2b40328592d8db961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>58</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>95821b2fdbbd2b40328592d8db961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_supported_by</element>
+            <position>59</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>19821b2fdbbd2b40328592d8db961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_support_group</element>
+            <position>60</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>99821b2fdbbd2b40328592d8db961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_sys_id</element>
+            <position>61</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>1d821b2fdbbd2b40328592d8db961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_vendor</element>
+            <position>62</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>9d821b2fdbbd2b40328592d8db961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>63</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>11821b2fdbbd2b40328592d8db961948</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>template_import_log.message</element>
+            <position>64</position>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_id>91821b2fdbbd2b40328592d8db961948</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_imp_tmpl_alm_asset" sys_domain="global" view="Default view">d9821b2fdbbd2b40328592d8db961925</sys_ui_section>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>u_imp_tmpl_alm_asset</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>fayu.xu</sys_created_by>
+            <sys_created_on>2018-11-22 06:44:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d9821b2fdbbd2b40328592d8db961925</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_imp_tmpl_alm_asset</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
+            <sys_update_name>sys_ui_section_d9821b2fdbbd2b40328592d8db961925</sys_update_name>
+            <sys_updated_by>fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-11-22 06:44:32</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

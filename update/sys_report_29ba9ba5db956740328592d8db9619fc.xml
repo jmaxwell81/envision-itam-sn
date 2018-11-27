@@ -6,14 +6,14 @@
         <allow_data_label_overlap>false</allow_data_label_overlap>
         <axis_max_color display_value="UI14 Blue Light">b0d449b3d7332100fa6c0c12ce610383</axis_max_color>
         <axis_min_color display_value="White">65b303c7a9fe3dba00629aff95ee3597</axis_min_color>
-        <bar_unstack>false</bar_unstack>
+        <bar_unstack>true</bar_unstack>
         <chart_background_color/>
         <chart_border_color/>
         <chart_border_radius>0</chart_border_radius>
         <chart_border_width>1</chart_border_width>
         <chart_height>450</chart_height>
         <chart_size>large</chart_size>
-        <chart_title>无形资产总数</chart_title>
+        <chart_title>借用资产及到期时间统计</chart_title>
         <chart_title_color display_value="Black">65b30218a9fe3dba0120df8611520d97</chart_title_color>
         <chart_title_size>16</chart_title_size>
         <chart_title_x_position>0</chart_title_x_position>
@@ -38,20 +38,17 @@
         <donut_width_percent>50</donut_width_percent>
         <end_time/>
         <exp_report_attrs>true</exp_report_attrs>
-        <field>acquisition_method</field>
+        <field>model</field>
         <field_list/>
-        <filter table="alm_asset">model_category=e6d61064db9da340328592d8db9619bb^NQmodel_category=aed65464db9da340328592d8db9619a3^NQmodel_category=a2d65464db9da340328592d8db9619a4^NQmodel_category=a6d65464db9da340328592d8db9619a4^NQmodel_category=aad65464db9da340328592d8db9619a4<item display_table="cmdb_model_category" display_value="专利" endquery="false" field="model_category" goto="false" newquery="false" operator="=" or="false" value="e6d61064db9da340328592d8db9619bb"/>
-            <item display_table="cmdb_model_category" display_value="商标" endquery="false" field="model_category" goto="false" newquery="true" operator="=" or="false" value="aed65464db9da340328592d8db9619a3"/>
-            <item display_table="cmdb_model_category" display_value="著作权" endquery="false" field="model_category" goto="false" newquery="true" operator="=" or="false" value="a2d65464db9da340328592d8db9619a4"/>
-            <item display_table="cmdb_model_category" display_value="特许权" endquery="false" field="model_category" goto="false" newquery="true" operator="=" or="false" value="a6d65464db9da340328592d8db9619a4"/>
-            <item display_table="cmdb_model_category" display_value="域名" endquery="false" field="model_category" goto="false" newquery="true" operator="=" or="false" value="aad65464db9da340328592d8db9619a4"/>
+        <filter table="alm_asset">install_status=11^managed_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe<item endquery="false" field="install_status" goto="false" newquery="false" operator="=" or="false" value="11"/>
+            <item endquery="false" field="managed_by" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
         </filter>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>
         <gauge_autoscale>true</gauge_autoscale>
         <group/>
         <import_table/>
-        <interval>year</interval>
+        <interval>date</interval>
         <is_published>true</is_published>
         <is_scheduled>false</is_scheduled>
         <legend_background_color/>
@@ -81,9 +78,9 @@
         <sc_stackby_variable_id/>
         <score_color display_value="Black">65b30218a9fe3dba0120df8611520d97</score_color>
         <series_name_text/>
-        <set_color>one_color</set_color>
+        <set_color>color_palette</set_color>
         <show_chart_border>false</show_chart_border>
-        <show_chart_data_label>false</show_chart_data_label>
+        <show_chart_data_label>true</show_chart_data_label>
         <show_chart_title>report</show_chart_title>
         <show_chart_total>false</show_chart_total>
         <show_data_label_position_middle>false</show_data_label_position_middle>
@@ -95,26 +92,26 @@
         <show_zero>true</show_zero>
         <source_type>table</source_type>
         <start_time/>
-        <sumfield>assigned_to...</sumfield>
+        <sumfield>cost</sumfield>
         <sys_class_name>sys_report</sys_class_name>
         <sys_created_by>junhui.lei</sys_created_by>
         <sys_created_on>2018-10-22 05:41:05</sys_created_on>
         <sys_id>29ba9ba5db956740328592d8db9619fc</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>无形资产总数</sys_name>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>借用资产及到期时间统计</sys_name>
         <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
         <sys_update_name>sys_report_29ba9ba5db956740328592d8db9619fc</sys_update_name>
-        <sys_updated_by>junhui.lei</sys_updated_by>
-        <sys_updated_on>2018-10-22 05:41:08</sys_updated_on>
+        <sys_updated_by>fayu.xu</sys_updated_by>
+        <sys_updated_on>2018-11-23 05:59:29</sys_updated_on>
         <table>alm_asset</table>
-        <title>无形资产总数</title>
+        <title>借用资产及到期时间统计</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
-        <trend_field/>
-        <type>single_score</type>
+        <trend_field>sys_updated_on</trend_field>
+        <type>line_bar</type>
         <upper_limit/>
         <use_color_heatmap>false</use_color_heatmap>
         <user>095c875edb082700328592d8db9619bb</user>

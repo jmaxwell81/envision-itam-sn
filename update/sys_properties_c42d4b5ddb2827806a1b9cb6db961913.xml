@@ -2,10 +2,9 @@
 <record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>小程序AppId&#13;
-Test: wx5574b0df4fb2dcbc&#13;
-Envision: wx30c06a68da80b479&#13;
-</description>
+        <description>小程序AppId
+Test: wx5574b0df4fb2dcbc
+Envision: wx30c06a68da80b479</description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
         <name>x_envision_itam.wx.appid</name>
@@ -15,14 +14,14 @@ Envision: wx30c06a68da80b479&#13;
         <sys_created_by>yanyong.peng</sys_created_by>
         <sys_created_on>2018-09-14 03:16:28</sys_created_on>
         <sys_id>c42d4b5ddb2827806a1b9cb6db961913</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>x_envision_itam.wx.appid</sys_name>
         <sys_package display_value="Envision ITAM" source="x_enven_envision_i">684921c1db2ce3806a1b9cb6db96196a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Envision ITAM">684921c1db2ce3806a1b9cb6db96196a</sys_scope>
         <sys_update_name>sys_properties_c42d4b5ddb2827806a1b9cb6db961913</sys_update_name>
         <sys_updated_by>yanyong.peng</sys_updated_by>
-        <sys_updated_on>2018-11-09 02:09:16</sys_updated_on>
+        <sys_updated_on>2018-11-27 02:24:08</sys_updated_on>
         <type>string</type>
         <value>wx30c06a68da80b479</value>
         <write_roles/>
